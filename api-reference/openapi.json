@@ -1,0 +1,1612 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ServiceProvider API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/DeliveryChannel/Create": {
+      "post": {
+        "tags": [
+          "DeliveryChannel"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryChannelRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryChannelRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryChannelRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryChannelRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "$ref": "#/components/schemas/DeliveryChannelResponse"
+                    },
+                    "Paging": {
+                      "type": "object",
+                      "properties": {
+                        "Skip": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Take": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Total": {
+                          "type": "integer",
+                          "format": "int32"
+                        }
+                      }
+                    },
+                    "Token": {
+                      "type": "object"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/DeliveryChannel/Update": {
+      "post": {
+        "tags": [
+          "DeliveryChannel"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryChannelRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryChannelRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryChannelRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryChannelRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "$ref": "#/components/schemas/DeliveryChannelResponse"
+                    },
+                    "Paging": {
+                      "type": "object",
+                      "properties": {
+                        "Skip": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Take": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Total": {
+                          "type": "integer",
+                          "format": "int32"
+                        }
+                      }
+                    },
+                    "Token": {
+                      "type": "object"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/DeliveryChannel/Delete": {
+      "post": {
+        "tags": [
+          "DeliveryChannel"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GuidEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GuidEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GuidEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GuidEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "$ref": "#/components/schemas/DeliveryChannelResponse"
+                    },
+                    "Paging": {
+                      "type": "object",
+                      "properties": {
+                        "Skip": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Take": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Total": {
+                          "type": "integer",
+                          "format": "int32"
+                        }
+                      }
+                    },
+                    "Token": {
+                      "type": "object"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Event/Subscribe": {
+      "post": {
+        "tags": [
+          "Event"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EventSubscribeRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EventSubscribeRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EventSubscribeRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EventSubscribeRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "$ref": "#/components/schemas/EventSubscribeResponse"
+                    },
+                    "Paging": {
+                      "type": "object",
+                      "properties": {
+                        "Skip": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Take": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Total": {
+                          "type": "integer",
+                          "format": "int32"
+                        }
+                      }
+                    },
+                    "Token": {
+                      "type": "object"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Event/Unsubscribe": {
+      "post": {
+        "tags": [
+          "Event"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EventUnsubscribeRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EventUnsubscribeRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EventUnsubscribeRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EventUnsubscribeRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "$ref": "#/components/schemas/EventSubscribeResponse"
+                    },
+                    "Paging": {
+                      "type": "object",
+                      "properties": {
+                        "Skip": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Take": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Total": {
+                          "type": "integer",
+                          "format": "int32"
+                        }
+                      }
+                    },
+                    "Token": {
+                      "type": "object"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DeliveryChannelAvailabilityModal": {
+        "required": [
+          "categoriesSupported"
+        ],
+        "type": "object",
+        "properties": {
+          "categoriesSupported": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "CASH",
+                "VOUCHERS",
+                "RESTORING_FAMILY_LINKS",
+                "MENTAL_HEALTH",
+                "LIVELIHOODS",
+                "NON_FOOD_ITEMS",
+                "SHELTER",
+                "MIGRATION",
+                "INFORMATION",
+                "PROTECTION",
+                "GENDER_INCLUSION",
+                "CLIMATE",
+                "HEALTH",
+                "FOOD"
+              ],
+              "type": "string",
+              "example": "CASH"
+            }
+          },
+          "countriesSupported": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "countriesExcluded": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "kycSupported": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "NULL",
+                "NATIONAL_IDENTITY",
+                "PASSPORT",
+                "DRIVER_LICENSE",
+                "RESIDENCE",
+                "OTHER"
+              ],
+              "type": "string",
+              "example": "NULL"
+            },
+            "nullable": true
+          },
+          "kycExcluded": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "NULL",
+                "NATIONAL_IDENTITY",
+                "PASSPORT",
+                "DRIVER_LICENSE",
+                "RESIDENCE",
+                "OTHER"
+              ],
+              "type": "string",
+              "example": "NULL"
+            },
+            "nullable": true
+          },
+          "currenciesSupported": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "NULL",
+                "USD",
+                "EUR",
+                "GBP",
+                "JPY",
+                "AUD",
+                "CAD",
+                "CHF",
+                "RUB",
+                "BRL",
+                "BGN",
+                "COP",
+                "HUF",
+                "MDL",
+                "PLN",
+                "RON",
+                "UAH",
+                "TRY"
+              ],
+              "type": "string",
+              "example": "NULL"
+            },
+            "nullable": true
+          },
+          "currenciesExcluded": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "NULL",
+                "USD",
+                "EUR",
+                "GBP",
+                "JPY",
+                "AUD",
+                "CAD",
+                "CHF",
+                "RUB",
+                "BRL",
+                "BGN",
+                "COP",
+                "HUF",
+                "MDL",
+                "PLN",
+                "RON",
+                "UAH",
+                "TRY"
+              ],
+              "type": "string",
+              "example": "NULL"
+            },
+            "nullable": true
+          },
+          "nationalitiesSupported": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "NULL",
+                "NOT_ENOUGH_INFO",
+                "AFGHAN",
+                "ALANDER",
+                "ALBANIAN",
+                "ALGERIAN",
+                "AMERICAN",
+                "AMERICAN_SAMOAN",
+                "ANDORRAN",
+                "ANGOLAN",
+                "ANGUILLAN",
+                "ANTARCTICAN",
+                "ANTIGUANS",
+                "ARGENTINE",
+                "ARMENIAN",
+                "ARUBAN",
+                "AUSTRALIAN",
+                "AUSTRIAN",
+                "AZERBAIJANI",
+                "BAHAMIAN",
+                "BAHRAINI",
+                "BANGLADESHI",
+                "BARBADIAN",
+                "BARTHELEMOIS",
+                "BELARUSIAN",
+                "BELGIAN",
+                "BELIZEAN",
+                "BENINESE",
+                "BERMUDIAN",
+                "BHUTANESE",
+                "BOLIVIAN",
+                "BONAIRIAN",
+                "BOSNIAN",
+                "BOSNIAN_HERZEGOVINIAN",
+                "BOUVET_ISLANDER",
+                "BRAZILIAN",
+                "BRITISH",
+                "BRITISH_INDIAN_OCEAN_TERRITORY",
+                "BRITISH_VIRGIN_ISLANDER",
+                "BRUNEIAN",
+                "BULGARIAN",
+                "BURKINABE",
+                "BURMESE",
+                "BURUNDIAN",
+                "CAMBODIAN",
+                "CAMEROONIAN",
+                "CANADIAN",
+                "CAPE_VERDEAN",
+                "CAYMANIAN",
+                "CENTRAL_AFRICAN",
+                "CHADIAN",
+                "CHILEAN",
+                "CHINESE",
+                "CHRISTMAS_ISLANDER",
+                "COCOS_ISLANDER",
+                "COLOMBIAN",
+                "COMORAN",
+                "CONGOLESE",
+                "CONGOLESE_DR",
+                "COOK_ISLANDER",
+                "COSTA_RICAN",
+                "CROATIAN",
+                "CUBAN",
+                "CURACAOAN",
+                "CYPRIOT",
+                "CZECH",
+                "DANISH",
+                "DJIBOUTIAN",
+                "DOMINICAN",
+                "DOMINICAN_COMMONWEALTH",
+                "DUTCH",
+                "EAST_TIMORESE",
+                "ECUADOREAN",
+                "EGYPTIAN",
+                "EMIRATI",
+                "EQUATORIAL_GUINEAN",
+                "ERITREAN",
+                "ESTONIAN",
+                "ETHIOPIAN",
+                "FALKLAND_ISLANDER",
+                "FAROESE",
+                "FIJIAN",
+                "FILIPINO",
+                "FINNISH",
+                "FRENCH",
+                "FRENCH_GUIANESE",
+                "FRENCH_POLYNESIAN",
+                "FRENCH_SOUTHERN",
+                "GABONESE",
+                "GAMBIAN",
+                "GEORGIAN",
+                "GERMAN",
+                "GHANAIAN",
+                "GIBRALTAR",
+                "GREEK",
+                "GREENLANDER",
+                "GRENADIAN",
+                "GUADELOUPEAN",
+                "GUAMANIAN",
+                "GUATEMALAN",
+                "GUERNSEY",
+                "GUINEA_BISSAUAN",
+                "GUINEAN",
+                "GUYANESE",
+                "HAITIAN",
+                "HEARD_AND_MCDONALD_ISLANDER",
+                "HERZEGOVINIAN",
+                "HONDURAN",
+                "HONGKONGER",
+                "HUNGARIAN",
+                "I_KIRIBATI",
+                "ICELANDER",
+                "INDIAN",
+                "INDONESIAN",
+                "IRANIAN",
+                "IRAQI",
+                "IRISH",
+                "ISRAELI",
+                "ITALIAN",
+                "IVORIAN",
+                "JAMAICAN",
+                "JAPANESE",
+                "JERSEY",
+                "JORDANIAN",
+                "KAZAKHSTANI",
+                "KENYAN",
+                "KITTIAN_AND_NEVISIAN",
+                "KUWAITI",
+                "KYRGYZ",
+                "LAOTIAN",
+                "LATVIAN",
+                "LEBANESE",
+                "LIBERIAN",
+                "LIBYAN",
+                "LIECHTENSTEINER",
+                "LITHUANIAN",
+                "LUXEMBOURGER",
+                "MACANESE",
+                "MACEDONIAN",
+                "MAHORAIS",
+                "MALAGASY",
+                "MALAWIAN",
+                "MALAYSIAN",
+                "MALDIVIAN",
+                "MALIAN",
+                "MALTESE",
+                "MANX",
+                "MARSHALLESE",
+                "MARTINICAN",
+                "MAURITANIAN",
+                "MAURITIAN",
+                "MEXICAN",
+                "MICRONESIAN",
+                "MOLDOVAN",
+                "MONACAN",
+                "MONGOLIAN",
+                "MONTENEGRIN",
+                "MONTSERRATIAN",
+                "MOROCCAN",
+                "MOSOTHO",
+                "MOTSWANA",
+                "MOZAMBICAN",
+                "NAMIBIAN",
+                "NAURUAN",
+                "NEPALESE",
+                "NEW_CALEDONIAN",
+                "NEW_ZEALANDER",
+                "NI_VANUATU",
+                "NICARAGUAN",
+                "NIGERIAN",
+                "NIGERIEN",
+                "NIUEAN",
+                "NORFOLK_ISLANDER",
+                "NORTH_KOREAN",
+                "NORTHERN_IRISH",
+                "NORTHERN_MARIANA_ISLANDER",
+                "NORWEGIAN",
+                "OMANI",
+                "PAKISTANI",
+                "PALAUAN",
+                "PALESTINIAN",
+                "PANAMANIAN",
+                "PAPUA_NEW_GUINEAN",
+                "PARAGUAYAN",
+                "PERUVIAN",
+                "PITCAIRNER",
+                "POLISH",
+                "PORTUGUESE",
+                "PUERTO_RICAN",
+                "QATARI",
+                "REUNIONESE",
+                "ROMANIAN",
+                "RUSSIAN",
+                "RWANDAN",
+                "SAINT_HELENIAN",
+                "SAINT_LUCIAN",
+                "SAINT_MARTINER",
+                "SAINT_PIERRAIS",
+                "SALVADORAN",
+                "SAMOAN",
+                "SAN_MARINESE",
+                "SAO_TOMEAN",
+                "SAUDI",
+                "SCOTTISH",
+                "SENEGALESE",
+                "SERBIAN",
+                "SEYCHELLOIS",
+                "SIERRA_LEONEAN",
+                "SINGAPOREAN",
+                "SINT_MAARTENER",
+                "SLOVAKIAN",
+                "SLOVENIAN",
+                "SOLOMON_ISLANDER",
+                "SOMALI",
+                "SOUTH_AFRICAN",
+                "SOUTH_GEORGIA_AND_SOUTH_SANDWICH_ISLANDER",
+                "SOUTH_KOREAN",
+                "SOUTH_SUDANESE",
+                "SPANISH",
+                "SRI_LANKAN",
+                "SUDANESE",
+                "SURINAMER",
+                "SVALBARDIAN",
+                "SWAZI",
+                "SWEDISH",
+                "SWISS",
+                "SYRIAN",
+                "TAIWANESE",
+                "TAJIK",
+                "TANZANIAN",
+                "THAI",
+                "TOGOLESE",
+                "TOKELAUAN",
+                "TONGAN",
+                "TRINIDADIAN_OR_TOBAGONIAN",
+                "TUNISIAN",
+                "TURKISH",
+                "TURKMEN",
+                "TURKS_AND_CAICOS_ISLANDER",
+                "TUVALUAN",
+                "UGANDAN",
+                "UKRAINIAN",
+                "URUGUAYAN",
+                "US_MINOR_OUTLYING_ISLANDER",
+                "US_VIRGIN_ISLANDER",
+                "UZBEKISTANI",
+                "VATICAN",
+                "VENEZUELAN",
+                "VIETNAMESE",
+                "VINCENTIAN",
+                "WALLIS_AND_FUTUNA_ISLANDER",
+                "WELSH",
+                "WESTERN_SAHARAN",
+                "YEMENITE",
+                "ZAMBIAN",
+                "ZIMBABWEAN"
+              ],
+              "type": "string",
+              "example": "NOT_ENOUGH_INFO"
+            },
+            "nullable": true
+          },
+          "nationalitiesExcluded": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "NULL",
+                "NOT_ENOUGH_INFO",
+                "AFGHAN",
+                "ALANDER",
+                "ALBANIAN",
+                "ALGERIAN",
+                "AMERICAN",
+                "AMERICAN_SAMOAN",
+                "ANDORRAN",
+                "ANGOLAN",
+                "ANGUILLAN",
+                "ANTARCTICAN",
+                "ANTIGUANS",
+                "ARGENTINE",
+                "ARMENIAN",
+                "ARUBAN",
+                "AUSTRALIAN",
+                "AUSTRIAN",
+                "AZERBAIJANI",
+                "BAHAMIAN",
+                "BAHRAINI",
+                "BANGLADESHI",
+                "BARBADIAN",
+                "BARTHELEMOIS",
+                "BELARUSIAN",
+                "BELGIAN",
+                "BELIZEAN",
+                "BENINESE",
+                "BERMUDIAN",
+                "BHUTANESE",
+                "BOLIVIAN",
+                "BONAIRIAN",
+                "BOSNIAN",
+                "BOSNIAN_HERZEGOVINIAN",
+                "BOUVET_ISLANDER",
+                "BRAZILIAN",
+                "BRITISH",
+                "BRITISH_INDIAN_OCEAN_TERRITORY",
+                "BRITISH_VIRGIN_ISLANDER",
+                "BRUNEIAN",
+                "BULGARIAN",
+                "BURKINABE",
+                "BURMESE",
+                "BURUNDIAN",
+                "CAMBODIAN",
+                "CAMEROONIAN",
+                "CANADIAN",
+                "CAPE_VERDEAN",
+                "CAYMANIAN",
+                "CENTRAL_AFRICAN",
+                "CHADIAN",
+                "CHILEAN",
+                "CHINESE",
+                "CHRISTMAS_ISLANDER",
+                "COCOS_ISLANDER",
+                "COLOMBIAN",
+                "COMORAN",
+                "CONGOLESE",
+                "CONGOLESE_DR",
+                "COOK_ISLANDER",
+                "COSTA_RICAN",
+                "CROATIAN",
+                "CUBAN",
+                "CURACAOAN",
+                "CYPRIOT",
+                "CZECH",
+                "DANISH",
+                "DJIBOUTIAN",
+                "DOMINICAN",
+                "DOMINICAN_COMMONWEALTH",
+                "DUTCH",
+                "EAST_TIMORESE",
+                "ECUADOREAN",
+                "EGYPTIAN",
+                "EMIRATI",
+                "EQUATORIAL_GUINEAN",
+                "ERITREAN",
+                "ESTONIAN",
+                "ETHIOPIAN",
+                "FALKLAND_ISLANDER",
+                "FAROESE",
+                "FIJIAN",
+                "FILIPINO",
+                "FINNISH",
+                "FRENCH",
+                "FRENCH_GUIANESE",
+                "FRENCH_POLYNESIAN",
+                "FRENCH_SOUTHERN",
+                "GABONESE",
+                "GAMBIAN",
+                "GEORGIAN",
+                "GERMAN",
+                "GHANAIAN",
+                "GIBRALTAR",
+                "GREEK",
+                "GREENLANDER",
+                "GRENADIAN",
+                "GUADELOUPEAN",
+                "GUAMANIAN",
+                "GUATEMALAN",
+                "GUERNSEY",
+                "GUINEA_BISSAUAN",
+                "GUINEAN",
+                "GUYANESE",
+                "HAITIAN",
+                "HEARD_AND_MCDONALD_ISLANDER",
+                "HERZEGOVINIAN",
+                "HONDURAN",
+                "HONGKONGER",
+                "HUNGARIAN",
+                "I_KIRIBATI",
+                "ICELANDER",
+                "INDIAN",
+                "INDONESIAN",
+                "IRANIAN",
+                "IRAQI",
+                "IRISH",
+                "ISRAELI",
+                "ITALIAN",
+                "IVORIAN",
+                "JAMAICAN",
+                "JAPANESE",
+                "JERSEY",
+                "JORDANIAN",
+                "KAZAKHSTANI",
+                "KENYAN",
+                "KITTIAN_AND_NEVISIAN",
+                "KUWAITI",
+                "KYRGYZ",
+                "LAOTIAN",
+                "LATVIAN",
+                "LEBANESE",
+                "LIBERIAN",
+                "LIBYAN",
+                "LIECHTENSTEINER",
+                "LITHUANIAN",
+                "LUXEMBOURGER",
+                "MACANESE",
+                "MACEDONIAN",
+                "MAHORAIS",
+                "MALAGASY",
+                "MALAWIAN",
+                "MALAYSIAN",
+                "MALDIVIAN",
+                "MALIAN",
+                "MALTESE",
+                "MANX",
+                "MARSHALLESE",
+                "MARTINICAN",
+                "MAURITANIAN",
+                "MAURITIAN",
+                "MEXICAN",
+                "MICRONESIAN",
+                "MOLDOVAN",
+                "MONACAN",
+                "MONGOLIAN",
+                "MONTENEGRIN",
+                "MONTSERRATIAN",
+                "MOROCCAN",
+                "MOSOTHO",
+                "MOTSWANA",
+                "MOZAMBICAN",
+                "NAMIBIAN",
+                "NAURUAN",
+                "NEPALESE",
+                "NEW_CALEDONIAN",
+                "NEW_ZEALANDER",
+                "NI_VANUATU",
+                "NICARAGUAN",
+                "NIGERIAN",
+                "NIGERIEN",
+                "NIUEAN",
+                "NORFOLK_ISLANDER",
+                "NORTH_KOREAN",
+                "NORTHERN_IRISH",
+                "NORTHERN_MARIANA_ISLANDER",
+                "NORWEGIAN",
+                "OMANI",
+                "PAKISTANI",
+                "PALAUAN",
+                "PALESTINIAN",
+                "PANAMANIAN",
+                "PAPUA_NEW_GUINEAN",
+                "PARAGUAYAN",
+                "PERUVIAN",
+                "PITCAIRNER",
+                "POLISH",
+                "PORTUGUESE",
+                "PUERTO_RICAN",
+                "QATARI",
+                "REUNIONESE",
+                "ROMANIAN",
+                "RUSSIAN",
+                "RWANDAN",
+                "SAINT_HELENIAN",
+                "SAINT_LUCIAN",
+                "SAINT_MARTINER",
+                "SAINT_PIERRAIS",
+                "SALVADORAN",
+                "SAMOAN",
+                "SAN_MARINESE",
+                "SAO_TOMEAN",
+                "SAUDI",
+                "SCOTTISH",
+                "SENEGALESE",
+                "SERBIAN",
+                "SEYCHELLOIS",
+                "SIERRA_LEONEAN",
+                "SINGAPOREAN",
+                "SINT_MAARTENER",
+                "SLOVAKIAN",
+                "SLOVENIAN",
+                "SOLOMON_ISLANDER",
+                "SOMALI",
+                "SOUTH_AFRICAN",
+                "SOUTH_GEORGIA_AND_SOUTH_SANDWICH_ISLANDER",
+                "SOUTH_KOREAN",
+                "SOUTH_SUDANESE",
+                "SPANISH",
+                "SRI_LANKAN",
+                "SUDANESE",
+                "SURINAMER",
+                "SVALBARDIAN",
+                "SWAZI",
+                "SWEDISH",
+                "SWISS",
+                "SYRIAN",
+                "TAIWANESE",
+                "TAJIK",
+                "TANZANIAN",
+                "THAI",
+                "TOGOLESE",
+                "TOKELAUAN",
+                "TONGAN",
+                "TRINIDADIAN_OR_TOBAGONIAN",
+                "TUNISIAN",
+                "TURKISH",
+                "TURKMEN",
+                "TURKS_AND_CAICOS_ISLANDER",
+                "TUVALUAN",
+                "UGANDAN",
+                "UKRAINIAN",
+                "URUGUAYAN",
+                "US_MINOR_OUTLYING_ISLANDER",
+                "US_VIRGIN_ISLANDER",
+                "UZBEKISTANI",
+                "VATICAN",
+                "VENEZUELAN",
+                "VIETNAMESE",
+                "VINCENTIAN",
+                "WALLIS_AND_FUTUNA_ISLANDER",
+                "WELSH",
+                "WESTERN_SAHARAN",
+                "YEMENITE",
+                "ZAMBIAN",
+                "ZIMBABWEAN"
+              ],
+              "type": "string",
+              "example": "NOT_ENOUGH_INFO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeliveryChannelCallCenterModal": {
+        "required": [
+          "email",
+          "phone",
+          "website",
+          "whatsapp"
+        ],
+        "type": "object",
+        "properties": {
+          "phone": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "website": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "whatsapp": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeliveryChannelContactModal": {
+        "required": [
+          "email",
+          "name",
+          "phone"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "phone": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeliveryChannelDeliveryOptionModal": {
+        "required": [
+          "dataType",
+          "evaluationExpression",
+          "fieldLabel",
+          "fieldName",
+          "visibility"
+        ],
+        "type": "object",
+        "properties": {
+          "fieldLabel": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "fieldName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "evaluationExpression": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "visibility": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "fieldMaxLength": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fieldMinLength": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dataType": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "defaultValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "validationRegex": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeliveryChannelRequest": {
+        "required": [
+          "availability",
+          "callCenter",
+          "contacts",
+          "deliveryOptions",
+          "landingPage",
+          "name",
+          "providerDeliveryChannelId",
+          "shortDescription"
+        ],
+        "type": "object",
+        "properties": {
+          "providerDeliveryChannelId": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "name": {
+            "$ref": "#/components/schemas/DeliveryChannelTranslationModal"
+          },
+          "shortDescription": {
+            "$ref": "#/components/schemas/DeliveryChannelTranslationModal"
+          },
+          "landingPage": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "contacts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeliveryChannelContactModal"
+            }
+          },
+          "callCenter": {
+            "$ref": "#/components/schemas/DeliveryChannelCallCenterModal"
+          },
+          "availability": {
+            "$ref": "#/components/schemas/DeliveryChannelAvailabilityModal"
+          },
+          "deliveryOptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeliveryChannelDeliveryOptionModal"
+            }
+          },
+          "isApproved": {
+            "type": "boolean"
+          },
+          "status": {
+            "enum": [
+              "OFFLINE",
+              "ONLINE",
+              "REQUESTED"
+            ],
+            "type": "string",
+            "example": "OFFLINE"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeliveryChannelResponse": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "providerDeliveryChannelId": {
+            "type": "string",
+            "nullable": true
+          },
+          "date": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeliveryChannelTranslationModal": {
+        "required": [
+          "language",
+          "translation"
+        ],
+        "type": "object",
+        "properties": {
+          "language": {
+            "enum": [
+              "NULL",
+              "XX",
+              "EN",
+              "RU",
+              "UK",
+              "TR",
+              "AR",
+              "BG",
+              "CS",
+              "DA",
+              "DE",
+              "EL",
+              "ES",
+              "ET",
+              "FI",
+              "FR",
+              "HI",
+              "HR",
+              "HU",
+              "IT",
+              "KO",
+              "LT",
+              "LV",
+              "NL",
+              "PA",
+              "PL",
+              "PT",
+              "RO",
+              "SK",
+              "SL",
+              "SV",
+              "UR",
+              "AB",
+              "AA",
+              "AF",
+              "AK",
+              "SQ",
+              "AM",
+              "AN",
+              "HY",
+              "AS",
+              "AV",
+              "AE",
+              "AY",
+              "AZ",
+              "BM",
+              "BA",
+              "EU",
+              "BE",
+              "BN",
+              "BI",
+              "BS",
+              "BR",
+              "MY",
+              "CA",
+              "CH",
+              "CE",
+              "NY",
+              "ZH",
+              "CU",
+              "CV",
+              "KW",
+              "CO",
+              "CR",
+              "DV",
+              "DZ",
+              "EO",
+              "EE",
+              "FO",
+              "FJ",
+              "FY",
+              "FF",
+              "GD",
+              "GL",
+              "LG",
+              "KA",
+              "KL",
+              "GN",
+              "GU",
+              "HT",
+              "HA",
+              "HE",
+              "HZ",
+              "HO",
+              "IS",
+              "IO",
+              "IG",
+              "ID",
+              "IA",
+              "IE",
+              "IU",
+              "IK",
+              "GA",
+              "JA",
+              "JV",
+              "KN",
+              "KR",
+              "KS",
+              "KK",
+              "KM",
+              "KI",
+              "RW",
+              "KY",
+              "KV",
+              "KG",
+              "KJ",
+              "KU",
+              "LO",
+              "LA",
+              "LI",
+              "LN",
+              "LU",
+              "LB",
+              "MK",
+              "MG",
+              "MS",
+              "ML",
+              "MT",
+              "GV",
+              "MI",
+              "MR",
+              "MH",
+              "MN",
+              "NA",
+              "NV",
+              "ND",
+              "NR",
+              "NG",
+              "NE",
+              "NO",
+              "NB",
+              "NN",
+              "II",
+              "OC",
+              "OJ",
+              "OR",
+              "OM",
+              "OS",
+              "PI",
+              "PS",
+              "FA",
+              "QU",
+              "RM",
+              "RN",
+              "SE",
+              "SM",
+              "SG",
+              "SA",
+              "SC",
+              "SR",
+              "SN",
+              "SD",
+              "SI",
+              "SO",
+              "ST",
+              "SU",
+              "SW",
+              "SS",
+              "TL",
+              "TY",
+              "TG",
+              "TA",
+              "TT",
+              "TE",
+              "TH",
+              "BO",
+              "TI",
+              "TO",
+              "TS",
+              "TN",
+              "TK",
+              "TW",
+              "UG",
+              "UZ",
+              "VE",
+              "VI",
+              "VO",
+              "WA",
+              "CY",
+              "WO",
+              "XH",
+              "YI",
+              "YO",
+              "ZA",
+              "ZU"
+            ],
+            "type": "string",
+            "example": "EN"
+          },
+          "translation": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EventSubscribeRequest": {
+        "type": "object",
+        "properties": {
+          "eventType": {
+            "enum": [
+              "NULL",
+              "DELIVERY_CHANNEL_STATUS",
+              "NEW_DELIVERY_REQUEST",
+              "REFUND_DELIVERY"
+            ],
+            "type": "string",
+            "example": "NULL"
+          },
+          "callbackUrl": {
+            "maxLength": 256,
+            "minLength": 0,
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EventSubscribeResponse": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "subscriptionId": {
+            "type": "string",
+            "nullable": true
+          },
+          "callbackUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "eventType": {
+            "enum": [
+              "NULL",
+              "DELIVERY_CHANNEL_STATUS",
+              "NEW_DELIVERY_REQUEST",
+              "REFUND_DELIVERY"
+            ],
+            "type": "string",
+            "example": "NULL"
+          },
+          "date": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EventUnsubscribeRequest": {
+        "type": "object",
+        "properties": {
+          "eventType": {
+            "enum": [
+              "NULL",
+              "DELIVERY_CHANNEL_STATUS",
+              "NEW_DELIVERY_REQUEST",
+              "REFUND_DELIVERY"
+            ],
+            "type": "string",
+            "example": "NULL"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GuidEntity": {
+        "required": [
+          "guid"
+        ],
+        "type": "object",
+        "properties": {
+          "guid": {
+            "maxLength": 64,
+            "minLength": 0,
+            "type": "string"
+          },
+          "createTime": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime_DT": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "updateTime": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "updateTime_DT": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "readOnly": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "updatedBy": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "JWT": {
+        "type": "http",
+        "description": "JWT Authorization header using the Bearer scheme.",
+        "scheme": "bearer"
+      }
+    }
+  }
+}

@@ -1,71 +1,77 @@
 ---
-title: Introduction
-description: "Welcome to the home of your new documentation"
+title: AccessRC API Documentation
 ---
 
-<img
-  className="block dark:hidden"
-  src="/images/hero-light.png"
-  alt="Hero Light"
-/>
-<img
-  className="hidden dark:block"
-  src="/images/hero-dark.png"
-  alt="Hero Dark"
-/>
+# AccessRC API Documentation
 
-## Setting up
+Welcome to the AccessRC API documentation. This API enables seamless integration with the AccessRC platform, providing functionalities for service providers, event subscriptions, delivery requests, and monitoring.
 
-The first step to world-class documentation is setting up your editing environments.
+![](/images/AccessRC+Seguimiento.jpg)
 
-<CardGroup cols={2}>
-  <Card
-    title="Edit Your Docs"
-    icon="pen-to-square"
-    href="https://mintlify.com/docs/quickstart"
-  >
-    Get your docs set up locally for easy development
-  </Card>
-  <Card
-    title="Preview Changes"
-    icon="image"
-    href="https://mintlify.com/docs/development"
-  >
-    Preview your changes before you push to make sure they're perfect
-  </Card>
-</CardGroup>
+## Overview
 
-## Make it yours
+AccessRC facilitates the management and delivery of assistance programs through a structured API platform. The API includes endpoints for:
 
-Update your docs to your brand and add valuable content for the best user conversion.
+* **Service Provider Management**
 
-<CardGroup cols={2}>
-  <Card
-    title="Customize Style"
-    icon="palette"
-    href="https://mintlify.com/docs/settings/global"
-  >
-    Customize your docs to your company's colors and brands
-  </Card>
-  <Card
-    title="Reference APIs"
-    icon="code"
-    href="https://mintlify.com/docs/api-playground/openapi"
-  >
-    Automatically generate endpoints from an OpenAPI spec
-  </Card>
-  <Card
-    title="Add Components"
-    icon="screwdriver-wrench"
-    href="https://mintlify.com/docs/content/components/accordions"
-  >
-    Build interactive features and designs to guide your users
-  </Card>
-  <Card
-    title="Get Inspiration"
-    icon="stars"
-    href="https://mintlify.com/customers"
-  >
-    Check out our showcase of our favorite documentation
-  </Card>
-</CardGroup>
+* **Event Subscription**
+
+* **Delivery Requests**
+
+* **Monitoring**
+
+## Getting Started
+
+To integrate with the AccessRC API, follow these steps:
+
+1. **Authentication**: Obtain API credentials to authenticate your requests.
+
+2. **Base URL**: Use the provided base URL for API requests.
+
+3. **Endpoints**: Refer to the endpoint-specific documentation for request and response formats.
+
+## API Endpoints
+
+### Service Provider
+
+* [Register Delivery Channel](./api/register-delivery-channel.mdx)
+
+* [Delivery Channel Approval Event](./api/delivery-channel-approval-event.mdx)
+
+* [Delivery Channel Update](./api/delivery-channel-update.mdx)
+
+* [Delivery Channel Update Approval](./api/delivery-channel-update-approval.mdx)
+
+* [Delivery Channel Delete](./api/delivery-channel-delete.mdx)
+
+* [Delivery Channel Delete Approval](./api/delivery-channel-delete-approval.mdx)
+
+* [Delivery Channel Get](./api/delivery-channel-get.mdx)
+
+* [Get Enum Values](./api/get-enum-values.mdx)
+
+* [Get Countries](./api/get-countries.mdx)
+
+### Event Subscription
+
+* [Subscribe to Events](./api/subscribe-events.mdx)
+
+* [Unsubscribe from Events](./api/unsubscribe-events.mdx)
+
+### Delivery Request
+
+* [New Delivery Request](./api/new-delivery-request.mdx)
+
+* [Sync Delivery Request](./api/sync-delivery-request.mdx)
+
+* [Sync Delivery](./api/sync-delivery.mdx)
+
+* [Refund Delivery Event](./api/refund-delivery-event.mdx)
+
+### Monitoring
+
+* [Monitoring](./api/monitoring.mdx)
+
+Each endpoint file is ready to be filled with detailed specifications, including request and response structures, parameters, and examples.
+
+For further assistance, contact our support team.

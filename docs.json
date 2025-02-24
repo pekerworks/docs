@@ -22,9 +22,11 @@
           {
             "group": "Endpoint Examples",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete"
+              "api-reference/endpoint/delivery_channel_create",
+              "api-reference/endpoint/delivery_channel_update",
+              "api-reference/endpoint/delivery_channel_delete",
+              "api-reference/endpoint/event_subscribe",
+              "api-reference/endpoint/event_unsubscribe"
             ]
           }
         ]

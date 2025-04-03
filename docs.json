@@ -11,22 +11,78 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "API Reference",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "Documentation",
             "pages": [
-              "api-reference/introduction"
+              "documentation/introduction"
             ]
           },
           {
-            "group": "Endpoint Examples",
+            "group": "Authentication",
+            "pages": [
+              "documentation/documentation/authentication"
+            ]
+          },
+          {
+            "group": "Webhooks",
+            "pages": [
+              "documentation/webhook/introduction",
+              "documentation/webhook/event_types",
+              "documentation/webhook/DELIVERY_CHANNEL_STATUS",
+              "documentation/webhook/NEW_DELIVERY_REQUEST",
+              "documentation/webhook/REFUND_DELIVERY",
+              "documentation/webhook/verify_webhook_requests"
+            ]
+          },
+          {
+            "group": "Delivery Channels",
+            "pages": [
+              "documentation/process/create",
+              "documentation/process/update",
+              "documentation/process/delete"
+            ]
+          },
+          {
+            "group": "Subscription",
+            "pages": [
+              "documentation/process/subscribe",
+              "documentation/process/unsubscribe"
+            ]
+          },
+          {
+            "group": "Delivery Request",
+            "pages": [
+              "documentation/process/sync_delivery_request",
+              "documentation/process/sync_delivery"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "api-reference/base_url",
+              "api-reference/authentication",
+              "api-reference/response_codes",
+              "api-reference/errors",
+              "api-reference/rate_limit"
+            ]
+          },
+          {
+            "group": "Endpoints",
             "pages": [
               "api-reference/endpoint/delivery_channel_create",
               "api-reference/endpoint/delivery_channel_update",
               "api-reference/endpoint/delivery_channel_delete",
               "api-reference/endpoint/event_subscribe",
-              "api-reference/endpoint/event_unsubscribe"
+              "api-reference/endpoint/event_unsubscribe",
+              "api-reference/endpoint/sync_delivery_request",
+              "api-reference/endpoint/sync_delivery"
             ]
           }
         ]
@@ -36,8 +92,8 @@
     }
   },
   "logo": {
-    "light": "/logo/IFRC+Signature.png",
-    "dark": "/logo/IFRC+Signature.png"
+    "light": "/logo/accessrc_logo.png",
+    "dark": "/logo/accessrc_logo.png"
   },
   "navbar": {
     "links": [

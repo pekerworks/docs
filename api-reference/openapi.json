@@ -44,6 +44,20 @@
             }
           }
         },
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -X GET 'https://api.example.com/users/123' -H 'Authorization: Bearer YOUR_TOKEN'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "fetch('https://api.example.com/users/123', { headers: { 'Authorization': 'Bearer YOUR_TOKEN' } })"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\nheaders = {'Authorization': 'Bearer YOUR_TOKEN'}\nresponse = requests.get('https://api.example.com/users/123', headers=headers)\nprint(response.json())"
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",

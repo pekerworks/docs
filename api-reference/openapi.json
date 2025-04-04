@@ -36,11 +36,6 @@
         },
         "x-codeSamples": [
           {
-            "lang": "javascript",
-            "label": "javascript Example",
-            "source": "fetch('https://api.example.com/users/123', { headers: { 'Authorization': 'Bearer YOUR_TOKEN' } })"
-          },
-          {
             "lang": "cURL",
             "label": "cURL Example",
             "source": "curl -X GET 'https://api.example.com/users/123' -H \n 'Authorization: Bearer YOUR_TOKEN'"

@@ -92,8 +92,8 @@
     }
   },
   "logo": {
-    "light": "/logo/accessrc_logo.png",
-    "dark": "/logo/accessrc_logo.png"
+    "light": "/logo/accessrc_logo.jpg",
+    "dark": "/logo/accessrc_logo.jpg"
   },
   "navbar": {
     "links": [

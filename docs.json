@@ -109,5 +109,10 @@
       "github": "https://accessrc.org/",
       "linkedin": "https://accessrc.org/"
     }
+  },
+  "examples":{
+    "languages":[
+      "curl"
+    ]
   }
 }

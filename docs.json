@@ -118,6 +118,13 @@
         "python",
         "javascript"
       ]
+    },
+    "mdx": {
+      "auth": {
+        "method": "key",
+        "name": "x-api-key"
+      },
+      "server":"https://api.uat.accessrc.org"
     }
   }
 }

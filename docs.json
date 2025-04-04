@@ -110,9 +110,11 @@
       "linkedin": "https://accessrc.org/"
     }
   },
-  "examples":{
-    "languages":[
-      "curl"
-    ]
+  "api": {
+    "examples":{
+      "languages":[
+        "curl"
+      ]
+    }
   }
 }

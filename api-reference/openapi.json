@@ -20,6 +20,11 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
+              },
+              "example": {
+                  "id": "123",
+                  "name": "John Doe",
+                  "email": "john@example.com"
               }
             },
             "text/json": {
@@ -30,6 +35,11 @@
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
+              },
+              "example": {
+                  "id": "123",
+                  "name": "John Doe",
+                  "email": "john@example.com"
               }
             }
           }
@@ -134,43 +144,8 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
-              },
-              "example":
-              {
-                  "requestStatus": "REQUESTED",
-                  "requestMessage": "Information changed by user",
-                  "requestedBy":{
-                    "id":"f9f3da9d-4dd7-444a-a1eb-fbf60ca8cf68",
-                    "name": "121 netherlands",
-                    "requesterType": "SERVICE_PROVIDER"
-                  },
-                  "profile":{
-                    "memberId": "47edb0b5-36bd-4c35-8ad0-2ab4eea23eb1",
-                    "phoneNumber": "+33998281772",
-                    "email": "focalpoint@gmail.com",
-                    "gender": "FEMALE",
-                    "birthDate": "1988-01-01",
-                    "profilePhoto": "/path/to/file",
-                    "name": "Diane",
-                    "surname": "Ellison",
-                    "middleNames":
-                    [
-                        "Lewis"
-                    ],
-                    "nameLocal": "Diane",
-                    "surnameLocal": "Ellison",
-                    "middleNamesLocal":
-                    [
-                        "Lewis"
-                    ],
-                    "documentPhoto": "/path/to/file",
-                    "documentNumber": "889238932991",
-                    "documentType": "NATIONAL_IDENTITY"
-                  },
-                  "changedFields":[
-                    "birthDate","name","documentNumber"
-                  ]
               }
+
             },
             "text/json": {
               "schema": {

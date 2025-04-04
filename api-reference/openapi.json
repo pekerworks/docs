@@ -36,19 +36,23 @@
         },
         "x-codeSamples": [
           {
-            "lang": "cURL",
-            "source": "curl -X GET 'https://api.example.com/users/123' -H 'Authorization: Bearer YOUR_TOKEN'"
-          },
-          {
             "lang": "javascript",
+            "label": "javascript Example",
             "source": "fetch('https://api.example.com/users/123', { headers: { 'Authorization': 'Bearer YOUR_TOKEN' } })"
           },
           {
+            "lang": "cURL",
+            "label": "cURL Example",
+            "source": "curl -X GET 'https://api.example.com/users/123' -H \n 'Authorization: Bearer YOUR_TOKEN'"
+          },
+          {
             "lang": "python",
+            "label": "python Example",
             "source": "import requests\nheaders = {'Authorization': 'Bearer YOUR_TOKEN'}\nresponse = requests.get('https://api.example.com/users/123', headers=headers)\nprint(response.json())"
           },
           {
             "lang": "json",
+            "label": "json Example",
             "source": "{'x':'abc'}"
           }
         ],

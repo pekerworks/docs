@@ -20,11 +20,6 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
-              },
-              "example": {
-                  "id": "123",
-                  "name": "John Doe",
-                  "email": "john@example.com"
               }
             },
             "text/json": {
@@ -35,11 +30,6 @@
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
-              },
-              "example": {
-                  "id": "123",
-                  "name": "John Doe",
-                  "email": "john@example.com"
               }
             }
           }
@@ -50,12 +40,16 @@
             "source": "curl -X GET 'https://api.example.com/users/123' -H 'Authorization: Bearer YOUR_TOKEN'"
           },
           {
-            "lang": "JavaScript",
+            "lang": "javascript",
             "source": "fetch('https://api.example.com/users/123', { headers: { 'Authorization': 'Bearer YOUR_TOKEN' } })"
           },
           {
-            "lang": "Python",
+            "lang": "python",
             "source": "import requests\nheaders = {'Authorization': 'Bearer YOUR_TOKEN'}\nresponse = requests.get('https://api.example.com/users/123', headers=headers)\nprint(response.json())"
+          },
+          {
+            "lang": "json",
+            "source": "{'x':'abc'}"
           }
         ],
         "responses": {

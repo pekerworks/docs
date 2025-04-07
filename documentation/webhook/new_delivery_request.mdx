@@ -14,8 +14,6 @@ This document describes the **New Delivery Request** webhook event, where the **
 
 ## Webhook Request Payload
 
-The webhook sends different payloads depending on the type of delivery (VOUCHER or CASH).
-
 ### CASH - Delivery
 
 ```json
@@ -136,15 +134,15 @@ If the validation fails or there is a bad request, the response will be:
 
 ### 401 Response
 
-If the validation fails or there is a bad request, the response will be:
+If the verification fails, the response will be:
 
 ```json
 {
     "status": "failed",
     "error": {
-        "code": 400,
-        "message": "Verification failed. Please check your input.",
-        "type": "BadRequest"
+        "code": 401,
+        "message": "Verification failed",
+        "type": "Unauthorized"
     }
 }
 ```

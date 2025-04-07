@@ -67,6 +67,21 @@ Sent if the request is invalid or the payload fails validation on the Service Pr
 }
 ```
 
+### 401 Response
+
+If the verification fails, the response will be:
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 401,
+        "message": "Verification failed",
+        "type": "Unauthorized"
+    }
+}
+```
+
 ### 500 Response
 
 Sent when an internal error occurs in the Service Provider’s callback system.
@@ -83,5 +98,5 @@ Sent when an internal error occurs in the Service Provider’s callback system.
 ```
 
 ## Notes
-	•	The providerDeliveryChannelId is a required field in both the request and the response.
-	•	Ensure your webhook endpoint can correctly distinguish between the statuses and handle them accordingly.
+- The providerDeliveryChannelId is a required field in both the request and the response.
+- Ensure your webhook endpoint can correctly distinguish between the statuses and handle them accordingly.

@@ -30,9 +30,14 @@
             "pages": [
               "documentation/webhook/introduction",
               "documentation/webhook/event_types",
-              "documentation/webhook/delivery_channel_status",
-              "documentation/webhook/new_delivery_request",
-              "documentation/webhook/refund_delivery",
+              {
+                "group": "Events",
+                "pages": [
+                  "documentation/webhook/delivery_channel_status",
+                  "documentation/webhook/new_delivery_request",
+                  "documentation/webhook/refund_delivery"
+                ]
+              },
               "documentation/webhook/verify_webhook_requests"
             ]
           },

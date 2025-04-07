@@ -82,7 +82,11 @@
               "api-reference/endpoint/event_subscribe",
               "api-reference/endpoint/event_unsubscribe",
               "api-reference/endpoint/sync_delivery_request",
-              "api-reference/endpoint/sync_delivery"
+              "api-reference/endpoint/sync_delivery",
+              {
+                "group": "Editing",
+                "pages": ["api-reference/endpoint/delivery_channel_get"]
+              }
             ]
           }
         ]

@@ -34,13 +34,6 @@
             }
           }
         },
-        "x-codeSamples": [
-          {
-            "lang": "python",
-            "label": "python Example",
-            "source": "import requests\nheaders = {'Authorization': 'Bearer YOUR_TOKEN'}\nresponse = requests.get('https://api.example.com/users/123', headers=headers)\nprint(response.json())"
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -1897,16 +1890,16 @@
       }
     },
     "securitySchemes": {
-      "JWT": {
-        "type": "http",
-        "description": "JWT Authorization header using the Bearer scheme.",
-        "scheme": "bearer"
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "x-api-key"
       }
     }
   },
   "security": [
     {
-      "JWT": [ ]
+      "ApiKeyAuth": []
     }
   ]
 }

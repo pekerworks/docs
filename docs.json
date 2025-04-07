@@ -114,9 +114,10 @@
     "examples":{
       "languages":[
         "curl",
-        "json",
+        "java",
         "python",
-        "javascript"
+        "javascript",
+        "c#"
       ]
     },
     "mdx": {

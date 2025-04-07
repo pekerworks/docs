@@ -347,7 +347,7 @@
             }
           }
         }
-      }
+
     },
     "/api/DeliveryChannel/Update": {
       "post": {

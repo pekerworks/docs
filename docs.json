@@ -79,8 +79,8 @@
               {
                 "group": "Delivery Channel",
                 "pages": [
-                  "api-reference/endpoint/delivery_channel_get",
                   "api-reference/endpoint/delivery_channel_create",
+                  "api-reference/endpoint/delivery_channel_get",
                   "api-reference/endpoint/delivery_channel_update",
                   "api-reference/endpoint/delivery_channel_delete"
                 ]

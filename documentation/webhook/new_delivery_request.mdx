@@ -1,5 +1,3 @@
-# Webhook Documentation for New Delivery Request Event
-
 ## Overview
 
 This document describes the **New Delivery Request** webhook event, where the **Service Provider** subscribes to the `NEW_DELIVERY_REQUEST` event in AccessRC. When the **Program Manager** creates a delivery request for a specific application group related to an assistance program that the **Service Provider** is configured for, AccessRC sends a webhook call to the callback service of the Service Provider with the delivery request details for integration.
@@ -66,7 +64,8 @@ The webhook sends different payloads depending on the type of delivery (VOUCHER 
             "type": "CASH"
         }
     ]
-}```
+}
+```
 
 ### VOUCHER - Delivery
 
@@ -103,7 +102,7 @@ The webhook sends different payloads depending on the type of delivery (VOUCHER 
             "type": "Food Kit"
         }
     ]
-}```
+}
 
 
 ## Webhook Response Payload

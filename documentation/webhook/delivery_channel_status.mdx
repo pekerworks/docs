@@ -23,7 +23,8 @@ The webhook will send one of the following payloads based on the decision.
     "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
     "status": "Approved",
     "message": ""
-}```
+}
+```
 
 ### ❌ Rejected
 
@@ -32,7 +33,8 @@ The webhook will send one of the following payloads based on the decision.
     "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
     "status": "Rejected",
     "message": "Description is not clear enough"
-}```
+}
+```
 
 ## Webhook Response Payload
 
@@ -47,7 +49,8 @@ Indicates that the callback from the Service Provider was successfully received 
     "data": {
         "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622"
     }
-}```
+}
+```
 
 ### 400 Response
 
@@ -61,7 +64,8 @@ Sent if the request is invalid or the payload fails validation on the Service Pr
     "message": "Validation failed. Please check your input.",
     "type": "BadRequest"
   }
-}```
+}
+```
 
 ### 500 Response
 
@@ -75,7 +79,8 @@ Sent when an internal error occurs in the Service Provider’s callback system.
         "message": "Internal Server Error",
         "type": "Exception"
     }
-}```
+}
+```
 
 ## Notes
 	•	The providerDeliveryChannelId is a required field in both the request and the response.

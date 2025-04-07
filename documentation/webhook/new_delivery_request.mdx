@@ -103,7 +103,7 @@ The webhook sends different payloads depending on the type of delivery (VOUCHER 
         }
     ]
 }
-
+```
 
 ## Webhook Response Payload
 
@@ -116,7 +116,8 @@ A successful callback response from the Service Provider’s callback service.
     "status": "success",
     "message": "Callback successfully received",
     "data": {}
-}```
+}
+```
 
 ### 400 Response
 
@@ -130,7 +131,8 @@ If the validation fails or there is a bad request, the response will be:
         "message": "Validation failed. Please check your input.",
         "type": "BadRequest"
     }
-}```
+}
+```
 
 ### 401 Response
 
@@ -144,7 +146,8 @@ If the validation fails or there is a bad request, the response will be:
         "message": "Verification failed. Please check your input.",
         "type": "BadRequest"
     }
-}```
+}
+```
 
 ### 500 Response
 
@@ -158,4 +161,5 @@ In case of an internal server error, the response will be:
         "message": "Internal Server Error",
         "type": "Exception"
     }
-}```
+}
+```

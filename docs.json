@@ -76,16 +76,28 @@
           {
             "group": "Endpoints",
             "pages": [
-              "api-reference/endpoint/delivery_channel_create",
-              "api-reference/endpoint/delivery_channel_update",
-              "api-reference/endpoint/delivery_channel_delete",
-              "api-reference/endpoint/event_subscribe",
-              "api-reference/endpoint/event_unsubscribe",
-              "api-reference/endpoint/sync_delivery_request",
-              "api-reference/endpoint/sync_delivery",
               {
-                "group": "Editing",
-                "pages": ["api-reference/endpoint/delivery_channel_get"]
+                "group": "Delivery Channel",
+                "pages": [
+                  "api-reference/endpoint/delivery_channel_get",
+                  "api-reference/endpoint/delivery_channel_create",
+                  "api-reference/endpoint/delivery_channel_update",
+                  "api-reference/endpoint/delivery_channel_delete"
+                ]
+              },
+              {
+                "group": "Subscription",
+                "pages": [
+                  "api-reference/endpoint/event_subscribe",
+                  "api-reference/endpoint/event_unsubscribe"
+                ]
+              },
+              {
+                "group": "Delivery Request",
+                "pages": [
+                  "api-reference/endpoint/sync_delivery_request",
+                  "api-reference/endpoint/sync_delivery"
+                ]
               }
             ]
           }

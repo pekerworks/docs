@@ -1,3 +1,31 @@
 ---
-title: 'Authentication'
+title: Authentication
+description: How to authenticate with AccessRC API using your API key.
 ---
+
+## 🔐 Authentication
+
+Access to the AccessRC API is secured via **API keys**. Each service provider receives a unique API key, which must be included in the header of every request.
+
+### 🛠️ How to Get an API Key
+
+AccessRC platform admin can generate an API key from the **AccessRC Service Provider Portal**:
+
+1. Log into AccessRC Program Managment Module.
+2. Select service provider account.
+3. Click on the **"Generate API Key"** button (under the "Service Provider" section).
+4. Copy and securely store the key. It will be masked in the interface for security.
+5. Share the key with Service Provider contact
+
+> ⚠️ Keep your API key secret. Treat it like a password. If compromised, request AccessRC Platform admin to regenerate it from the portal.
+
+---
+
+### 📥 Using the API Key in Requests
+
+To authenticate, include your API key in the `x-api-key` header of your HTTP requests.
+
+#### Example Header
+
+```http
+x-api-key: YOUR_API_KEY_HERE

@@ -1,3 +1,46 @@
 ---
-title: 'Event Types'
+title: Event Types
+description: Reference for all supported webhook event types in AccessRC.
 ---
+
+## 📋 Event Types
+
+Below is the list of all event types you can subscribe to using our webhook system. These correspond to different actions or changes within the AccessRC platform.
+
+---
+
+### 📦 Delivery Events
+
+| Event Type                | Description                                   |
+|---------------------------|-----------------------------------------------|
+| `DELIVERY_CHANNEL_STATUS` | Delivery Channel Request approved or rejected |
+
+---
+
+### 🎯 Delivery Request Events
+
+| Event Type              | Description                            |
+|-------------------------|----------------------------------------|
+| `NEW_DELIVERY_REQUEST`  | A new delivery request was created     |
+
+---
+
+### ⚠️ Refund Events
+
+| Event Type              | Description                            |
+|-------------------------|----------------------------------------|
+| `REFUND_DELIVERY`       | A refund is requested for a delivery   |
+
+
+---
+
+### ✅ Subscribing to Events
+
+Use the [`event_subscribe` API endpoint](./api-reference/endpoint/event_subscribe) to subscribe your URL to one or more of these events.
+
+You can subscribe to:
+- A single event (e.g., `DELIVERY_CHANNEL_STATUS`)
+
+---
+
+Let us know if you'd like to propose a new event type or need help debugging your webhooks.

@@ -1,3 +1,28 @@
 ---
-title: 'Introduction'
+title: Webhook Introduction
+description: Learn how to use webhooks to receive real-time event notifications from AccessRC.
+---
+
+## 📡 Webhook Introduction
+
+Webhooks allow your system to receive real-time updates from AccessRC when specific events happen—such as a delivery update, service completion, or error.
+
+When you subscribe to a webhook event, AccessRC will send an HTTP POST request to your defined URL whenever the event occurs.
+
+---
+
+### 🧪 Why Use Webhooks?
+
+- ✅ Get notified immediately about changes
+- 🔄 Automate reactions to events (e.g., update your internal system)
+- 📉 Reduce polling and unnecessary API calls
+
+---
+
+### 🔧 How Webhooks Work
+
+1. **Subscribe to events** using the `event_subscribe` endpoint.
+2. **Define a webhook URL** on your server that listens for POST requests.
+3. **Handle incoming event data** and respond with a 2xx status.
+
 ---

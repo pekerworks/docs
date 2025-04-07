@@ -1,3 +1,15 @@
----
-title: 'Create Delivery Channel'
----
+## Create
+
+Service Provider sends deliverychannels details to AccessRC for registering delivery channels.
+
+<p align="center">
+  <img src="/images/create_delivery_channel.svg" />
+</p>
+
+## Delivery Channel Approval 
+
+In the second step of this stage a manual approval will be required by AccessRC IM from the Delivery Channel Screen. After the approval, Service Provider will be notified by DELIVERY_CHANNEL_STATUS event. Delivery Channel request can also be rejected and DELIVERY_CHANNEL_STATUS event will be sent including a rejection message to Service Provider in that case.
+
+<p align="center">
+  <img src="/images/delivery-channel-approve-reject.svg" />
+</p>

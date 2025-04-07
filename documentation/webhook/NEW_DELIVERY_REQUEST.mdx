@@ -1,18 +1,14 @@
----
-title: 'New Delivery Request'
----
-
 # Webhook Documentation for New Delivery Request Event
 
 ## Overview
 
-This document describes the **New Delivery Request** webhook event, where the **Service Provider** subscribes to the `newDeliveryRequest` event in AccessRC. When the **Program Manager** creates a delivery request for a specific application group related to an assistance program that the **Service Provider** is configured for, AccessRC sends a webhook call to the callback service of the Service Provider with the delivery request details for integration.
+This document describes the **New Delivery Request** webhook event, where the **Service Provider** subscribes to the `NEW_DELIVERY_REQUEST` event in AccessRC. When the **Program Manager** creates a delivery request for a specific application group related to an assistance program that the **Service Provider** is configured for, AccessRC sends a webhook call to the callback service of the Service Provider with the delivery request details for integration.
 
 ---
 
 ## Event Flow: AccessRC → Service Provider
 
-1. **Service Provider** subscribes to the `newDeliveryRequest` event.
+1. **Service Provider** subscribes to the `NEW_DELIVERY_REQUEST` event.
 2. When a delivery request is created, AccessRC sends a webhook call to the service provider's callback URL.
 3. The Service Provider processes the details of the delivery request and integrates it into their system.
 
@@ -40,7 +36,6 @@ The webhook sends different payloads depending on the type of delivery (VOUCHER 
                 "surname": "Doe",
                 "nameLocal": "John",
                 "surnameLocal": "Doe",
-                "profilePhoto": "https://rr-ifrc-registration-core.s3.eu-west-1.amazonaws.com/upload/b815/2531/b8152531-f69a-4086-b220.....",
                 "birthDate": "2001-05-01T00:00:00Z",
                 "gender": "Male",
                 "language": "EN",
@@ -71,7 +66,7 @@ The webhook sends different payloads depending on the type of delivery (VOUCHER 
             "type": "CASH"
         }
     ]
-}
+}```
 
 ### VOUCHER - Delivery
 
@@ -91,7 +86,6 @@ The webhook sends different payloads depending on the type of delivery (VOUCHER 
                 "surname": "Doe",
                 "nameLocal": "John",
                 "surnameLocal": "Doe",
-                "profilePhoto": "https://rr-ifrc-registration-core.s3.eu-west-1.amazonaws.com/upload/b815/2531/b8152531-f69a-4086-b220.....",
                 "birthDate": "2001-05-01T00:00:00Z",
                 "gender": "Male",
                 "language": "EN",
@@ -109,7 +103,7 @@ The webhook sends different payloads depending on the type of delivery (VOUCHER 
             "type": "Food Kit"
         }
     ]
-}
+}```
 
 
 ## Webhook Response Payload
@@ -123,7 +117,7 @@ A successful callback response from the Service Provider’s callback service.
     "status": "success",
     "message": "Callback successfully received",
     "data": {}
-}
+}```
 
 ### 400 Response
 
@@ -137,7 +131,21 @@ If the validation fails or there is a bad request, the response will be:
         "message": "Validation failed. Please check your input.",
         "type": "BadRequest"
     }
-}
+}```
+
+### 401 Response
+
+If the validation fails or there is a bad request, the response will be:
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 400,
+        "message": "Verification failed. Please check your input.",
+        "type": "BadRequest"
+    }
+}```
 
 ### 500 Response
 
@@ -151,4 +159,4 @@ In case of an internal server error, the response will be:
         "message": "Internal Server Error",
         "type": "Exception"
     }
-}
+}```

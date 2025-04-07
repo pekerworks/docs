@@ -15,22 +15,25 @@
             "application/json-patch+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
-              }
+              },
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
             },
             "application/json": {
-              "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
-              }
+              },
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
-              }
+              },
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
-              }
+              },
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
             }
           }
         },

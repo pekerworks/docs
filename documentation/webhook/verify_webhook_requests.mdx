@@ -1,3 +1,84 @@
 ---
 title: 'Verify Webhook Request'
 ---
+
+# Webhook Signing Secret
+
+To verify webhook requests from AccessRC, your service must validate the HMAC-SHA256 signature using a shared secret.
+
+AccessRC platform admin will generate an Shared Secret Key from the **AccessRC Service Provider Portal**:
+
+You will receive this `SHARED_SECRET` during platform admin onboarding your service provider.
+
+> 🔐 **Keep this secret safe and never expose it in logs, URLs, or client-side code.**
+
+
+## 📬 Signature Header
+
+Every webhook request will include a signature header:
+
+```http
+x-accessrc-signature: sha256=3bdc5b07d7ef9b61b98ed5df4b1793e12fd...
+```
+
+- The value after `sha256=` is the **hex-encoded HMAC-SHA256 hash**.
+- This hash is generated using:
+  - The **raw request body**
+  - Your **shared secret** (provided during onboarding)
+
+---
+
+## 🔁 Verification Steps
+
+1. **Extract the Signature**
+   Read the `X-AccessRC-Signature` header from the incoming webhook request.
+
+2. **Get the Raw Request Body**
+   Use the **raw** payload (not the parsed JSON) exactly as received.
+
+3. **Recompute the Signature**
+   Use HMAC-SHA256 with your shared secret and the raw body.
+
+4. **Compare Signatures**
+   Check if the computed signature matches the one in the header using **constant-time comparison**.
+
+---
+
+## ✅ Example (Pseudocode)
+
+```ts
+function verifyWebhookSignature(req, sharedSecret) {
+  const receivedSignature = req.headers['x-accessrc-signature']; // e.g. sha256=abcdef...
+  const body = req.rawBody; // must be the raw string, before JSON.parse
+
+  const computedSignature = 'sha256=' + HMAC_SHA256(sharedSecret, body);
+
+  return constantTimeCompare(receivedSignature, computedSignature);
+}
+```
+
+> ⚠️ Ensure you are using the raw request body as a string. Some frameworks (like Express or Django) may parse the body and lose the original formatting.
+
+---
+
+## 🔒 Security Best Practices
+
+- Never log or expose the shared secret.
+- Reject unsigned webhook requests.
+
+---
+
+## 📲 Testing Webhooks
+
+To test locally:
+- Use a tool like [ngrok](https://ngrok.com) to expose your local webhook endpoint.
+- Log the raw body and headers.
+- Simulate signature generation using the shared secret.
+
+---
+
+## 📬 Response Expectations
+
+After validation, your endpoint must return a 2xx HTTP status (usually `200 OK`). If validation fails, return `401 Unauthorized` or `403 Forbidden`.
+
+---

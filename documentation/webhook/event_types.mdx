@@ -11,9 +11,9 @@ Below is the list of all event types you can subscribe to using our webhook syst
 
 ### 📦 Delivery Events
 
-| Event Type                | Description                                   |
-|---------------------------|-----------------------------------------------|
-| `DELIVERY_CHANNEL_STATUS` | Delivery Channel Request approved or rejected |
+| Event Type                | Description                                      |
+|---------------------------|--------------------------------------------------|
+| `DELIVERY_CHANNEL_STATUS` | Delivery Channel Request is approved or rejected |
 
 ---
 
@@ -21,11 +21,11 @@ Below is the list of all event types you can subscribe to using our webhook syst
 
 | Event Type              | Description                            |
 |-------------------------|----------------------------------------|
-| `NEW_DELIVERY_REQUEST`  | A new delivery request was created     |
+| `NEW_DELIVERY_REQUEST`  | A new delivery request is created      |
 
 ---
 
-### ⚠️ Refund Events
+### ↪️ Refund Events
 
 | Event Type              | Description                            |
 |-------------------------|----------------------------------------|
@@ -36,7 +36,7 @@ Below is the list of all event types you can subscribe to using our webhook syst
 
 ### ✅ Subscribing to Events
 
-Use the [`event_subscribe` API endpoint](./api-reference/endpoint/event_subscribe) to subscribe your URL to one or more of these events.
+Use the [`event_subscribe` API endpoint](../../api-reference/endpoint/event_subscribe) to subscribe your URL to one or more of these events.
 
 You can subscribe to:
 - A single event (e.g., `DELIVERY_CHANNEL_STATUS`)

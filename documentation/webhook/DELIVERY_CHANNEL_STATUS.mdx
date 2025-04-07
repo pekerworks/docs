@@ -1,3 +1,88 @@
 ---
 title: 'Delivery Channel Status'
 ---
+
+# Webhook Documentation for Delivery Channel Approval Event
+
+## Overview
+
+This document describes the `DELIVERY_CHANNEL_STATUS` webhook event, triggered after a manual approval or rejection of a delivery channel request within AccessRC. This event is sent from **AccessRC** to the **Service Provider** once the approval decision is made by the Information Management (IM) team from the Registration screen.
+
+---
+
+## Event Flow: AccessRC → Service Provider
+
+1. **Service Provider** submits a delivery channel request.
+2. The AccessRC IM team reviews and approves or rejects the request manually.
+3. A webhook call is sent to the Service Provider indicating the **status** (`Approved` or `Rejected`) of the delivery channel request.
+
+---
+
+## Webhook Request Payload
+
+The webhook will send one of the following payloads based on the decision.
+
+### ✅ Approved
+
+```json
+{
+    "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+    "status": "Approved",
+    "message": ""
+}
+
+### ❌ Rejected
+
+```json
+{
+    "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+    "status": "Rejected",
+    "message": "Description is not clear enough"
+}
+
+## Webhook Response Payload
+
+### 200 Response
+
+Indicates that the callback from the Service Provider was successfully received and processed.
+
+```json
+{
+    "status": "success",
+    "message": "Callback successfully received",
+    "data": {
+        "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622"
+    }
+}
+
+### 400 Response
+
+Sent if the request is invalid or the payload fails validation on the Service Provider’s side.
+
+```json
+{
+  "status": "failed",
+  "error": {
+    "code": 400,
+    "message": "Validation failed. Please check your input.",
+    "type": "BadRequest"
+  }
+}
+
+### 500 Response
+
+Sent when an internal error occurs in the Service Provider’s callback system.
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 500,
+        "message": "Internal Server Error",
+        "type": "Exception"
+    }
+}
+
+## Notes
+	•	The providerDeliveryChannelId is a required field in both the request and the response.
+	•	Ensure your webhook endpoint can correctly distinguish between the statuses and handle them accordingly.

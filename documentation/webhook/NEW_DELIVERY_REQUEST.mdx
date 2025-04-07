@@ -1,3 +1,154 @@
 ---
 title: 'New Delivery Request'
 ---
+
+# Webhook Documentation for New Delivery Request Event
+
+## Overview
+
+This document describes the **New Delivery Request** webhook event, where the **Service Provider** subscribes to the `newDeliveryRequest` event in AccessRC. When the **Program Manager** creates a delivery request for a specific application group related to an assistance program that the **Service Provider** is configured for, AccessRC sends a webhook call to the callback service of the Service Provider with the delivery request details for integration.
+
+---
+
+## Event Flow: AccessRC → Service Provider
+
+1. **Service Provider** subscribes to the `newDeliveryRequest` event.
+2. When a delivery request is created, AccessRC sends a webhook call to the service provider's callback URL.
+3. The Service Provider processes the details of the delivery request and integrates it into their system.
+
+---
+
+## Webhook Request Payload
+
+The webhook sends different payloads depending on the type of delivery (VOUCHER or CASH).
+
+### CASH - Delivery
+
+```json
+{
+    "deliveryRequestId": "2372dd86-1e5d-4110-97ba-ff3c4237a74f",
+    "providerDeliveryChannelId": "36cd4d29-e332-47b9-9ceb-f084fe5b0446",
+    "description": "Ukraine Winterization Cash Delivery",
+    "delivery": [
+        {
+            "deliveryId": "6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+            "applicationDetails": {
+                "beneficiaryId": "WU-949966281_1de2b7a4",
+                "email": "johndoe@gmail.com",
+                "phone": "+14155550132",
+                "name": "John",
+                "surname": "Doe",
+                "nameLocal": "John",
+                "surnameLocal": "Doe",
+                "profilePhoto": "https://rr-ifrc-registration-core.s3.eu-west-1.amazonaws.com/upload/b815/2531/b8152531-f69a-4086-b220.....",
+                "birthDate": "2001-05-01T00:00:00Z",
+                "gender": "Male",
+                "language": "EN",
+                "locationLatitude": "48.1175883",
+                "locationLongitude": "20.0454645",
+                "documentNumber": "97341027813752",
+                "documentType": "Ukraine - ePassport (2015)",
+                "country": "Ukranian",
+                "organization": "Ukraine Red Cross",
+                "status": "ACTIVE"
+            },
+            "deliveryOptions": [
+                {
+                    "key": "iban",
+                    "value": "UA629492312998229455975734891"
+                },
+                {
+                    "key": "bankName",
+                    "value": "PrivatBank"
+                },
+                {
+                    "key": "swiftCode",
+                    "value": "PBANUA2XXXX"
+                }
+            ],
+            "amount": "120",
+            "unit": "EUR",
+            "type": "CASH"
+        }
+    ]
+}
+
+### VOUCHER - Delivery
+
+```json
+{
+    "deliveryRequestId": "2372dd86-1e5d-4110-97ba-ff3c4237a74f",
+    "providerDeliveryChannelId": "36cd4d29-e332-47b9-9ceb-f084fe5b0446",
+    "description": "1st Month Hygiene Kits",
+    "delivery": [
+        {
+            "deliveryId": "6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+            "applicationDetails": {
+                "beneficiaryId": "WU-949966281_1de2b7a4",
+                "email": "johndoe@gmail.com",
+                "phone": "+14155550132",
+                "name": "John",
+                "surname": "Doe",
+                "nameLocal": "John",
+                "surnameLocal": "Doe",
+                "profilePhoto": "https://rr-ifrc-registration-core.s3.eu-west-1.amazonaws.com/upload/b815/2531/b8152531-f69a-4086-b220.....",
+                "birthDate": "2001-05-01T00:00:00Z",
+                "gender": "Male",
+                "language": "EN",
+                "locationLatitude": "48.1175883",
+                "locationLongitude": "20.0454645",
+                "documentNumber": "97341027813752",
+                "documentType": "Ukraine - ePassport (2015)",
+                "country": "Ukranian",
+                "organization": "Ukraine Red Cross",
+                "status": "ACTIVE"
+            },
+            "deliveryOptions": [],
+            "amount": "2",
+            "unit": "pcs",
+            "type": "Food Kit"
+        }
+    ]
+}
+
+
+## Webhook Response Payload
+
+### 200 Response
+
+A successful callback response from the Service Provider’s callback service.
+
+```json
+{
+    "status": "success",
+    "message": "Callback successfully received",
+    "data": {}
+}
+
+### 400 Response
+
+If the validation fails or there is a bad request, the response will be:
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 400,
+        "message": "Validation failed. Please check your input.",
+        "type": "BadRequest"
+    }
+}
+
+### 500 Response
+
+In case of an internal server error, the response will be:
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 500,
+        "message": "Internal Server Error",
+        "type": "Exception"
+    }
+}

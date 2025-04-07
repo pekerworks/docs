@@ -36,19 +36,9 @@
         },
         "x-codeSamples": [
           {
-            "lang": "cURL",
-            "label": "cURL Example",
-            "source": "curl -X GET 'https://api.example.com/users/123' -H \n 'Authorization: Bearer YOUR_TOKEN'"
-          },
-          {
             "lang": "python",
             "label": "python Example",
             "source": "import requests\nheaders = {'Authorization': 'Bearer YOUR_TOKEN'}\nresponse = requests.get('https://api.example.com/users/123', headers=headers)\nprint(response.json())"
-          },
-          {
-            "lang": "json",
-            "label": "json Example",
-            "source": "{'x':'abc'}"
           }
         ],
         "responses": {
@@ -1826,7 +1816,8 @@
           "translation": {
             "maxLength": 1024,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "example":"New delivery channel"
           }
         },
         "additionalProperties": false

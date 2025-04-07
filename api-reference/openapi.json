@@ -85,7 +85,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/DeliveryChannelResponse"
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -111,11 +111,238 @@
                     }
                   }
                 },
-                "example": {
-                  "id": "123",
-                  "name": "John Doe",
-                  "email": "john@example.com"
-                }
+                "example": {"error":null,"data":{"message":"Delivery Channel request is created successfully","providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","date":"2025-04-04T14:07:49Z","requestType":"Delivery Channel Create","requestedDate":"2025-04-04T14:07:47Z"},"status":"success"}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"95bd740b-755b-4f95-8549-fa9acfc31a41","code":400,"type":"ValidationError","message":"Invalid request body format. Please check your request format from AccessRC API specifications.","title":"Invalid Request Body"},"data":null,"status":"failed"}
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":401,"type":"Unauthorized","message":null,"title":"API Key is missing"},"data":null,"status":"failed"}
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":500,"type":"Exception","message":null,"title":"Internal Server Error"},"data":null,"status":"failed"}
               }
             }
           }
@@ -132,23 +359,26 @@
             "application/json-patch+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
-              }
+              },
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
-              }
-
+              },
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
-              }
+              },
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
-              }
+              },
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
             }
           }
         },
@@ -200,7 +430,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/DeliveryChannelResponse"
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -225,7 +455,239 @@
                       }
                     }
                   }
-                }
+                },
+                "example": {"error":null,"data":{"message":"Delivery Channel update request is created successfully","providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","date":"2025-04-04T14:07:49Z","requestType":"Delivery Channel Update","requestedDate":"2025-04-04T14:07:47Z"},"status":"success"}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"95bd740b-755b-4f95-8549-fa9acfc31a41","code":400,"type":"ValidationError","message":"Invalid request body format. Please check your request format from AccessRC API specifications.","title":"Invalid Request Body"},"data":null,"status":"failed"}
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":401,"type":"Unauthorized","message":null,"title":"API Key is missing"},"data":null,"status":"failed"}
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":500,"type":"Exception","message":null,"title":"Internal Server Error"},"data":null,"status":"failed"}
               }
             }
           }
@@ -242,22 +704,26 @@
             "application/json-patch+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelDeleteRequest"
-              }
+              },
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","status":"OFFLINE"}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelDeleteRequest"
-              }
+              },
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","status":"OFFLINE"}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelDeleteRequest"
-              }
+              },
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","status":"OFFLINE"}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelDeleteRequest"
-              }
+              },
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","status":"OFFLINE"}
             }
           }
         },
@@ -309,7 +775,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/DeliveryChannelResponse"
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -334,7 +800,239 @@
                       }
                     }
                   }
-                }
+                },
+                "example": {"error":null,"data":{"message":"Delivery Channel update status request is created successfully","providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","date":"2025-04-04T14:07:49Z","requestType":"Delivery Channel Create","requestedDate":"2025-04-04T14:07:47Z"},"status":"success"}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"95bd740b-755b-4f95-8549-fa9acfc31a41","code":400,"type":"ValidationError","message":"Invalid request body format. Please check your request format from AccessRC API specifications.","title":"Invalid Request Body"},"data":null,"status":"failed"}
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":401,"type":"Unauthorized","message":null,"title":"API Key is missing"},"data":null,"status":"failed"}
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":500,"type":"Exception","message":null,"title":"Internal Server Error"},"data":null,"status":"failed"}
               }
             }
           }
@@ -404,7 +1102,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/DeliveryChannelModal"
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -429,7 +1127,239 @@
                       }
                     }
                   }
-                }
+                },
+                "example": {"error":null,"data":{"isApproved":true,"status":"ONLINE","providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","EUR","GBP"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]},"status":"success"}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"95bd740b-755b-4f95-8549-fa9acfc31a41","code":400,"type":"ValidationError","message":"Invalid request body format. Please check your request format from AccessRC API specifications.","title":"Invalid Request Body"},"data":null,"status":"failed"}
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":401,"type":"Unauthorized","message":null,"title":"API Key is missing"},"data":null,"status":"failed"}
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":500,"type":"Exception","message":null,"title":"Internal Server Error"},"data":null,"status":"failed"}
               }
             }
           }
@@ -446,22 +1376,26 @@
             "application/json-patch+json": {
               "schema": {
                 "$ref": "#/components/schemas/EventSubscribeRequest"
-              }
+              },
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e"}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/EventSubscribeRequest"
-              }
+              },
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e"}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/EventSubscribeRequest"
-              }
+              },
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e"}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/EventSubscribeRequest"
-              }
+              },
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e"}
             }
           }
         },
@@ -513,7 +1447,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/EventSubscribeResponse"
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -538,7 +1472,239 @@
                       }
                     }
                   }
-                }
+                },
+                "example": {"error":null,"data":{"message":"Webhook successfully subscribed","subscriptionId":"c79f8f33-0042-4c25-bd5e-0dc1982f8cea","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","eventType":"NEW_DELIVERY_REQUEST","date":"2025-04-07T07:51:38Z"},"status":"success"}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"95bd740b-755b-4f95-8549-fa9acfc31a41","code":400,"type":"ValidationError","message":"Invalid request body format. Please check your request format from AccessRC API specifications.","title":"Invalid Request Body"},"data":null,"status":"failed"}
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":401,"type":"Unauthorized","message":null,"title":"API Key is missing"},"data":null,"status":"failed"}
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":500,"type":"Exception","message":null,"title":"Internal Server Error"},"data":null,"status":"failed"}
               }
             }
           }
@@ -555,22 +1721,26 @@
             "application/json-patch+json": {
               "schema": {
                 "$ref": "#/components/schemas/EventUnsubscribeRequest"
-              }
+              },
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS"}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/EventUnsubscribeRequest"
-              }
+              },
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS"}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/EventUnsubscribeRequest"
-              }
+              },
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS"}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/EventUnsubscribeRequest"
-              }
+              },
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS"}
             }
           }
         },
@@ -622,7 +1792,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/EventSubscribeResponse"
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -647,7 +1817,239 @@
                       }
                     }
                   }
-                }
+                },
+                "example": {"error":null,"data":{"message":"Webhook successfully unsubscribed","subscriptionId":"c79f8f33-0042-4c25-bd5e-0dc1982f8cea","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","eventType":"NEW_DELIVERY_REQUEST","date":"2025-04-07T07:51:38Z"},"status":"success"}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"95bd740b-755b-4f95-8549-fa9acfc31a41","code":400,"type":"ValidationError","message":"Invalid request body format. Please check your request format from AccessRC API specifications.","title":"Invalid Request Body"},"data":null,"status":"failed"}
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":401,"type":"Unauthorized","message":null,"title":"API Key is missing"},"data":null,"status":"failed"}
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":500,"type":"Exception","message":null,"title":"Internal Server Error"},"data":null,"status":"failed"}
               }
             }
           }
@@ -1473,68 +2875,6 @@
         },
         "additionalProperties": false
       },
-      "DeliveryChannelModal": {
-        "required": [
-          "availability",
-          "callCenter",
-          "contacts",
-          "deliveryOptions",
-          "landingPage",
-          "name",
-          "providerDeliveryChannelId",
-          "shortDescription"
-        ],
-        "type": "object",
-        "properties": {
-          "isApproved": {
-            "type": "boolean"
-          },
-          "status": {
-            "enum": [
-              "OFFLINE",
-              "ONLINE",
-              "REQUESTED"
-            ],
-            "type": "string",
-            "example": "OFFLINE"
-          },
-          "providerDeliveryChannelId": {
-            "maxLength": 64,
-            "minLength": 0,
-            "type": "string"
-          },
-          "name": {
-            "$ref": "#/components/schemas/DeliveryChannelTranslationModal"
-          },
-          "shortDescription": {
-            "$ref": "#/components/schemas/DeliveryChannelTranslationModal"
-          },
-          "landingPage": {
-            "maxLength": 512,
-            "minLength": 0,
-            "type": "string"
-          },
-          "contacts": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/DeliveryChannelContactModal"
-            }
-          },
-          "callCenter": {
-            "$ref": "#/components/schemas/DeliveryChannelCallCenterModal"
-          },
-          "availability": {
-            "$ref": "#/components/schemas/DeliveryChannelAvailabilityModal"
-          },
-          "deliveryOptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/DeliveryChannelDeliveryOptionModal"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
       "DeliveryChannelRequestModal": {
         "required": [
           "availability",
@@ -1581,32 +2921,6 @@
             "items": {
               "$ref": "#/components/schemas/DeliveryChannelDeliveryOptionModal"
             }
-          }
-        },
-        "additionalProperties": false
-      },
-      "DeliveryChannelResponse": {
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string",
-            "nullable": true
-          },
-          "providerDeliveryChannelId": {
-            "type": "string",
-            "nullable": true
-          },
-          "date": {
-            "type": "string",
-            "nullable": true
-          },
-          "requestType": {
-            "type": "string",
-            "nullable": true
-          },
-          "requestedDate": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1812,8 +3126,33 @@
           "translation": {
             "maxLength": 1024,
             "minLength": 0,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "guid": {
             "type": "string",
-            "example":"New delivery channel"
+            "nullable": true
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1843,38 +3182,6 @@
         },
         "additionalProperties": false
       },
-      "EventSubscribeResponse": {
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string",
-            "nullable": true
-          },
-          "subscriptionId": {
-            "type": "string",
-            "nullable": true
-          },
-          "callbackUrl": {
-            "type": "string",
-            "nullable": true
-          },
-          "eventType": {
-            "enum": [
-              "NULL",
-              "DELIVERY_CHANNEL_STATUS",
-              "NEW_DELIVERY_REQUEST",
-              "REFUND_DELIVERY"
-            ],
-            "type": "string",
-            "example": "NULL"
-          },
-          "date": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "EventUnsubscribeRequest": {
         "type": "object",
         "properties": {
@@ -1887,6 +3194,22 @@
             ],
             "type": "string",
             "example": "NULL"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IFRCBaseResponse": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/Error"
+          },
+          "data": {
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

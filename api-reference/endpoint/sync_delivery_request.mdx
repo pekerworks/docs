@@ -5,3 +5,127 @@ openapi: 'POST /api/DeliveryRequest/SyncDeliveryRequest'
 
 > ⚠️ **Warning**  
 > Not implemented yet.
+
+## Webhook Request Payload
+
+### Initial Sync
+
+```json
+{
+    "deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f",
+    "providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c",
+    "providerDelivery":[
+        {
+            "providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684",
+            "deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+            "syncStatus":"synced",
+            "comment":""
+        }
+    ],
+    "message":"Delivery Request successfully synced",
+    "providerStatus":"WaitingSecondaryLevelTopupApproval",
+    "deliveryRequestCreationDate":"2023-01-01T12:00:00Z",
+    "deliveryRequestApproveDate":""
+}
+```
+
+### Failed Sync
+
+```json
+{
+    "deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f",
+    "providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c",
+    "providerDelivery":[
+        {
+            "providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684",
+            "deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+            "syncStatus":"failed",
+            "comment":"IBAN is missing"
+        }
+    ],
+    "message":"Delivery Request cannot be synced. Deliveries has inconvenience. Please check the delivery details.",
+    "providerStatus":"Rejected",
+    "deliveryRequestCreationDate":"",
+    "deliveryRequestApproveDate":""
+}
+```
+
+### Update Sync
+
+```json
+{
+    "deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f",
+    "providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c",
+    "providerDelivery":[
+        {
+            "providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684",
+            "deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+            "syncStatus":"synced",
+            "comment":""
+        }
+    ],
+    "message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH",
+    "providerStatus":"Completed",
+    "deliveryRequestCreationDate":"2023-01-01T12:00:00",
+    "deliveryRequestApproveDate":"2023-02-01T12:00:00Z"
+}
+```
+
+## Webhook Response Payload
+
+### 200 Response
+
+A successful callback response from the Service Provider’s callback service.
+
+```json
+{
+    "status": "success",
+    "message": "Callback successfully received",
+    "data": {}
+}
+```
+
+### 400 Response
+
+If the validation fails or there is a bad request, the response will be:
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 400,
+        "message": "Validation failed. Please check your input.",
+        "type": "BadRequest"
+    }
+}
+```
+
+### 401 Response
+
+If the verification fails, the response will be:
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 401,
+        "message": "Verification failed",
+        "type": "Unauthorized"
+    }
+}
+```
+
+### 500 Response
+
+In case of an internal server error, the response will be:
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 500,
+        "message": "Internal Server Error",
+        "type": "Exception"
+    }
+}
+```

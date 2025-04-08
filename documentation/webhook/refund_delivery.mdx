@@ -1,28 +1,80 @@
-# 🚧 Work In Progress
 
-This section of the documentation is currently under development.
+## Overview
 
-We’re actively working on adding content and improving this page to better support your integration with **AccessRC**.
+Service Provider subscribes "REFUND_DELIVERY" event in AccessRC. So when a refund delivery event is created in AccessRC, system sends a webhook call to the callback service of the Service Provider.
 
----
+> ⚠️ **Warning**  
+> Not implemented yet.
 
-## What's Coming
+<p align="center">
+  <img src="/images/delivery-refund.svg" />
+</p>
 
-- ✅ Detailed API examples  
-- ✅ Schema definitions  
-- ✅ Integration guides  
-- ✅ Common use cases and troubleshooting  
+## Webhook Request Payload
 
----
+```json
+{
+    "deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a"
+}
+```
 
-## Need Help Now?
+## Webhook Response Payload
 
-If you’re looking for information that isn’t here yet:
+### 200 Response
 
-- Reach out to the AccessRC team
-- Check existing documented events in the sidebar
-- Follow the latest updates in the integration changelog
+A successful callback response from the Service Provider’s callback service.
 
-Thanks for your patience 🙏
+```json
+{
+    "status": "success",
+    "message": "Callback successfully received",
+    "data": {
+        "deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+    }
+}
+```
 
-Stay tuned!
+### 400 Response
+
+If the validation fails or there is a bad request, the response will be:
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 400,
+        "message": "Validation failed. Please check your input.",
+        "type": "BadRequest"
+    }
+}
+```
+
+### 401 Response
+
+If the verification fails, the response will be:
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 401,
+        "message": "Verification failed",
+        "type": "Unauthorized"
+    }
+}
+```
+
+### 500 Response
+
+In case of an internal server error, the response will be:
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 500,
+        "message": "Internal Server Error",
+        "type": "Exception"
+    }
+}
+```

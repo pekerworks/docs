@@ -71,11 +71,7 @@
           {
             "group": "Introduction",
             "pages": [
-              "api-reference/base_url",
-              "api-reference/authentication",
-              "api-reference/response_codes",
-              "api-reference/errors",
-              "api-reference/rate_limit"
+              "api-reference/introduction"
             ]
           },
           {

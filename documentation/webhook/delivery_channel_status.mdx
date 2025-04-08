@@ -22,7 +22,9 @@ The webhook will send one of the following payloads based on the decision.
 {
     "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
     "status": "Approved",
-    "message": ""
+    "message": "",
+    "requestType": "Delivery Channel Update Status",
+    "requestedDate": "04/07/2025 06:42:29"
 }
 ```
 
@@ -32,9 +34,16 @@ The webhook will send one of the following payloads based on the decision.
 {
     "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
     "status": "Rejected",
-    "message": "Description is not clear enough"
+    "message": "Description is not clear enough",
+    "requestType": "Delivery Channel Update Status",
+    "requestedDate": "04/07/2025 06:42:29"
 }
 ```
+
+#### Request Types
+- Delivery Channel Create
+- Delivery Channel Update
+- Delivery Channel Update Status
 
 ## Webhook Response Payload
 

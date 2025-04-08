@@ -6,12 +6,13 @@ title: 'Update Delivery Channel'
 
 Service Provider can also update Delivery Channel after the create approval process In this case AccessRC IM will analyze the data and approves or rejects the delivery channel update.
 
+[`Update Delivery Channel Request` API endpoint](../../api-reference/endpoint/delivery_channel_update)
+
 <p align="center">
   <img src="/images/delivery-channel-update.svg" />
 </p>
 
-## Delivery Channel Update Approval 
+## Delivery Channel Update Approval or Rejection
 
 In the second step of this stage a manual approval will be required by AccessRC IM from the Delivery Channel Screen. After the approval, Service Provider will be notified by DELIVERY_CHANNEL_STATUS event. Delivery Channel request can also be rejected and DELIVERY_CHANNEL_STATUS event will be sent including a rejection message to Service Provider in that case.
 
-[`Approve or Reject Delivery Channel Update` API endpoint](../../api-reference/endpoint/delivery_channel_update)

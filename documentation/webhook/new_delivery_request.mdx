@@ -31,25 +31,7 @@ This document describes the **New Delivery Request** webhook event, where the **
     "delivery": [
         {
             "deliveryId": "6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
-            "applicationDetails": {
-                "beneficiaryId": "WU-949966281_1de2b7a4",
-                "email": "johndoe@gmail.com",
-                "phone": "+14155550132",
-                "name": "John",
-                "surname": "Doe",
-                "nameLocal": "John",
-                "surnameLocal": "Doe",
-                "birthDate": "2001-05-01T00:00:00Z",
-                "gender": "Male",
-                "language": "EN",
-                "locationLatitude": "48.1175883",
-                "locationLongitude": "20.0454645",
-                "documentNumber": "97341027813752",
-                "documentType": "Ukraine - ePassport (2015)",
-                "country": "Ukranian",
-                "organization": "Ukraine Red Cross",
-                "status": "ACTIVE"
-            },
+            "beneficiaryId": "WU-949966281_1de2b7a4",
             "deliveryOptions": [
                 {
                     "key": "iban",
@@ -65,8 +47,7 @@ This document describes the **New Delivery Request** webhook event, where the **
                 }
             ],
             "amount": "120",
-            "unit": "EUR",
-            "type": "CASH"
+            "unit": "EUR"
         }
     ]
 }
@@ -82,29 +63,19 @@ This document describes the **New Delivery Request** webhook event, where the **
     "delivery": [
         {
             "deliveryId": "6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
-            "applicationDetails": {
-                "beneficiaryId": "WU-949966281_1de2b7a4",
-                "email": "johndoe@gmail.com",
-                "phone": "+14155550132",
-                "name": "John",
-                "surname": "Doe",
-                "nameLocal": "John",
-                "surnameLocal": "Doe",
-                "birthDate": "2001-05-01T00:00:00Z",
-                "gender": "Male",
-                "language": "EN",
-                "locationLatitude": "48.1175883",
-                "locationLongitude": "20.0454645",
-                "documentNumber": "97341027813752",
-                "documentType": "Ukraine - ePassport (2015)",
-                "country": "Ukranian",
-                "organization": "Ukraine Red Cross",
-                "status": "ACTIVE"
-            },
-            "deliveryOptions": [],
+            "beneficiaryId": "WU-949966281_1de2b7a4",
+            "deliveryOptions": [
+                {
+                    "key": "fullName",
+                    "value": "John Doe"
+                },
+                {
+                    "key": "email",
+                    "value": "johndoe@gmail.com"
+                }
+            ],
             "amount": "2",
-            "unit": "pcs",
-            "type": "Food Kit"
+            "unit": "pcs"
         }
     ]
 }

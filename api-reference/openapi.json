@@ -3576,16 +3576,17 @@
       }
     },
     "securitySchemes": {
-      "JWT": {
-        "type": "http",
-        "description": "JWT Authorization header using the Bearer scheme.",
-        "scheme": "bearer"
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "x-api-key",
+        "description": "API Key required in `x-api-key` header"
       }
     }
   },
   "security": [
     {
-      "JWT": [ ]
+      "ApiKeyAuth": []
     }
   ]
 }

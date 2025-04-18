@@ -83,7 +83,8 @@
                   "api-reference/endpoint/delivery_channel_create",
                   "api-reference/endpoint/delivery_channel_get",
                   "api-reference/endpoint/delivery_channel_update",
-                  "api-reference/endpoint/delivery_channel_delete"
+                  "api-reference/endpoint/delivery_channel_delete",
+                  "api-reference/endpoint/get_lookup_values"
                 ]
               },
               {

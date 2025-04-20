@@ -6,7 +6,7 @@ openapi: 'POST /api/DeliveryRequest/SyncDeliveryRequest'
 > ⚠️ **Warning**  
 > Not implemented yet.
 
-## Webhook Request Payload
+## Request Payload
 
 ### Initial Sync
 
@@ -18,14 +18,13 @@ openapi: 'POST /api/DeliveryRequest/SyncDeliveryRequest'
         {
             "providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684",
             "deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
-            "syncStatus":"synced",
+            "syncStatus":"SUCCESS",
             "comment":""
         }
     ],
-    "message":"Delivery Request successfully synced",
+    "message":"Delivery Request successfully created",
     "providerStatus":"WaitingSecondaryLevelTopupApproval",
-    "deliveryRequestCreationDate":"2023-01-01T12:00:00Z",
-    "deliveryRequestApproveDate":""
+    "status":"PENDING_APPROVAL"
 }
 ```
 
@@ -37,16 +36,15 @@ openapi: 'POST /api/DeliveryRequest/SyncDeliveryRequest'
     "providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c",
     "providerDelivery":[
         {
-            "providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684",
+            "providerDeliveryId":"",
             "deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
-            "syncStatus":"failed",
+            "syncStatus":"FAILED",
             "comment":"IBAN is missing"
         }
     ],
     "message":"Delivery Request cannot be synced. Deliveries has inconvenience. Please check the delivery details.",
     "providerStatus":"Rejected",
-    "deliveryRequestCreationDate":"",
-    "deliveryRequestApproveDate":""
+    "status":"REJECTED"
 }
 ```
 
@@ -60,18 +58,17 @@ openapi: 'POST /api/DeliveryRequest/SyncDeliveryRequest'
         {
             "providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684",
             "deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
-            "syncStatus":"synced",
+            "syncStatus":"SUCCESS",
             "comment":""
         }
     ],
     "message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH",
     "providerStatus":"Completed",
-    "deliveryRequestCreationDate":"2023-01-01T12:00:00",
-    "deliveryRequestApproveDate":"2023-02-01T12:00:00Z"
+    "status":"APPROVED"
 }
 ```
 
-## Webhook Response Payload
+## Response Payload
 
 ### 200 Response
 

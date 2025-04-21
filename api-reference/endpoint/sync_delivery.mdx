@@ -7,7 +7,7 @@ openapi: 'POST /api/DeliveryRequest/SyncDelivery'
 > Not implemented yet.
 
 
-## Webhook Request Payload
+## Request Payload
 
 ### CASH
 
@@ -15,14 +15,10 @@ openapi: 'POST /api/DeliveryRequest/SyncDelivery'
 {
     "providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684",
     "deliveryAmount":"150.00",
-    "deliveryType":"Cash",
     "deliveryUnit":"EUR",
     "deliveryVoucherSerialNo": "",
-    "deliveryReferenceNumber": "66021926"
-    "deliveredAt":"2024.06.13 10:00:00 AM",
-    "receivedAt":"",
-    "revertedAt":"2024.06.28 10:00:00 AM",
-    "status":"REVERTED",
+    "deliveryReferenceNumber": "66021926",
+    "status":"DELIVERY_REVERTED",
 }
 ```
 
@@ -32,23 +28,19 @@ openapi: 'POST /api/DeliveryRequest/SyncDelivery'
 {
     "providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684",
     "deliveryAmount":"1.00",
-    "deliveryType":"Hygiene Kit",
     "deliveryUnit":"pcs",
     "deliveryVoucherSerialNo": "500000650388213UR",
-    "deliveryReferenceNumber": ""
-    "deliveredAt":"2024.06.13 10:00:00 AM",
-    "receivedAt":"2024.06.13 10:00:00 AM",
-    "revertedAt":"",
-    "status":"SUCCESS"
+    "deliveryReferenceNumber": "",
+    "status":"DELIVERY_COLLECTED"
 }
 ```
 
-- SUCCESS -> Beneficiary collected delivery or cash is delivered via iban
-- SUCCESS_PENDING -> Wait step which delivery provider ensures that delivery is collected
-- REVERTED -> Delivery or cash is reverted
-- COMMIT -> Delivery request is committed to the delivery provider
+- DELIVERY_COLLECTED -> Beneficiary collected delivery or cash is delivered via iban
+- DELIVERY_PENDING -> Wait step which delivery provider ensures that delivery is collected
+- DELIVERY_REVERTED -> Delivery or cash is reverted
+- DELIVERED -> Delivery request is committed to the delivery provider
 
-## Webhook Response Payload
+## Response Payload
 
 ### 200 Response
 

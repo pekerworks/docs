@@ -13,12 +13,22 @@ openapi: 'POST /api/DeliveryRequest/SyncDelivery'
 
 ```json
 {
-    "providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684",
-    "deliveryAmount":"150.00",
-    "deliveryUnit":"EUR",
-    "deliveryVoucherSerialNo": "",
-    "deliveryReferenceNumber": "66021926",
-    "status":"DELIVERY_REVERTED",
+    {
+        "providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684",
+        "deliveryAmount":"150.00",
+        "deliveryUnit":"EUR",
+        "deliveryVoucherSerialNo": "",
+        "deliveryReferenceNumber": "66021926",
+        "status":"DELIVERY_REVERTED"
+    },
+    {
+        "providerDeliveryId":"8a2b16e7-f074-4433-8ef2-ac8d913249f0",
+        "deliveryAmount":"200.00",
+        "deliveryUnit":"EUR",
+        "deliveryVoucherSerialNo": "",
+        "deliveryReferenceNumber": "55423654",
+        "status":"DELIVERY_PENDING"
+    },
 }
 ```
 
@@ -26,12 +36,22 @@ openapi: 'POST /api/DeliveryRequest/SyncDelivery'
 
 ```json
 {
-    "providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684",
-    "deliveryAmount":"1.00",
-    "deliveryUnit":"pcs",
-    "deliveryVoucherSerialNo": "500000650388213UR",
-    "deliveryReferenceNumber": "",
-    "status":"DELIVERY_COLLECTED"
+   {
+        "providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684",
+        "deliveryAmount":"1.00",
+        "deliveryUnit":"pcs",
+        "deliveryVoucherSerialNo": "500000650388213UR",
+        "deliveryReferenceNumber": "",
+        "status":"DELIVERY_COLLECTED"
+   },
+   {
+        "providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4",
+        "deliveryAmount":"2.00",
+        "deliveryUnit":"pcs",
+        "deliveryVoucherSerialNo": "500000435643513UR",
+        "deliveryReferenceNumber": "",
+        "status":"DELIVERY_COLLECTED"
+   }
 }
 ```
 

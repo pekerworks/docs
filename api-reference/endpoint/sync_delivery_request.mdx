@@ -67,61 +67,13 @@ openapi: 'POST /api/DeliveryRequest/Sync'
 }
 ```
 
-## Response Payload
+**Status**
 
-### 200 Response
+- PENDING_APPROVAL -> Delivery request is in an approval process
+- REJECTED -> Delivery request is rejected
+- APPROVED -> Delivery request is approved
 
-A successful callback response from the Service Provider’s callback service.
+**SycnStatus**
 
-```json
-{
-    "status": "success",
-    "message": "Callback successfully received",
-    "data": {}
-}
-```
-
-### 400 Response
-
-If the validation fails or there is a bad request, the response will be:
-
-```json
-{
-    "status": "failed",
-    "error": {
-        "code": 400,
-        "message": "Validation failed. Please check your input.",
-        "type": "BadRequest"
-    }
-}
-```
-
-### 401 Response
-
-If the verification fails, the response will be:
-
-```json
-{
-    "status": "failed",
-    "error": {
-        "code": 401,
-        "message": "Verification failed",
-        "type": "Unauthorized"
-    }
-}
-```
-
-### 500 Response
-
-In case of an internal server error, the response will be:
-
-```json
-{
-    "status": "failed",
-    "error": {
-        "code": 500,
-        "message": "Internal Server Error",
-        "type": "Exception"
-    }
-}
-```
+- SUCCESS -> Delivery request delivery is successfully synced to Service Provider
+- FAILED -> Delivery request delivery is failed to sync to Service Provider

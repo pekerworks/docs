@@ -350,6 +350,351 @@
         }
       }
     },
+    "/api/Delivery/Sync": {
+      "post": {
+        "tags": [
+          "Delivery"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliverySyncRequest"
+              },
+              "example": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryAmount":1.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryAmount":2.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED"}]}
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliverySyncRequest"
+              },
+              "example": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryAmount":1.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryAmount":2.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED"}]}
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliverySyncRequest"
+              },
+              "example": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryAmount":1.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryAmount":2.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED"}]}
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliverySyncRequest"
+              },
+              "example": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryAmount":1.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryAmount":2.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED"}]}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":null,"data":{"message":"Callback successfully received"},"status":"success"}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"95bd740b-755b-4f95-8549-fa9acfc31a41","code":400,"type":"ValidationError","message":"Invalid request body format. Please check your request format from AccessRC API specifications.","title":"Invalid Request Body"},"data":null,"status":"failed"}
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":401,"type":"Unauthorized","message":null,"title":"API Key is missing"},"data":null,"status":"failed"}
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":500,"type":"Exception","message":null,"title":"Internal Server Error"},"data":null,"status":"failed"}
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/DeliveryChannel/Create": {
       "post": {
         "tags": [
@@ -361,25 +706,25 @@
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
             }
           }
         },
@@ -706,25 +1051,25 @@
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
             }
           }
         },
@@ -1474,7 +1819,352 @@
                     }
                   }
                 },
-                "example": {"error":null,"data":{"isApproved":true,"status":"ONLINE","providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","EUR","GBP"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","evaluationExpression":"bnf.account","visibility":"REQ","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]},"status":"success"}
+                "example": {"error":null,"data":{"isApproved":true,"status":"ONLINE","providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","EUR","GBP"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":null,"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]},"status":"success"}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"95bd740b-755b-4f95-8549-fa9acfc31a41","code":400,"type":"ValidationError","message":"Invalid request body format. Please check your request format from AccessRC API specifications.","title":"Invalid Request Body"},"data":null,"status":"failed"}
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":401,"type":"Unauthorized","message":null,"title":"API Key is missing"},"data":null,"status":"failed"}
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":500,"type":"Exception","message":null,"title":"Internal Server Error"},"data":null,"status":"failed"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/DeliveryRequest/Sync": {
+      "post": {
+        "tags": [
+          "DeliveryRequest"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryRequestSyncRequest"
+              },
+              "example": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":""}],"message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH","providerStatus":"Completed","status":"APPROVED"}
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryRequestSyncRequest"
+              },
+              "example": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":""}],"message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH","providerStatus":"Completed","status":"APPROVED"}
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryRequestSyncRequest"
+              },
+              "example": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":""}],"message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH","providerStatus":"Completed","status":"APPROVED"}
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryRequestSyncRequest"
+              },
+              "example": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":""}],"message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH","providerStatus":"Completed","status":"APPROVED"}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Error": {
+                      "type": "object",
+                      "properties": {
+                        "Code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "Type": {
+                          "type": "string"
+                        },
+                        "Message": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Data": {
+                      "type": "object",
+                      "properties": {
+                        "Error": {
+                          "type": "object",
+                          "properties": {
+                            "Code": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Type": {
+                              "type": "string"
+                            },
+                            "Message": {
+                              "type": "string"
+                            },
+                            "Title": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "Data": {
+                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                        },
+                        "Paging": {
+                          "type": "object",
+                          "properties": {
+                            "Skip": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Take": {
+                              "type": "integer",
+                              "format": "int32"
+                            },
+                            "Total": {
+                              "type": "integer",
+                              "format": "int32"
+                            }
+                          }
+                        },
+                        "Token": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {"error":null,"data":{"message":"Delivery Request is synced successfully","providerDeliveryRequestId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","date":"2025-04-04T14:07:49Z"},"status":"success"}
               }
             }
           },
@@ -2508,6 +3198,7 @@
                 "RON",
                 "UAH",
                 "TRY",
+                "PEN",
                 "ALL"
               ],
               "type": "string",
@@ -2536,6 +3227,7 @@
                 "RON",
                 "UAH",
                 "TRY",
+                "PEN",
                 "ALL"
               ],
               "type": "string",
@@ -3077,6 +3769,64 @@
         },
         "additionalProperties": false
       },
+      "DeliveryChannelBudgetModal": {
+        "required": [
+          "amount"
+        ],
+        "type": "object",
+        "properties": {
+          "currency": {
+            "enum": [
+              "NULL",
+              "USD",
+              "EUR",
+              "GBP",
+              "JPY",
+              "AUD",
+              "CAD",
+              "CHF",
+              "RUB",
+              "BRL",
+              "BGN",
+              "COP",
+              "HUF",
+              "MDL",
+              "PLN",
+              "RON",
+              "UAH",
+              "TRY",
+              "PEN",
+              "ALL"
+            ],
+            "type": "string",
+            "nullable": true
+          },
+          "commodity": {
+            "enum": [
+              "NULL",
+              "BUNCH",
+              "CAN",
+              "CARTON",
+              "CUP",
+              "G",
+              "GALLON",
+              "KG",
+              "LT",
+              "METER",
+              "PACK",
+              "PCS",
+              "SACK"
+            ],
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
       "DeliveryChannelCallCenterModal": {
         "required": [
           "email",
@@ -3162,11 +3912,9 @@
       "DeliveryChannelDeliveryOptionModal": {
         "required": [
           "dataType",
-          "evaluationExpression",
           "fieldLabel",
           "fieldName",
-          "isRequired",
-          "visibility"
+          "isRequired"
         ],
         "type": "object",
         "properties": {
@@ -3177,16 +3925,6 @@
           },
           "fieldName": {
             "maxLength": 128,
-            "minLength": 0,
-            "type": "string"
-          },
-          "evaluationExpression": {
-            "maxLength": 128,
-            "minLength": 0,
-            "type": "string"
-          },
-          "visibility": {
-            "maxLength": 32,
             "minLength": 0,
             "type": "string"
           },
@@ -3261,6 +3999,9 @@
           },
           "availability": {
             "$ref": "#/components/schemas/DeliveryChannelAvailabilityModal"
+          },
+          "budget": {
+            "$ref": "#/components/schemas/DeliveryChannelBudgetModal"
           },
           "deliveryOptions": {
             "type": "array",
@@ -3477,6 +4218,124 @@
         },
         "additionalProperties": false
       },
+      "DeliveryItem": {
+        "required": [
+          "deliveryAmount",
+          "deliveryUnit",
+          "providerDeliveryId",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "providerDeliveryId": {
+            "maxLength": 64,
+            "minLength": 0,
+            "type": "string"
+          },
+          "deliveryAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "deliveryUnit": {
+            "maxLength": 64,
+            "minLength": 0,
+            "type": "string"
+          },
+          "deliveryVoucherSerialNo": {
+            "maxLength": 64,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "deliveryReferenceNo": {
+            "maxLength": 64,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "enum": [
+              "DRAFT",
+              "SENT_TO_SERVICE_PROVIDER",
+              "ACCEPTED_BY_SERVICE_PROVIDER",
+              "REJECTED_BY_SERVICE_PROVIDER",
+              "DELIVERY_PENDING",
+              "DELIVERED",
+              "DELIVERY_COLLECTED",
+              "DELIVERY_REVERTED"
+            ],
+            "type": "string",
+            "example": "DRAFT"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeliveryRequestSyncRequest": {
+        "required": [
+          "deliveryRequestId",
+          "message",
+          "providerDelivery",
+          "providerDeliveryRequestId",
+          "providerStatus",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "deliveryRequestId": {
+            "maxLength": 64,
+            "minLength": 0,
+            "type": "string"
+          },
+          "providerDeliveryRequestId": {
+            "maxLength": 64,
+            "minLength": 0,
+            "type": "string"
+          },
+          "providerDelivery": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProviderDeliveryItem"
+            }
+          },
+          "message": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string"
+          },
+          "providerStatus": {
+            "maxLength": 64,
+            "minLength": 0,
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "DRAFT",
+              "PENDING_APPROVAL",
+              "APPROVED",
+              "REJECTED",
+              "DELIVERED"
+            ],
+            "type": "string",
+            "example": "DRAFT"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeliverySyncRequest": {
+        "required": [
+          "deliveryList"
+        ],
+        "type": "object",
+        "properties": {
+          "deliveryList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeliveryItem"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
       "Error": {
         "type": "object",
         "properties": {
@@ -3568,6 +4427,42 @@
             "nullable": true
           },
           "status": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProviderDeliveryItem": {
+        "required": [
+          "deliveryId",
+          "syncStatus"
+        ],
+        "type": "object",
+        "properties": {
+          "providerDeliveryId": {
+            "maxLength": 64,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "deliveryId": {
+            "maxLength": 64,
+            "minLength": 0,
+            "type": "string"
+          },
+          "syncStatus": {
+            "enum": [
+              "PENDING",
+              "SUCCESS",
+              "FAILED"
+            ],
+            "type": "string",
+            "example": "PENDING"
+          },
+          "comment": {
+            "maxLength": 1024,
+            "minLength": 0,
             "type": "string",
             "nullable": true
           }

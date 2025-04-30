@@ -457,7 +457,7 @@
                     }
                   }
                 },
-                "example": {"error":null,"data":{"message":"Callback successfully received"},"status":"success"}
+                "example": {"error":null,"data":{"message":"Deliveries are synced successfully","date":"2025-04-04T14:07:49Z"},"status":"success"}
               }
             }
           },

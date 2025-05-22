@@ -101,6 +101,12 @@
                   "api-reference/endpoint/sync_delivery_request",
                   "api-reference/endpoint/sync_delivery"
                 ]
+              },
+              {
+                "group": "Application",
+                "pages": [
+                  "api-reference/endpoint/import_program_applications"
+                ]
               }
             ]
           }

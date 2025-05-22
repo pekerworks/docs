@@ -35,6 +35,7 @@
                 "pages": [
                   "documentation/webhook/delivery_channel_status",
                   "documentation/webhook/new_delivery_request",
+                  "documentation/webhook/eligibility_event",
                   "documentation/webhook/refund_delivery"
                 ]
               },

@@ -30,15 +30,6 @@
             "pages": [
               "documentation/webhook/introduction",
               "documentation/webhook/event_types",
-              {
-                "group": "Events",
-                "pages": [
-                  "documentation/webhook/delivery_channel_status",
-                  "documentation/webhook/new_delivery_request",
-                  "documentation/webhook/eligibility_event",
-                  "documentation/webhook/refund_delivery"
-                ]
-              },
               "documentation/webhook/verify_webhook_requests"
             ]
           },
@@ -108,6 +99,16 @@
                   "api-reference/endpoint/import_program_applications"
                 ]
               }
+            ]
+          },
+          {
+            "group": "Events",
+            "pages": [
+               "api-reference/events/delivery_channel_status",
+               "api-reference/events/new_delivery_request",
+               "api-reference/events/eligibility_event",
+               "api-reference/events/refund_delivery",
+               "api-reference/events/program_create"
             ]
           }
         ]

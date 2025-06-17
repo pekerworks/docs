@@ -8,10 +8,13 @@ openapi: 'POST /api/Application/Import'
 
 ## Request Payload
 
-### Sample Body
+### Sample Request
 
-```json
-{
-    
-}
+multipart/form-data
+
+```curl 
+curl -X POST https://api.accessrc.org/api/ApplicationForm/Import \
+  -H "x-api-key: your-api-key" \
+  -F "programId=9e59b161-d5df-4207-a965-398e8378a8ff" \
+  -F "file=@applications.json"
 ```

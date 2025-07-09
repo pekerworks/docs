@@ -1,0 +1,103 @@
+---
+title: 'Applications Import Processing Result'
+---
+
+## Overview
+
+This document describes the **Applications Import Processing Result** webhook event, where the **Service Provider** subscribes to the `APPLICATIONS_IMPORT_RESULT` event in AccessRC. When the **Program Manager** hits Sync Program for a program that the **Service Provider** is configured for, AccessRC sends a webhook call to the callback service of the Service Provider with the program metadata for integration.
+
+---
+> ⚠️ **Warning**  
+> Not implemented yet.
+
+## Event Flow: AccessRC → Service Provider
+
+1. **Service Provider** subscribes to the `APPLICATIONS_IMPORT_RESULT` event.
+2. When imported applications processing is completed AccessRC sends a webhook call to the service provider's callback URL.
+3. The Service Provider processes the metadata of the Program and integrates it into their system.
+
+---
+
+## Webhook Request Payload
+
+```json
+{
+	"programId": "9e59b161-d5df-4207-a965-398e8378a8ff",
+    "providerImportId": "ef46ec28-61cc-4a6c-a789-bf8f782758cc",
+	"summary": {
+        "totalRecords": 120,
+        "successCount": 115,
+        "failureCount": 5
+    },
+    "errors": [
+        {
+        "applicationId": "f4e0262e-bee9-4620-9b53-24bce207d27e",
+        "error": "Invalid phone number format"
+        },
+        {
+        "applicationId": "e859a954-83da-483a-86cc-258026774e2c",
+        "error": "Missing required field: country"
+        }
+    ],
+    "status": "PARTIAL_SUCCESS" // could be: SUCCESS, PARTIAL_SUCCESS, FAILED
+}
+```
+
+## Webhook Response Payload
+
+### 200 Response
+
+A successful callback response from the Service Provider’s callback service.
+
+```json
+{
+    "status": "success",
+    "message": "Callback successfully received",
+    "data": {}
+}
+```
+
+### 400 Response
+
+If the validation fails or there is a bad request, the response will be:
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 400,
+        "message": "Validation failed. Please check your input.",
+        "type": "BadRequest"
+    }
+}
+```
+
+### 401 Response
+
+If the verification fails, the response will be:
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 401,
+        "message": "Verification failed",
+        "type": "Unauthorized"
+    }
+}
+```
+
+### 500 Response
+
+In case of an internal server error, the response will be:
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 500,
+        "message": "Internal Server Error",
+        "type": "Exception"
+    }
+}
+```

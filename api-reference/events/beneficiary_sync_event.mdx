@@ -1,0 +1,175 @@
+---
+title: 'Beneficiary Syncronization'
+---
+
+## Overview
+
+This document describes the **Beneficiary Syncronization** webhook event, where the **Service Provider** subscribes to the `BENEFICIARY_SYNC` event in AccessRC. When the **Program Manager** hits sync Sync Beneficiaries for an application group that the **Service Provider** is configured for, AccessRC sends a webhook call to the callback service of the Service Provider with the beneficiary metadata for integration.
+
+---
+> ⚠️ **Warning**  
+> Not implemented yet.
+
+## Event Flow: AccessRC → Service Provider
+
+1. **Service Provider** subscribes to the `BENEFICIARY_SYNC` event.
+2. When **Program Manager** hits sync Beneficiaries, AccessRC sends a webhook call to the service provider's callback URL.
+3. The Service Provider processes the details of the beneficiaries and integrates it into their system.
+
+---
+
+## Webhook Request Payload
+
+```json
+{
+	"programId": "d286e1f0-516d-45d3-8d0d-368b130b3386",
+	"providerProgramReferenceId" :"17b2d4f7-9d4f-4a59-97bd-5a19ddbc3ef3",
+	"applications":[
+		{
+			"beneficiaryFederationId":"VR-558602180",
+            "providerBeneficiaryId":"140e32ca-6a30-43ec-9d95-f401931b3d54",
+            "applicationId":"81e798e8-3386-4933-b6a6-123fa3eb2ff6",
+            "providerApplicationId":"dd607ac9-75d0-4491-9856-522f53bf627e",
+			"fullNameLocal":"John Doe",
+			"email": "johndoe@gmail.com",
+			"finalEvaluation":{
+				"evaluationKey": "FITS_CRITERIA",
+				"evaluationName": "Fits Criteria"
+			},
+			"mandotaryCriteria":[
+				{
+					"criteriaKey": "AllMembersProfile",
+					"criteriaName": "All Members Profile",
+					"evaluationKey": "NOT_VALIDATED",
+					"evaluationName": "Not Validated"
+					"notes": "Profile validation is still waiting: VR-558602180::Profile Status::Active::Profile Review Status::Waiting for Resubmission"
+				},
+				{
+					"criteriaKey": "ApplicationLocation",
+					"criteriaName": "Application Location",
+					"evaluationKey": "FITS_CRITERIA",
+					"evaluationName": "Fits Criteria"
+					"notes": ""
+				},
+				{
+					"criteriaKey": "FocalPointLocation",
+					"criteriaName": "Focal Point Location",
+					"evaluationKey": "FITS_CRITERIA",
+					"evaluationName": "Fits Criteria"
+					"notes": ""
+				},
+				{
+					"criteriaKey": "FocalPointProfile",
+					"criteriaName": "Focal Point Profile",
+					"evaluationKey": "NOT_VALIDATED",
+					"evaluationName": "Not Validated"
+					"notes": "Profile validation is still waiting: VR-558602180::Profile Status::Active::Profile Review Status::Waiting for Resubmission"
+				},
+				{
+					"criteriaKey": "HasReceivedAnyAssistance",
+					"criteriaName": "Has Received Any Assistance?",
+					"evaluationKey": "FITS_CRITERIA",
+					"evaluationName": "Fits Criteria"
+					"notes": ""
+				},
+				{
+					"criteriaKey": "IsMigrant",
+					"criteriaName": "Is Migrant?",
+					"evaluationKey": "FITS_CRITERIA",
+					"evaluationName": "Fits Criteria"
+					"notes": ""
+				}
+			]
+			"additionalCriteria":[
+				{
+					"criteriaKey": "IsAChild",
+					"criteriaName": "Is A Child?",
+					"evaluationKey": "FITS_CRITERIA",
+					"evaluationName": "Fits Criteria"
+					"notes": ""
+				},
+				{
+					"criteriaKey": "IsPersonElderly",
+					"criteriaName": "Is Person Elderly?",
+					"evaluationKey": "FITS_CRITERIA",
+					"evaluationName": "Fits Criteria"
+					"notes": ""
+				},
+				{
+					"criteriaKey": "IsSingleAdultHeadedHh",
+					"criteriaName": "Is Single Adult Headed Household?",
+					"evaluationKey": "FITS_CRITERIA",
+					"evaluationName": "Fits Criteria"
+					"notes": ""
+				},
+				{
+					"criteriaKey": "HasAtLeastNDependents",
+					"criteriaName": "Has At Least N Dependents?",
+					"evaluationKey": "FITS_CRITERIA",
+					"evaluationName": "Fits Criteria"
+					"notes": ""
+				}
+			]
+		}
+	]
+}
+```
+
+## Webhook Response Payload
+
+### 200 Response
+
+A successful callback response from the Service Provider’s callback service.
+
+```json
+{
+    "status": "success",
+    "message": "Callback successfully received",
+    "data": {}
+}
+```
+
+### 400 Response
+
+If the validation fails or there is a bad request, the response will be:
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 400,
+        "message": "Validation failed. Please check your input.",
+        "type": "BadRequest"
+    }
+}
+```
+
+### 401 Response
+
+If the verification fails, the response will be:
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 401,
+        "message": "Verification failed",
+        "type": "Unauthorized"
+    }
+}
+```
+
+### 500 Response
+
+In case of an internal server error, the response will be:
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 500,
+        "message": "Internal Server Error",
+        "type": "Exception"
+    }
+}
+```

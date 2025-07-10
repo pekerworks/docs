@@ -108,6 +108,7 @@
                "api-reference/events/delivery_channel_status",
                "api-reference/events/new_delivery_request",
                "api-reference/events/eligibility_event",
+               "api-reference/events/program_pull_form",
                "api-reference/events/refund_delivery"            ]
           }
         ]

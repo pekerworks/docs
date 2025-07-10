@@ -4,7 +4,7 @@ title: 'Eligibility Evaluated'
 
 ## Overview
 
-This document describes the **Eligibility Evaluation** webhook event, where the **Service Provider** subscribes to the `ELIGIBILITY_EVULATION` event in AccessRC. When the **Program Manager** hits sync Eligibility Evaluation for a program that the **Service Provider** is configured for, AccessRC sends a webhook call to the callback service of the Service Provider with the eligibility evaluations for integration.
+This document describes the **Eligibility Evaluation** webhook event, where the **Service Provider** subscribes to the `program.eligibility_evaluated` event in AccessRC. When the **Program Manager** hits sync Eligibility Evaluation for a program that the **Service Provider** is configured for, AccessRC sends a webhook call to the callback service of the Service Provider with the eligibility evaluations for integration.
 
 ---
 > ⚠️ **Warning**  
@@ -12,7 +12,7 @@ This document describes the **Eligibility Evaluation** webhook event, where the 
 
 ## Event Flow: AccessRC → Service Provider
 
-1. **Service Provider** subscribes to the `ELIGIBILITY_EVULATION` event.
+1. **Service Provider** subscribes to the `program.eligibility_evaluated` event.
 2. When **Program Manager** hits sync Eligibility Evaluation, AccessRC sends a webhook call to the service provider's callback URL.
 3. The Service Provider processes the details of the eligibility evaluations and integrates it into their system.
 

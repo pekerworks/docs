@@ -1,9 +1,180 @@
 ---
-title: 'Verify Webhook Request'
+title: 'Webhook Integration Guide'
 ---
 
-> ⚠️ **Warning**  
-> Not implemented yet.
+1. Webhook Subscription
+-----------------------
+
+Partners can subscribe to event notifications from AccessRC via the ``api/Event/Subscribe`` endpoint.
+
+Example Requests
+~~~~~~~~~~~~~~~~
+
+**No Authentication**
+
+.. code-block:: json
+
+    {
+      "eventType": "DELIVERY_CHANNEL_STATUS",
+      "callbackUrl": "https://partner.example.com/webhook"
+    }
+
+**API Key Authentication**
+
+.. code-block:: json
+
+    {
+      "eventType": "DELIVERY_CHANNEL_STATUS",
+      "callbackUrl": "https://partner.example.com/webhook",
+      "auth": {
+        "type": "header",
+        "headerName": "X-API-Key",
+        "headerValue": "my-api-key"
+      }
+    }
+
+**Basic Authentication**
+
+.. code-block:: json
+
+    {
+      "eventType": "DELIVERY_CHANNEL_STATUS",
+      "callbackUrl": "https://partner.example.com/webhook",
+      "auth": {
+        "type": "basic",
+        "username": "webhook-user",
+        "password": "s3cr3t"
+      }
+    }
+
+**HMAC Authentication**
+
+.. code-block:: json
+
+    {
+      "eventType": "DELIVERY_CHANNEL_STATUS",
+      "callbackUrl": "https://partner.example.com/webhook",
+      "auth": {
+        "type": "hmac",
+        "secret": "abcd1234"
+      }
+    }
+
+
+2. Webhook Request Authentication
+---------------------------------
+
+AccessRC will send event callbacks to your registered ``callbackUrl``.
+
+Each webhook request will include an authentication header according to your chosen subscription option:
+
++------------+----------------+--------------------------------------------+
+| Auth Type  | Header          | Example                                    |
++============+================+============================================+
+| None       | *(no header)*  | –                                          |
++------------+----------------+--------------------------------------------+
+| API Key    | X-API-Key       | ``X-API-Key: my-api-key``                 |
++------------+----------------+--------------------------------------------+
+| Basic      | Authorization   | ``Authorization: Basic bXl1c2VyOm15cGFzc3dvcmQ=`` |
++------------+----------------+--------------------------------------------+
+| HMAC       | X-Signature     | ``X-Signature: sha256=abcdef123456...``   |
++------------+----------------+--------------------------------------------+
+
+
+3. Verifying HMAC Signatures
+----------------------------
+
+When using **HMAC authentication**, every webhook request includes an ``X-Signature`` header:
+
+::
+
+    X-Signature: sha256=3bdc5b07d7ef9b61b98ed5df4b1793e12fd...
+
+This signature is generated using:
+
+- The **raw HTTP request body** (exact bytes, not parsed JSON)
+- The **shared secret** you provided in your subscription
+
+
+Verification Steps
+~~~~~~~~~~~~~~~~~~
+
+1. **Extract the Signature**
+
+   Read the ``X-Signature`` header from the incoming request.
+
+2. **Get the Raw Request Body**
+
+   Use the exact raw payload as received — do not reformat or parse.
+
+3. **Recompute the Signature**
+
+   Use ``HMAC-SHA256(secret, rawBody)`` to generate your own hash.
+   Prefix it with ``sha256=``.
+
+4. **Compare Signatures**
+
+   Compare your computed signature with the received one using a constant-time comparison
+   to avoid timing attacks.
+
+
+Example (Node.js)
+~~~~~~~~~~~~~~~~~
+
+.. code-block:: javascript
+
+    import crypto from "crypto";
+
+    function verifyWebhookSignature(req, secret) {
+      const received = req.headers["x-signature"]; // e.g. sha256=abcdef...
+      const body = req.rawBody; // must be unparsed string or buffer
+
+      const computed = "sha256=" + crypto.createHmac("sha256", secret)
+        .update(body)
+        .digest("hex");
+
+      return crypto.timingSafeEqual(
+        Buffer.from(received),
+        Buffer.from(computed)
+      );
+    }
+
+.. warning::
+
+   Some frameworks (e.g., Express, Django) parse the body automatically.
+   Ensure you capture the **raw request body** before parsing.
+
+
+4. Security Best Practices
+--------------------------
+
+- Never log or expose the shared secret.
+- Always verify the signature for HMAC webhooks.
+- Reject any unsigned or invalid webhook requests.
+- Use HTTPS for your webhook endpoint.
+
+
+5. Testing Webhooks
+-------------------
+
+To test locally:
+
+1. Use **ngrok** or similar tool to expose your local webhook endpoint.
+2. Log incoming request headers and raw body.
+3. Simulate signature generation using your shared secret.
+4. Verify your signature logic before deploying to production.
+
+
+6. Response Expectations
+------------------------
+
+Your webhook endpoint should:
+
+- Return **HTTP 2xx** (usually ``200 OK``) for successful processing.
+- Return **401 Unauthorized** or **403 Forbidden** if signature/auth validation fails.
+- Respond quickly (within a few seconds) to avoid retries.
+
+
 
 ## Webhook Signing Secret
 

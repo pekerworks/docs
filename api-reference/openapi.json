@@ -361,25 +361,25 @@
               "schema": {
                 "$ref": "#/components/schemas/DeliverySyncRequest"
               },
-              "example": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryAmount":1.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryAmount":2.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED"}]}
+              "example": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":1.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryId":null,"deliveryAmount":2.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"}]}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliverySyncRequest"
               },
-              "example": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryAmount":1.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryAmount":2.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED"}]}
+              "example": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":1.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryId":null,"deliveryAmount":2.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"}]}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliverySyncRequest"
               },
-              "example": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryAmount":1.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryAmount":2.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED"}]}
+              "example": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":1.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryId":null,"deliveryAmount":2.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"}]}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliverySyncRequest"
               },
-              "example": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryAmount":1.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryAmount":2.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED"}]}
+              "example": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":1.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryId":null,"deliveryAmount":2.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"}]}
             }
           }
         },
@@ -706,25 +706,25 @@
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}],"status":null}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}],"status":null}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}],"status":null}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}],"status":null}
             }
           }
         },
@@ -1051,25 +1051,25 @@
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}],"status":null}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}],"status":null}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}],"status":null}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]}
+              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}],"status":null}
             }
           }
         },
@@ -2068,25 +2068,25 @@
               "schema": {
                 "$ref": "#/components/schemas/DeliveryRequestSyncRequest"
               },
-              "example": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":""}],"message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH","providerStatus":"Completed","status":"APPROVED"}
+              "example": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH","providerStatus":"Completed","status":"APPROVED"}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryRequestSyncRequest"
               },
-              "example": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":""}],"message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH","providerStatus":"Completed","status":"APPROVED"}
+              "example": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH","providerStatus":"Completed","status":"APPROVED"}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryRequestSyncRequest"
               },
-              "example": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":""}],"message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH","providerStatus":"Completed","status":"APPROVED"}
+              "example": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH","providerStatus":"Completed","status":"APPROVED"}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryRequestSyncRequest"
               },
-              "example": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":""}],"message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH","providerStatus":"Completed","status":"APPROVED"}
+              "example": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH","providerStatus":"Completed","status":"APPROVED"}
             }
           }
         },
@@ -2413,25 +2413,25 @@
               "schema": {
                 "$ref": "#/components/schemas/EventSubscribeRequest"
               },
-              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e"}
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","auth":null}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/EventSubscribeRequest"
               },
-              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e"}
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","auth":null}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/EventSubscribeRequest"
               },
-              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e"}
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","auth":null}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/EventSubscribeRequest"
               },
-              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e"}
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","auth":null}
             }
           }
         },
@@ -3097,15 +3097,7 @@
     "schemas": {
       "DeliveryChannelAvailabilityModal": {
         "required": [
-          "categoriesSupported",
-          "countriesExcluded",
-          "countriesSupported",
-          "currenciesExcluded",
-          "currenciesSupported",
-          "kycExcluded",
-          "kycSupported",
-          "nationalitiesExcluded",
-          "nationalitiesSupported"
+          "categoriesSupported"
         ],
         "type": "object",
         "properties": {
@@ -3115,18 +3107,7 @@
               "enum": [
                 "CASH",
                 "VOUCHERS",
-                "RESTORING_FAMILY_LINKS",
-                "MENTAL_HEALTH",
-                "LIVELIHOODS",
-                "NON_FOOD_ITEMS",
-                "SHELTER",
-                "MIGRATION",
-                "INFORMATION",
-                "PROTECTION",
-                "GENDER_INCLUSION",
-                "CLIMATE",
-                "HEALTH",
-                "FOOD"
+                "INFORMATION"
               ],
               "type": "string",
               "example": "CASH"
@@ -3136,13 +3117,15 @@
             "type": "array",
             "items": {
               "type": "string"
-            }
+            },
+            "nullable": true
           },
           "countriesExcluded": {
             "type": "array",
             "items": {
               "type": "string"
-            }
+            },
+            "nullable": true
           },
           "kycSupported": {
             "type": "array",
@@ -3158,7 +3141,8 @@
               ],
               "type": "string",
               "example": "NULL"
-            }
+            },
+            "nullable": true
           },
           "kycExcluded": {
             "type": "array",
@@ -3174,7 +3158,8 @@
               ],
               "type": "string",
               "example": "NULL"
-            }
+            },
+            "nullable": true
           },
           "currenciesSupported": {
             "type": "array",
@@ -3199,11 +3184,171 @@
                 "UAH",
                 "TRY",
                 "PEN",
-                "ALL"
+                "ALL",
+                "AED",
+                "AFN",
+                "AMD",
+                "AOA",
+                "ARS",
+                "AWG",
+                "AZN",
+                "BAM",
+                "BBD",
+                "BDT",
+                "BHD",
+                "BIF",
+                "BMD",
+                "BND",
+                "BOB",
+                "BOV",
+                "BSD",
+                "BTN",
+                "BWP",
+                "BYN",
+                "BZD",
+                "CDF",
+                "CHE",
+                "CHW",
+                "CLF",
+                "CLP",
+                "CNY",
+                "COU",
+                "CRC",
+                "CUP",
+                "CVE",
+                "CZK",
+                "DJF",
+                "DKK",
+                "DOP",
+                "DZD",
+                "EGP",
+                "ERN",
+                "ETB",
+                "FJD",
+                "FKP",
+                "GEL",
+                "GHS",
+                "GIP",
+                "GMD",
+                "GNF",
+                "GTQ",
+                "GYD",
+                "HKD",
+                "HNL",
+                "HTG",
+                "IDR",
+                "ILS",
+                "INR",
+                "IQD",
+                "IRR",
+                "ISK",
+                "JMD",
+                "JOD",
+                "KES",
+                "KGS",
+                "KHR",
+                "KMF",
+                "KPW",
+                "KRW",
+                "KWD",
+                "KYD",
+                "KZT",
+                "LAK",
+                "LBP",
+                "LKR",
+                "LRD",
+                "LSL",
+                "LYD",
+                "MAD",
+                "MGA",
+                "MKD",
+                "MMK",
+                "MNT",
+                "MOP",
+                "MRU",
+                "MUR",
+                "MVR",
+                "MWK",
+                "MXN",
+                "MXV",
+                "MYR",
+                "MZN",
+                "NAD",
+                "NGN",
+                "NIO",
+                "NOK",
+                "NPR",
+                "NZD",
+                "OMR",
+                "PAB",
+                "PGK",
+                "PHP",
+                "PKR",
+                "PYG",
+                "QAR",
+                "RSD",
+                "RWF",
+                "SAR",
+                "SBD",
+                "SCR",
+                "SDG",
+                "SEK",
+                "SGD",
+                "SHP",
+                "SLE",
+                "SOS",
+                "SRD",
+                "SSP",
+                "STN",
+                "SVC",
+                "SYP",
+                "SZL",
+                "THB",
+                "TJS",
+                "TMT",
+                "TND",
+                "TOP",
+                "TTD",
+                "TWD",
+                "TZS",
+                "UGX",
+                "USN",
+                "UYI",
+                "UYU",
+                "UYW",
+                "UZS",
+                "VED",
+                "VES",
+                "VND",
+                "VUV",
+                "WST",
+                "XAD",
+                "XAF",
+                "XBA",
+                "XBB",
+                "XBC",
+                "XBD",
+                "XCD",
+                "XCG",
+                "XDR",
+                "XOF",
+                "XPF",
+                "XSU",
+                "XUA",
+                "YER",
+                "ZAR",
+                "ZMW",
+                "ZWG",
+                "ANG",
+                "HRK",
+                "SLL",
+                "VEF",
+                "ZWL"
               ],
               "type": "string",
               "example": "NULL"
-            }
+            },
+            "nullable": true
           },
           "currenciesExcluded": {
             "type": "array",
@@ -3228,11 +3373,171 @@
                 "UAH",
                 "TRY",
                 "PEN",
-                "ALL"
+                "ALL",
+                "AED",
+                "AFN",
+                "AMD",
+                "AOA",
+                "ARS",
+                "AWG",
+                "AZN",
+                "BAM",
+                "BBD",
+                "BDT",
+                "BHD",
+                "BIF",
+                "BMD",
+                "BND",
+                "BOB",
+                "BOV",
+                "BSD",
+                "BTN",
+                "BWP",
+                "BYN",
+                "BZD",
+                "CDF",
+                "CHE",
+                "CHW",
+                "CLF",
+                "CLP",
+                "CNY",
+                "COU",
+                "CRC",
+                "CUP",
+                "CVE",
+                "CZK",
+                "DJF",
+                "DKK",
+                "DOP",
+                "DZD",
+                "EGP",
+                "ERN",
+                "ETB",
+                "FJD",
+                "FKP",
+                "GEL",
+                "GHS",
+                "GIP",
+                "GMD",
+                "GNF",
+                "GTQ",
+                "GYD",
+                "HKD",
+                "HNL",
+                "HTG",
+                "IDR",
+                "ILS",
+                "INR",
+                "IQD",
+                "IRR",
+                "ISK",
+                "JMD",
+                "JOD",
+                "KES",
+                "KGS",
+                "KHR",
+                "KMF",
+                "KPW",
+                "KRW",
+                "KWD",
+                "KYD",
+                "KZT",
+                "LAK",
+                "LBP",
+                "LKR",
+                "LRD",
+                "LSL",
+                "LYD",
+                "MAD",
+                "MGA",
+                "MKD",
+                "MMK",
+                "MNT",
+                "MOP",
+                "MRU",
+                "MUR",
+                "MVR",
+                "MWK",
+                "MXN",
+                "MXV",
+                "MYR",
+                "MZN",
+                "NAD",
+                "NGN",
+                "NIO",
+                "NOK",
+                "NPR",
+                "NZD",
+                "OMR",
+                "PAB",
+                "PGK",
+                "PHP",
+                "PKR",
+                "PYG",
+                "QAR",
+                "RSD",
+                "RWF",
+                "SAR",
+                "SBD",
+                "SCR",
+                "SDG",
+                "SEK",
+                "SGD",
+                "SHP",
+                "SLE",
+                "SOS",
+                "SRD",
+                "SSP",
+                "STN",
+                "SVC",
+                "SYP",
+                "SZL",
+                "THB",
+                "TJS",
+                "TMT",
+                "TND",
+                "TOP",
+                "TTD",
+                "TWD",
+                "TZS",
+                "UGX",
+                "USN",
+                "UYI",
+                "UYU",
+                "UYW",
+                "UZS",
+                "VED",
+                "VES",
+                "VND",
+                "VUV",
+                "WST",
+                "XAD",
+                "XAF",
+                "XBA",
+                "XBB",
+                "XBC",
+                "XBD",
+                "XCD",
+                "XCG",
+                "XDR",
+                "XOF",
+                "XPF",
+                "XSU",
+                "XUA",
+                "YER",
+                "ZAR",
+                "ZMW",
+                "ZWG",
+                "ANG",
+                "HRK",
+                "SLL",
+                "VEF",
+                "ZWL"
               ],
               "type": "string",
               "example": "NULL"
-            }
+            },
+            "nullable": true
           },
           "nationalitiesSupported": {
             "type": "array",
@@ -3498,7 +3803,8 @@
               ],
               "type": "string",
               "example": "NOT_ENOUGH_INFO"
-            }
+            },
+            "nullable": true
           },
           "nationalitiesExcluded": {
             "type": "array",
@@ -3764,7 +4070,8 @@
               ],
               "type": "string",
               "example": "NOT_ENOUGH_INFO"
-            }
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -3796,7 +4103,166 @@
               "UAH",
               "TRY",
               "PEN",
-              "ALL"
+              "ALL",
+              "AED",
+              "AFN",
+              "AMD",
+              "AOA",
+              "ARS",
+              "AWG",
+              "AZN",
+              "BAM",
+              "BBD",
+              "BDT",
+              "BHD",
+              "BIF",
+              "BMD",
+              "BND",
+              "BOB",
+              "BOV",
+              "BSD",
+              "BTN",
+              "BWP",
+              "BYN",
+              "BZD",
+              "CDF",
+              "CHE",
+              "CHW",
+              "CLF",
+              "CLP",
+              "CNY",
+              "COU",
+              "CRC",
+              "CUP",
+              "CVE",
+              "CZK",
+              "DJF",
+              "DKK",
+              "DOP",
+              "DZD",
+              "EGP",
+              "ERN",
+              "ETB",
+              "FJD",
+              "FKP",
+              "GEL",
+              "GHS",
+              "GIP",
+              "GMD",
+              "GNF",
+              "GTQ",
+              "GYD",
+              "HKD",
+              "HNL",
+              "HTG",
+              "IDR",
+              "ILS",
+              "INR",
+              "IQD",
+              "IRR",
+              "ISK",
+              "JMD",
+              "JOD",
+              "KES",
+              "KGS",
+              "KHR",
+              "KMF",
+              "KPW",
+              "KRW",
+              "KWD",
+              "KYD",
+              "KZT",
+              "LAK",
+              "LBP",
+              "LKR",
+              "LRD",
+              "LSL",
+              "LYD",
+              "MAD",
+              "MGA",
+              "MKD",
+              "MMK",
+              "MNT",
+              "MOP",
+              "MRU",
+              "MUR",
+              "MVR",
+              "MWK",
+              "MXN",
+              "MXV",
+              "MYR",
+              "MZN",
+              "NAD",
+              "NGN",
+              "NIO",
+              "NOK",
+              "NPR",
+              "NZD",
+              "OMR",
+              "PAB",
+              "PGK",
+              "PHP",
+              "PKR",
+              "PYG",
+              "QAR",
+              "RSD",
+              "RWF",
+              "SAR",
+              "SBD",
+              "SCR",
+              "SDG",
+              "SEK",
+              "SGD",
+              "SHP",
+              "SLE",
+              "SOS",
+              "SRD",
+              "SSP",
+              "STN",
+              "SVC",
+              "SYP",
+              "SZL",
+              "THB",
+              "TJS",
+              "TMT",
+              "TND",
+              "TOP",
+              "TTD",
+              "TWD",
+              "TZS",
+              "UGX",
+              "USN",
+              "UYI",
+              "UYU",
+              "UYW",
+              "UZS",
+              "VED",
+              "VES",
+              "VND",
+              "VUV",
+              "WST",
+              "XAD",
+              "XAF",
+              "XBA",
+              "XBB",
+              "XBC",
+              "XBD",
+              "XCD",
+              "XCG",
+              "XDR",
+              "XOF",
+              "XPF",
+              "XSU",
+              "XUA",
+              "YER",
+              "ZAR",
+              "ZMW",
+              "ZWG",
+              "ANG",
+              "HRK",
+              "SLL",
+              "VEF",
+              "ZWL"
             ],
             "type": "string",
             "nullable": true
@@ -3804,18 +4270,21 @@
           "commodity": {
             "enum": [
               "NULL",
-              "BUNCH",
-              "CAN",
-              "CARTON",
-              "CUP",
-              "G",
-              "GALLON",
-              "KG",
-              "LT",
-              "METER",
-              "PACK",
-              "PCS",
-              "SACK"
+              "BUNCH_COMMODITY",
+              "CAN_COMMODITY",
+              "CARTON_COMMODITY",
+              "CUP_COMMODITY",
+              "G_COMMODITY",
+              "GALLON_COMMODITY",
+              "KG_COMMODITY",
+              "LT_COMMODITY",
+              "METER_COMMODITY",
+              "PACK_COMMODITY",
+              "PCS_COMMODITY",
+              "SACK_COMMODITY",
+              "SESSION_COMMODITY",
+              "CLASS_COMMODITY",
+              "VISIT_COMMODITY"
             ],
             "type": "string",
             "nullable": true
@@ -3829,10 +4298,7 @@
       },
       "DeliveryChannelCallCenterModal": {
         "required": [
-          "email",
-          "phone",
-          "website",
-          "whatsapp"
+          "phone"
         ],
         "type": "object",
         "properties": {
@@ -3844,17 +4310,20 @@
           "email": {
             "maxLength": 256,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "website": {
             "maxLength": 512,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "whatsapp": {
             "maxLength": 256,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -3930,11 +4399,13 @@
           },
           "fieldMaxLength": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "fieldMinLength": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "dataType": {
             "maxLength": 32,
@@ -3962,13 +4433,9 @@
       "DeliveryChannelRequestModal": {
         "required": [
           "availability",
-          "callCenter",
-          "contacts",
-          "deliveryOptions",
           "landingPage",
           "name",
-          "providerDeliveryChannelId",
-          "shortDescription"
+          "providerDeliveryChannelId"
         ],
         "type": "object",
         "properties": {
@@ -3992,7 +4459,8 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/DeliveryChannelContactModal"
-            }
+            },
+            "nullable": true
           },
           "callCenter": {
             "$ref": "#/components/schemas/DeliveryChannelCallCenterModal"
@@ -4007,7 +4475,17 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/DeliveryChannelDeliveryOptionModal"
-            }
+            },
+            "nullable": true
+          },
+          "status": {
+            "enum": [
+              "OFFLINE",
+              "ONLINE",
+              "REQUESTED"
+            ],
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -4205,7 +4683,8 @@
               "YI",
               "YO",
               "ZA",
-              "ZU"
+              "ZU",
+              "CN"
             ],
             "type": "string",
             "example": "EN"
@@ -4231,6 +4710,12 @@
             "maxLength": 64,
             "minLength": 0,
             "type": "string"
+          },
+          "deliveryId": {
+            "maxLength": 64,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
           },
           "deliveryAmount": {
             "type": "number",
@@ -4261,11 +4746,18 @@
               "REJECTED_BY_SERVICE_PROVIDER",
               "DELIVERY_PENDING",
               "DELIVERED",
+              "DELIVERY_READY_TO_COLLECT",
               "DELIVERY_COLLECTED",
               "DELIVERY_REVERTED"
             ],
             "type": "string",
             "example": "DRAFT"
+          },
+          "providerStatus": {
+            "maxLength": 64,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -4274,7 +4766,6 @@
         "required": [
           "deliveryRequestId",
           "message",
-          "providerDelivery",
           "providerDeliveryRequestId",
           "providerStatus",
           "status"
@@ -4295,7 +4786,8 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ProviderDeliveryItem"
-            }
+            },
+            "nullable": true
           },
           "message": {
             "maxLength": 1024,
@@ -4362,6 +4854,50 @@
         },
         "additionalProperties": false
       },
+      "EventSubscribeAuth": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "maxLength": 16,
+            "minLength": 0,
+            "type": "string"
+          },
+          "headerName": {
+            "maxLength": 64,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "headerValue": {
+            "maxLength": 512,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "username": {
+            "maxLength": 128,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "maxLength": 512,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "secret": {
+            "maxLength": 512,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "EventSubscribeRequest": {
         "required": [
           "callbackUrl"
@@ -4383,6 +4919,9 @@
             "minLength": 0,
             "type": "string",
             "format": "uri"
+          },
+          "auth": {
+            "$ref": "#/components/schemas/EventSubscribeAuth"
           }
         },
         "additionalProperties": false
@@ -4462,6 +5001,12 @@
           },
           "comment": {
             "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "providerStatus": {
+            "maxLength": 64,
             "minLength": 0,
             "type": "string",
             "nullable": true

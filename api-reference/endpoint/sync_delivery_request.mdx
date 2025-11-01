@@ -3,7 +3,12 @@ title: 'Sync Delivery Request'
 openapi: 'POST /api/DeliveryRequest/Sync'
 ---
 
+**Endpoint specification**
 
+- This endpoint helps Service Provider to map AccessRC delivery request with own delivery request. 
+- deliveryRequestId is provided to Service Provider within the DELIVERY_REQUEST.SENT event callback body
+- At this step if Service Provider can't create delivery records for each assistance item, providerDelivery list can be empty.
+- AccessRC requires providerDeliveryRequestId to map the deliveryRequestId and other properties for status tracking and operational integrity
 
 ## Request Payload
 

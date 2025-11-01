@@ -3,7 +3,10 @@ title: 'Sync Delivery'
 openapi: 'POST /api/Delivery/Sync'
 ---
 
+**Endpoint specification**
 
+- This endpoint helps Service Provider to map AccessRC delivery with own delivery.
+- deliveryId is only required when providerDeliveryId and deliveryId aren't mapped within /api/DeliveryRequest/Sync method. If they are already mapped this field can either be missing from the body, can be empty ("deliveryId:"""), or can be null ("deliveryId:null")
 
 ## Request Payload
 

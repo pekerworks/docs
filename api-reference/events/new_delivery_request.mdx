@@ -4,13 +4,13 @@ title: 'New Delivery Request Sent'
 
 ## Overview
 
-This document describes the **New Delivery Request** webhook event, where the **Service Provider** subscribes to the `NEW_DELIVERY_REQUEST` event in AccessRC. When the **Program Manager** creates a delivery request for a specific application group related to an assistance program that the **Service Provider** is configured for, AccessRC sends a webhook call to the callback service of the Service Provider with the delivery request details for integration.
+This document describes the **New Delivery Request** webhook event, where the **Service Provider** subscribes to the `DELIVERY_REQUEST.SENT` event in AccessRC. When the **Program Manager** creates a delivery request for a specific application group related to an assistance program that the **Service Provider** is configured for, AccessRC sends a webhook call to the callback service of the Service Provider with the delivery request details for integration.
 
 ---
 
 ## Event Flow: AccessRC → Service Provider
 
-1. **Service Provider** subscribes to the `NEW_DELIVERY_REQUEST` event.
+1. **Service Provider** subscribes to the `DELIVERY_REQUEST.SENT` event.
 2. When a delivery request is created, AccessRC sends a webhook call to the service provider's callback URL.
 3. The Service Provider processes the details of the delivery request and integrates it into their system.
 
@@ -19,6 +19,21 @@ This document describes the **New Delivery Request** webhook event, where the **
 <p align="center">
   <img src="/images/newDeliveryRequest.svg" />
 </p>
+
+| Field | Description |
+|--------|--------------|
+| deliveryRequestId | Unique identifier (UUID) of the delivery request within AccessRC. Used to track, reference, and manage the specific delivery operation. |
+| providerDeliveryChannelId | Unique identifier (UUID) of the delivery channel through which this request will be executed (e.g., MoneyGram, IBAN Transfer). Links the delivery to a defined provider configuration. |
+| description | A human-readable description of the delivery request, typically summarizing its purpose, campaign, or activity (e.g., “Ukraine Winterization Cash Delivery”). |
+| delivery | Array containing one or more delivery records for individual beneficiaries under this request. Each item represents a single transaction. |
+| deliveryId | Unique identifier (UUID) of the individual delivery record within AccessRC. Used for internal tracking and reconciliation. |
+| beneficiaryId | Unique identifier of the beneficiary receiving this delivery. Used to map the transaction to a registered recipient in AccessRC. |
+| deliveryOptions | List of key–value pairs containing delivery-specific input data required by the provider (e.g., bank details, account identifiers). |
+| key | The field name expected by the provider (e.g., iban, bankName, swiftCode). |
+| value | The corresponding field value provided for that key. |
+| amount | The total amount or quantity assigned to this delivery (e.g., 120). |
+| unit | The unit of the delivery amount (e.g., EUR, USD, PCS). |
+
 
 ## Webhook Request Payload
 

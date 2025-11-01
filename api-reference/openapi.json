@@ -2413,153 +2413,25 @@
               "schema": {
                 "$ref": "#/components/schemas/EventSubscribeRequest"
               },
-              "examples": {
-                "DeliveryStatusWebhook": {
-                  "summary": "Delivery channel status updates",
-                  "value": {
-                    "eventType": "DELIVERY_CHANNEL_STATUS",
-                    "callbackUrl": "https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e",
-                    "auth": null
-                  }
-                },
-                "ProviderUpdateWebhook": {
-                  "summary": "Service provider update events",
-                  "value": {
-                    "eventType": "PROVIDER_UPDATE",
-                    "callbackUrl": "https://webhook.site/abc12345-6789-4def-0000-example",
-                    "auth": {
-                      "type": "HMAC",
-                      "secret": "mysecretkey"
-                    }
-                  }
-                },
-                "BeneficiaryApprovalWebhook": {
-                  "summary": "Beneficiary approval events",
-                  "value": {
-                    "eventType": "BENEFICIARY_APPROVAL",
-                    "callbackUrl": "https://myapp.org/webhooks/beneficiary",
-                    "auth": {
-                      "type": "BASIC",
-                      "username": "webhookuser",
-                      "password": "securepass"
-                    }
-                  }
-                }
-              }
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","auth":null}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/EventSubscribeRequest"
               },
-              "examples": {
-                "DeliveryStatusWebhook": {
-                  "summary": "Delivery channel status updates",
-                  "value": {
-                    "eventType": "DELIVERY_CHANNEL_STATUS",
-                    "callbackUrl": "https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e",
-                    "auth": null
-                  }
-                },
-                "ProviderUpdateWebhook": {
-                  "summary": "Service provider update events",
-                  "value": {
-                    "eventType": "PROVIDER_UPDATE",
-                    "callbackUrl": "https://webhook.site/abc12345-6789-4def-0000-example",
-                    "auth": {
-                      "type": "HMAC",
-                      "secret": "mysecretkey"
-                    }
-                  }
-                },
-                "BeneficiaryApprovalWebhook": {
-                  "summary": "Beneficiary approval events",
-                  "value": {
-                    "eventType": "BENEFICIARY_APPROVAL",
-                    "callbackUrl": "https://myapp.org/webhooks/beneficiary",
-                    "auth": {
-                      "type": "BASIC",
-                      "username": "webhookuser",
-                      "password": "securepass"
-                    }
-                  }
-                }
-              }
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","auth":null}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/EventSubscribeRequest"
               },
-              "examples": {
-                "DeliveryStatusWebhook": {
-                  "summary": "Delivery channel status updates",
-                  "value": {
-                    "eventType": "DELIVERY_CHANNEL_STATUS",
-                    "callbackUrl": "https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e",
-                    "auth": null
-                  }
-                },
-                "ProviderUpdateWebhook": {
-                  "summary": "Service provider update events",
-                  "value": {
-                    "eventType": "PROVIDER_UPDATE",
-                    "callbackUrl": "https://webhook.site/abc12345-6789-4def-0000-example",
-                    "auth": {
-                      "type": "HMAC",
-                      "secret": "mysecretkey"
-                    }
-                  }
-                },
-                "BeneficiaryApprovalWebhook": {
-                  "summary": "Beneficiary approval events",
-                  "value": {
-                    "eventType": "BENEFICIARY_APPROVAL",
-                    "callbackUrl": "https://myapp.org/webhooks/beneficiary",
-                    "auth": {
-                      "type": "BASIC",
-                      "username": "webhookuser",
-                      "password": "securepass"
-                    }
-                  }
-                }
-              }
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","auth":null}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/EventSubscribeRequest"
               },
-              "examples": {
-                "DeliveryStatusWebhook": {
-                  "summary": "Delivery channel status updates",
-                  "value": {
-                    "eventType": "DELIVERY_CHANNEL_STATUS",
-                    "callbackUrl": "https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e",
-                    "auth": null
-                  }
-                },
-                "ProviderUpdateWebhook": {
-                  "summary": "Service provider update events",
-                  "value": {
-                    "eventType": "PROVIDER_UPDATE",
-                    "callbackUrl": "https://webhook.site/abc12345-6789-4def-0000-example",
-                    "auth": {
-                      "type": "HMAC",
-                      "secret": "mysecretkey"
-                    }
-                  }
-                },
-                "BeneficiaryApprovalWebhook": {
-                  "summary": "Beneficiary approval events",
-                  "value": {
-                    "eventType": "BENEFICIARY_APPROVAL",
-                    "callbackUrl": "https://myapp.org/webhooks/beneficiary",
-                    "auth": {
-                      "type": "BASIC",
-                      "username": "webhookuser",
-                      "password": "securepass"
-                    }
-                  }
-                }
-              }
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","auth":null}
             }
           }
         },
@@ -4205,9 +4077,6 @@
         "additionalProperties": false
       },
       "DeliveryChannelBudgetModal": {
-        "required": [
-          "amount"
-        ],
         "type": "object",
         "properties": {
           "currency": {
@@ -4419,7 +4288,8 @@
           },
           "amount": {
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -4835,7 +4705,7 @@
         "type": "object",
         "properties": {
           "providerDeliveryId": {
-            "maxLength": 64,
+            "maxLength": 150,
             "minLength": 0,
             "type": "string"
           },
@@ -5108,7 +4978,7 @@
         "type": "object",
         "properties": {
           "providerDeliveryId": {
-            "maxLength": 64,
+            "maxLength": 150,
             "minLength": 0,
             "type": "string",
             "nullable": true

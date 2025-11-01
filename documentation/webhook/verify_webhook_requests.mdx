@@ -11,14 +11,14 @@ Partners can subscribe to event notifications from **AccessRC** via the `api/Eve
 #### 🔹 No Authentication
 ```json
 {
-  "eventType": "DELIVERY_CHANNEL_STATUS",
+  "eventType": "DELIVERY_CHANNEL.STATUS_UPDATED",
   "callbackUrl": "https://partner.example.com/webhook"
 }
 ```
 #### 🔹 API Key Authentication
 ```json
 {
-  "eventType": "DELIVERY_CHANNEL_STATUS",
+  "eventType": "DELIVERY_CHANNEL.STATUS_UPDATED",
   "callbackUrl": "https://partner.example.com/webhook",
   "auth": {
     "type": "header",
@@ -30,7 +30,7 @@ Partners can subscribe to event notifications from **AccessRC** via the `api/Eve
 #### 🔹 Basic Authentication
 ```json
 {
-  "eventType": "DELIVERY_CHANNEL_STATUS",
+  "eventType": "DELIVERY_CHANNEL.STATUS_UPDATED",
   "callbackUrl": "https://partner.example.com/webhook",
   "auth": {
     "type": "basic",
@@ -42,7 +42,7 @@ Partners can subscribe to event notifications from **AccessRC** via the `api/Eve
 #### 🔹 HMAC Authentication
 ```json
 {
-  "eventType": "DELIVERY_CHANNEL_STATUS",
+  "eventType": "DELIVERY_CHANNEL.STATUS_UPDATED",
   "callbackUrl": "https://partner.example.com/webhook",
   "auth": {
     "type": "hmac",

@@ -62,9 +62,9 @@ Each webhook request will include an authentication header according to your cho
 | 🔸 Auth Type | 🔖 Header | 🧩 Example |
 |--------------|------------|------------|
 | **None** | *(no header)* | – |
-| **API Key** | `X-API-Key` | `X-API-Key: my-api-key` |
+| **API Key** | `x-api-key` | `x-api-key: my-api-key` |
 | **Basic** | `Authorization` | `Authorization: Basic bXl1c2VyOm15cGFzc3dvcmQ=` |
-| **HMAC** | `X-Signature` | `X-Signature: sha256=abcdef123456...` |
+| **HMAC** | `x-signature	` | `x-signature: sha256=abcdef123456...` |
 
 </div>
 
@@ -73,7 +73,7 @@ Each webhook request will include an authentication header according to your cho
 When using **HMAC authentication**, every webhook request includes an `X-Signature` header:
 
 ```http
-x-accessrc-signature: sha256=3bdc5b07d7ef9b61b98ed5df4b1793e12fd...
+x-signature: sha256=3bdc5b07d7ef9b61b98ed5df4b1793e12fd...
 ```
 
 This signature is generated using:
@@ -86,7 +86,7 @@ This signature is generated using:
 ### ✅ Verification Steps
 
 1. **Extract the Signature**  
-   Read the `X-Signature` header from the incoming request.
+   Read the `x-signature` header from the incoming request.
 
 2. **Get the Raw Request Body**  
    Use the exact raw payload as received — do not reformat or parse.
@@ -96,30 +96,10 @@ This signature is generated using:
    Prefix it with `"sha256="`.
 
 4. **Compare Signatures**  
-   Compare your computed signature with the received one using a **constant-time comparison**  
-   to avoid timing attacks.
+   Compare your computed signature with the received one.
 
 ---
 
-### 💻 Example (Node.js)
-
-```js
-import crypto from "crypto";
-
-function verifyWebhookSignature(req, secret) {
-  const received = req.headers["x-signature"]; // e.g. sha256=abcdef...
-  const body = req.rawBody; // must be unparsed string or buffer
-
-  const computed = "sha256=" + crypto.createHmac("sha256", secret)
-    .update(body)
-    .digest("hex");
-
-  return crypto.timingSafeEqual(
-    Buffer.from(received),
-    Buffer.from(computed)
-  );
-}
-```
 
 ## 4. 🔒 Security Best Practices
 
@@ -150,7 +130,7 @@ To test locally and ensure your webhook integration works as expected:
 Your webhook endpoint should behave as follows:
 
 - ✅ **Return `HTTP 2xx`** (usually `200 OK`) when processing succeeds.  
-- 🔐 **Return `401 Unauthorized`** or **`403 Forbidden`** if signature or authentication validation fails.  
+- 🔐 **Return `401 Unauthorized`** if signature or authentication validation fails.  
 - ⏱️ **Respond quickly** (within a few seconds) — delayed responses may trigger retries.  
 - 🧾 Include a short, plain-text or JSON response body if helpful for debugging, but it’s optional.  
 
@@ -162,29 +142,53 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "status": "received",
-  "message": "Webhook processed successfully"
+  "status": "success",
+  "message": "Callback successfully received",
+  "data": {}
 }
 ```
 
-#### ❌ Invalid Signature
+#### ❌ Invalid Signature (HMAC)
 ```http
 HTTP/1.1 401 Unauthorized
 Content-Type: application/json
 
 {
-  "error": "Invalid signature",
-  "message": "HMAC verification failed"
+  "status": "failed",
+  "error": {
+     "code": 401,
+     "message": "Invalid Signature",
+     "type": "Unauthorized"
+  }
 }
 ```
 
-#### 🚫 Forbidden
+#### 🚫 Invalid API KEY
 ```http
-HTTP/1.1 403 Forbidden
+HTTP/1.1 401 Unauthorized
 Content-Type: application/json
 
 {
-  "error": "Forbidden",
-  "message": "Authentication not allowed for this endpoint"
+  "status": "failed",
+  "error": {
+     "code": 401,
+     "message": "Invalid API KEY",
+     "type": "Unauthorized"
+  }
+}
+```
+
+#### 🚫 Invalid Credentials
+```http
+HTTP/1.1 401 Unauthorized
+Content-Type: application/json
+
+{
+  "status": "failed",
+  "error": {
+     "code": 401,
+     "message": "Invalid Credentials",
+     "type": "Unauthorized"
+  }
 }
 ```

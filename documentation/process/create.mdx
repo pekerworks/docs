@@ -8,13 +8,15 @@ Service Provider sends deliverychannels details to AccessRC for registering deli
 
 [`Create Delivery Channel Request` API endpoint](../../api-reference/endpoint/delivery_channel_create)
 
+<Note>🗒️ Service Provider will track the channel flow with providerDeliveryChannelId (which is the unique identifier of Service Provider delivery channel in its own system) </Note>
+
 <p align="center">
   <img src="/images/create_delivery_channel.svg" />
 </p>
 
 ## Delivery Channel Approval or Rejection
 
-In the second step of this stage a manual approval will be required by AccessRC IM from the Delivery Channel Screen. After the approval, Service Provider will be notified by DELIVERY_CHANNEL_STATUS event. Delivery Channel request can also be rejected and DELIVERY_CHANNEL_STATUS event will be sent including a rejection message to Service Provider in that case.
+In the second step of this stage a manual approval will be required by AccessRC IM from the Delivery Channel Screen. After the approval, Service Provider will be notified by `DELIVERY_CHANNEL.STATUS_UPDATED` event. Delivery Channel request can also be rejected and `DELIVERY_CHANNEL.STATUS_UPDATED` event will be sent including a rejection message to Service Provider in that case.
 
 <p align="center">
   <img src="/images/delivery-channel-approve-reject.svg" />

@@ -4,13 +4,13 @@ title: 'New Delivery Request Sent'
 
 ## Overview
 
-This document describes the **New Delivery Request** webhook event, where the **Service Provider** subscribes to the `DELIVERY_REQUEST.SENT` event in AccessRC. When the **Program Manager** creates a delivery request for a specific application group related to an assistance program that the **Service Provider** is configured for, AccessRC sends a webhook call to the callback service of the Service Provider with the delivery request details for integration.
+This document describes the **New Delivery Request** webhook event, where the **Service Provider** subscribes to the `DELIVERY_REQUEST_SENT` event in AccessRC. When the **Program Manager** creates a delivery request for a specific application group related to an assistance program that the **Service Provider** is configured for, AccessRC sends a webhook call to the callback service of the Service Provider with the delivery request details for integration.
 
 ---
 
 ## Event Flow: AccessRC → Service Provider
 
-1. **Service Provider** subscribes to the `DELIVERY_REQUEST.SENT` event.
+1. **Service Provider** subscribes to the `DELIVERY_REQUEST_SENT` event.
 2. When a delivery request is created, AccessRC sends a webhook call to the service provider's callback URL.
 3. The Service Provider processes the details of the delivery request and integrates it into their system.
 

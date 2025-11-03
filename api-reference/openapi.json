@@ -361,25 +361,61 @@
               "schema": {
                 "$ref": "#/components/schemas/DeliverySyncRequest"
               },
-              "example": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":1.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryId":null,"deliveryAmount":2.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"}]}
+              "examples": {
+                "Cash Delivery Sync": {
+                  "summary": "Example of a cash delivery synchronization request.",
+                  "value": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":150.0,"deliveryUnit":"EUR","deliveryVoucherSerialNo":"","deliveryReferenceNo":"66021926","status":"DELIVERY_REVERTED","providerStatus":"Refund"},{"providerDeliveryId":"8a2b16e7-f074-4433-8ef2-ac8d913249f0","deliveryId":null,"deliveryAmount":200.0,"deliveryUnit":"EUR","deliveryVoucherSerialNo":"","deliveryReferenceNo":"55423654","status":"DELIVERY_PENDING","providerStatus":"Pending"}]}
+                },
+                "In-Kind Delivery Sync": {
+                  "summary": "Example of an in-kind delivery synchronization request.",
+                  "value": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":1.0,"deliveryUnit":"pcs","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryId":null,"deliveryAmount":2.0,"deliveryUnit":"pcs","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"}]}
+                }
+              }
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliverySyncRequest"
               },
-              "example": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":1.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryId":null,"deliveryAmount":2.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"}]}
+              "examples": {
+                "Cash Delivery Sync": {
+                  "summary": "Example of a cash delivery synchronization request.",
+                  "value": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":150.0,"deliveryUnit":"EUR","deliveryVoucherSerialNo":"","deliveryReferenceNo":"66021926","status":"DELIVERY_REVERTED","providerStatus":"Refund"},{"providerDeliveryId":"8a2b16e7-f074-4433-8ef2-ac8d913249f0","deliveryId":null,"deliveryAmount":200.0,"deliveryUnit":"EUR","deliveryVoucherSerialNo":"","deliveryReferenceNo":"55423654","status":"DELIVERY_PENDING","providerStatus":"Pending"}]}
+                },
+                "In-Kind Delivery Sync": {
+                  "summary": "Example of an in-kind delivery synchronization request.",
+                  "value": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":1.0,"deliveryUnit":"pcs","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryId":null,"deliveryAmount":2.0,"deliveryUnit":"pcs","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"}]}
+                }
+              }
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliverySyncRequest"
               },
-              "example": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":1.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryId":null,"deliveryAmount":2.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"}]}
+              "examples": {
+                "Cash Delivery Sync": {
+                  "summary": "Example of a cash delivery synchronization request.",
+                  "value": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":150.0,"deliveryUnit":"EUR","deliveryVoucherSerialNo":"","deliveryReferenceNo":"66021926","status":"DELIVERY_REVERTED","providerStatus":"Refund"},{"providerDeliveryId":"8a2b16e7-f074-4433-8ef2-ac8d913249f0","deliveryId":null,"deliveryAmount":200.0,"deliveryUnit":"EUR","deliveryVoucherSerialNo":"","deliveryReferenceNo":"55423654","status":"DELIVERY_PENDING","providerStatus":"Pending"}]}
+                },
+                "In-Kind Delivery Sync": {
+                  "summary": "Example of an in-kind delivery synchronization request.",
+                  "value": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":1.0,"deliveryUnit":"pcs","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryId":null,"deliveryAmount":2.0,"deliveryUnit":"pcs","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"}]}
+                }
+              }
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliverySyncRequest"
               },
-              "example": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":1.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryId":null,"deliveryAmount":2.0,"deliveryUnit":"PCS","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"}]}
+              "examples": {
+                "Cash Delivery Sync": {
+                  "summary": "Example of a cash delivery synchronization request.",
+                  "value": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":150.0,"deliveryUnit":"EUR","deliveryVoucherSerialNo":"","deliveryReferenceNo":"66021926","status":"DELIVERY_REVERTED","providerStatus":"Refund"},{"providerDeliveryId":"8a2b16e7-f074-4433-8ef2-ac8d913249f0","deliveryId":null,"deliveryAmount":200.0,"deliveryUnit":"EUR","deliveryVoucherSerialNo":"","deliveryReferenceNo":"55423654","status":"DELIVERY_PENDING","providerStatus":"Pending"}]}
+                },
+                "In-Kind Delivery Sync": {
+                  "summary": "Example of an in-kind delivery synchronization request.",
+                  "value": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":1.0,"deliveryUnit":"pcs","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryId":null,"deliveryAmount":2.0,"deliveryUnit":"pcs","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"}]}
+                }
+              }
             }
           }
         },
@@ -1739,6 +1775,7 @@
           {
             "name": "providerDeliveryChannelId",
             "in": "path",
+            "description": "Unique identifier (UUID) of the provider’s delivery channel. Used to reference this specific configuration in API operations.",
             "required": true,
             "schema": {
               "type": "string"
@@ -2068,25 +2105,77 @@
               "schema": {
                 "$ref": "#/components/schemas/DeliveryRequestSyncRequest"
               },
-              "example": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH","providerStatus":"Completed","status":"APPROVED"}
+              "examples": {
+                "Initial Sync (Pending Approval)": {
+                  "summary": "A newly created delivery request waiting for approval.",
+                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Delivery Request successfully created","providerStatus":"WaitingSecondaryLevelTopUpApproval","status":"PENDING_APPROVAL"}
+                },
+                "Failed Sync (Rejected)": {
+                  "summary": "A delivery request rejected due to invalid or missing information.",
+                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"FAILED","comment":"IBAN is missing","providerStatus":"Failed"}],"message":"Delivery Request cannot be synced. Deliveries contain inconsistencies. Please check the delivery details.","providerStatus":"Rejected","status":"REJECTED"}
+                },
+                "Update Sync (Approved / Completed)": {
+                  "summary": "An approved delivery request successfully completed.",
+                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Approved 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH.","providerStatus":"Completed","status":"APPROVED"}
+                }
+              }
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryRequestSyncRequest"
               },
-              "example": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH","providerStatus":"Completed","status":"APPROVED"}
+              "examples": {
+                "Initial Sync (Pending Approval)": {
+                  "summary": "A newly created delivery request waiting for approval.",
+                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Delivery Request successfully created","providerStatus":"WaitingSecondaryLevelTopUpApproval","status":"PENDING_APPROVAL"}
+                },
+                "Failed Sync (Rejected)": {
+                  "summary": "A delivery request rejected due to invalid or missing information.",
+                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"FAILED","comment":"IBAN is missing","providerStatus":"Failed"}],"message":"Delivery Request cannot be synced. Deliveries contain inconsistencies. Please check the delivery details.","providerStatus":"Rejected","status":"REJECTED"}
+                },
+                "Update Sync (Approved / Completed)": {
+                  "summary": "An approved delivery request successfully completed.",
+                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Approved 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH.","providerStatus":"Completed","status":"APPROVED"}
+                }
+              }
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryRequestSyncRequest"
               },
-              "example": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH","providerStatus":"Completed","status":"APPROVED"}
+              "examples": {
+                "Initial Sync (Pending Approval)": {
+                  "summary": "A newly created delivery request waiting for approval.",
+                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Delivery Request successfully created","providerStatus":"WaitingSecondaryLevelTopUpApproval","status":"PENDING_APPROVAL"}
+                },
+                "Failed Sync (Rejected)": {
+                  "summary": "A delivery request rejected due to invalid or missing information.",
+                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"FAILED","comment":"IBAN is missing","providerStatus":"Failed"}],"message":"Delivery Request cannot be synced. Deliveries contain inconsistencies. Please check the delivery details.","providerStatus":"Rejected","status":"REJECTED"}
+                },
+                "Update Sync (Approved / Completed)": {
+                  "summary": "An approved delivery request successfully completed.",
+                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Approved 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH.","providerStatus":"Completed","status":"APPROVED"}
+                }
+              }
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryRequestSyncRequest"
               },
-              "example": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Approve 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH","providerStatus":"Completed","status":"APPROVED"}
+              "examples": {
+                "Initial Sync (Pending Approval)": {
+                  "summary": "A newly created delivery request waiting for approval.",
+                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Delivery Request successfully created","providerStatus":"WaitingSecondaryLevelTopUpApproval","status":"PENDING_APPROVAL"}
+                },
+                "Failed Sync (Rejected)": {
+                  "summary": "A delivery request rejected due to invalid or missing information.",
+                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"FAILED","comment":"IBAN is missing","providerStatus":"Failed"}],"message":"Delivery Request cannot be synced. Deliveries contain inconsistencies. Please check the delivery details.","providerStatus":"Rejected","status":"REJECTED"}
+                },
+                "Update Sync (Approved / Completed)": {
+                  "summary": "An approved delivery request successfully completed.",
+                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Approved 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH.","providerStatus":"Completed","status":"APPROVED"}
+                }
+              }
             }
           }
         },
@@ -2413,25 +2502,93 @@
               "schema": {
                 "$ref": "#/components/schemas/EventSubscribeRequest"
               },
-              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","auth":null}
+              "examples": {
+                "No Authentication": {
+                  "summary": "Subscription without authentication.",
+                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":null}
+                },
+                "API Key (header)": {
+                  "summary": "Subscription with API key in a custom header.",
+                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"header","headerName":"X-API-Key","headerValue":"my-api-key","username":null,"password":null,"secret":null}}
+                },
+                "Basic Auth": {
+                  "summary": "Subscription secured with HTTP Basic authentication.",
+                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"basic","headerName":null,"headerValue":null,"username":"webhook-user","password":"securepass","secret":null}}
+                },
+                "HMAC": {
+                  "summary": "Subscription signed with an HMAC secret.",
+                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"hmac","headerName":null,"headerValue":null,"username":null,"password":null,"secret":"mysecretkey"}}
+                }
+              }
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/EventSubscribeRequest"
               },
-              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","auth":null}
+              "examples": {
+                "No Authentication": {
+                  "summary": "Subscription without authentication.",
+                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":null}
+                },
+                "API Key (header)": {
+                  "summary": "Subscription with API key in a custom header.",
+                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"header","headerName":"X-API-Key","headerValue":"my-api-key","username":null,"password":null,"secret":null}}
+                },
+                "Basic Auth": {
+                  "summary": "Subscription secured with HTTP Basic authentication.",
+                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"basic","headerName":null,"headerValue":null,"username":"webhook-user","password":"securepass","secret":null}}
+                },
+                "HMAC": {
+                  "summary": "Subscription signed with an HMAC secret.",
+                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"hmac","headerName":null,"headerValue":null,"username":null,"password":null,"secret":"mysecretkey"}}
+                }
+              }
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/EventSubscribeRequest"
               },
-              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","auth":null}
+              "examples": {
+                "No Authentication": {
+                  "summary": "Subscription without authentication.",
+                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":null}
+                },
+                "API Key (header)": {
+                  "summary": "Subscription with API key in a custom header.",
+                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"header","headerName":"X-API-Key","headerValue":"my-api-key","username":null,"password":null,"secret":null}}
+                },
+                "Basic Auth": {
+                  "summary": "Subscription secured with HTTP Basic authentication.",
+                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"basic","headerName":null,"headerValue":null,"username":"webhook-user","password":"securepass","secret":null}}
+                },
+                "HMAC": {
+                  "summary": "Subscription signed with an HMAC secret.",
+                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"hmac","headerName":null,"headerValue":null,"username":null,"password":null,"secret":"mysecretkey"}}
+                }
+              }
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/EventSubscribeRequest"
               },
-              "example": {"eventType":"DELIVERY_CHANNEL_STATUS","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","auth":null}
+              "examples": {
+                "No Authentication": {
+                  "summary": "Subscription without authentication.",
+                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":null}
+                },
+                "API Key (header)": {
+                  "summary": "Subscription with API key in a custom header.",
+                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"header","headerName":"X-API-Key","headerValue":"my-api-key","username":null,"password":null,"secret":null}}
+                },
+                "Basic Auth": {
+                  "summary": "Subscription secured with HTTP Basic authentication.",
+                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"basic","headerName":null,"headerValue":null,"username":"webhook-user","password":"securepass","secret":null}}
+                },
+                "HMAC": {
+                  "summary": "Subscription signed with an HMAC secret.",
+                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"hmac","headerName":null,"headerValue":null,"username":null,"password":null,"secret":"mysecretkey"}}
+                }
+              }
             }
           }
         },
@@ -2509,7 +2666,7 @@
                     }
                   }
                 },
-                "example": {"error":null,"data":{"message":"Webhook successfully subscribed","subscriptionId":"c79f8f33-0042-4c25-bd5e-0dc1982f8cea","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","eventType":"NEW_DELIVERY_REQUEST","date":"2025-04-07T07:51:38Z"},"status":"success"}
+                "example": {"error":null,"data":{"message":"Webhook successfully subscribed","subscriptionId":"c79f8f33-0042-4c25-bd5e-0dc1982f8cea","callbackUrl":"https://partner.example.com/webhook","eventType":"DELIVERY_REQUEST_SENT","date":"2025-04-07T07:51:38Z"},"status":"success"}
               }
             }
           },
@@ -2758,25 +2915,25 @@
               "schema": {
                 "$ref": "#/components/schemas/EventUnsubscribeRequest"
               },
-              "example": {"eventType":"DELIVERY_CHANNEL_STATUS"}
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED"}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/EventUnsubscribeRequest"
               },
-              "example": {"eventType":"DELIVERY_CHANNEL_STATUS"}
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED"}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/EventUnsubscribeRequest"
               },
-              "example": {"eventType":"DELIVERY_CHANNEL_STATUS"}
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED"}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/EventUnsubscribeRequest"
               },
-              "example": {"eventType":"DELIVERY_CHANNEL_STATUS"}
+              "example": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED"}
             }
           }
         },
@@ -2854,7 +3011,7 @@
                     }
                   }
                 },
-                "example": {"error":null,"data":{"message":"Webhook successfully unsubscribed","subscriptionId":"c79f8f33-0042-4c25-bd5e-0dc1982f8cea","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","eventType":"NEW_DELIVERY_REQUEST","date":"2025-04-07T07:51:38Z"},"status":"success"}
+                "example": {"error":null,"data":{"message":"Webhook successfully unsubscribed","subscriptionId":"c79f8f33-0042-4c25-bd5e-0dc1982f8cea","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","eventType":"DELIVERY_REQUEST_SENT","date":"2025-04-07T07:51:38Z"},"status":"success"}
               }
             }
           },
@@ -4388,42 +4545,50 @@
           "fieldLabel": {
             "maxLength": 128,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "The display label shown to users for this field (e.g., “IBAN (22 characters)”) and used for user-facing forms or validation messages."
           },
           "fieldName": {
             "maxLength": 128,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "The internal name or key used to identify the field in API requests (e.g., accountNumber)."
           },
           "fieldMaxLength": {
             "type": "integer",
+            "description": "The maximum number of characters or digits allowed for this field. Input exceeding this length won’t be allowed. If this value is sent as empty ““, the default value will be set as 500",
             "format": "int32",
             "nullable": true
           },
           "fieldMinLength": {
             "type": "integer",
+            "description": "The minimum number of characters or digits required for this field. Inputs shorter than this limit won’t be allowed. If this value is sent as empty ““, the default value will be set as 0",
             "format": "int32",
             "nullable": true
           },
           "dataType": {
             "maxLength": 32,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "Defines the expected data type for the field (e.g., STRING, NUMBER, DATE). Determines how the input should be validated and processed. (Negligible field - will be updated)"
           },
           "defaultValue": {
             "maxLength": 128,
             "minLength": 0,
             "type": "string",
+            "description": "Specifies the default value pre-filled or assumed if the user does not provide input for this field.",
             "nullable": true
           },
           "validationRegex": {
             "maxLength": 128,
             "minLength": 0,
             "type": "string",
+            "description": "Regular expression used to validate the field value against a specific format (e.g., IBAN pattern, phone number format).",
             "nullable": true
           },
           "isRequired": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Boolean value indicating whether this field is mandatory for successful submission or processing."
           }
         },
         "additionalProperties": false
@@ -4440,24 +4605,27 @@
           "providerDeliveryChannelId": {
             "maxLength": 64,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "Unique identifier (UUID) of the provider’s delivery channel. Used to reference this specific configuration in API operations."
           },
           "name": {
-            "$ref": "#/components/schemas/DeliveryChannelTranslationModal"
+            "$ref": "#/components/schemas/DeliveryChannelTranslationForNameModal"
           },
           "shortDescription": {
-            "$ref": "#/components/schemas/DeliveryChannelTranslationModal"
+            "$ref": "#/components/schemas/DeliveryChannelTranslationForShortDescriptionModal"
           },
           "landingPage": {
             "maxLength": 512,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "Public website URL of the provider or service where users can find more information."
           },
           "contacts": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/DeliveryChannelContactModal"
             },
+            "description": "List of primary contact persons for this delivery channel, including their name, email, and phone number.\n\ncontacts can be absent in the request body, can be an empty array (\"contacts\": []), or can be null (\"contacts\": null)",
             "nullable": true
           },
           "callCenter": {
@@ -4474,6 +4642,7 @@
             "items": {
               "$ref": "#/components/schemas/DeliveryChannelDeliveryOptionModal"
             },
+            "description": "Array of input field definitions required for processing a delivery, including label, field name, data type, length constraints, default value, validation pattern, and requirement status. deliveryOptions can be absent in the request body, can be an empty array (\"deliveryOptions\": []), or can be null (\"deliveryOptions\": null)",
             "nullable": true
           },
           "status": {
@@ -4483,12 +4652,13 @@
               "REQUESTED"
             ],
             "type": "string",
+            "description": "Indicates the current operational status of the delivery channel (e.g., REQUESTED, OFFLINE, ONLINE). (Note: Create method overrides the value, and  it is initially added as REQUESTED, so a new delivery channel can’t be created as Offline or Online) (Note: Update method can only update this field as Offline or Online)",
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "DeliveryChannelTranslationModal": {
+      "DeliveryChannelTranslationForNameModal": {
         "required": [
           "language",
           "translation"
@@ -4685,12 +4855,223 @@
               "CN"
             ],
             "type": "string",
+            "description": "Localized display language of the delivery channel",
             "example": "EN"
           },
           "translation": {
             "maxLength": 1024,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "Localized display name of the delivery channel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeliveryChannelTranslationForShortDescriptionModal": {
+        "required": [
+          "language",
+          "translation"
+        ],
+        "type": "object",
+        "properties": {
+          "language": {
+            "enum": [
+              "NULL",
+              "XX",
+              "EN",
+              "RU",
+              "UK",
+              "TR",
+              "AR",
+              "BG",
+              "CS",
+              "DA",
+              "DE",
+              "EL",
+              "ES",
+              "ET",
+              "FI",
+              "FR",
+              "HI",
+              "HR",
+              "HU",
+              "IT",
+              "KO",
+              "LT",
+              "LV",
+              "NL",
+              "PA",
+              "PL",
+              "PT",
+              "RO",
+              "SK",
+              "SL",
+              "SV",
+              "UR",
+              "AB",
+              "AA",
+              "AF",
+              "AK",
+              "SQ",
+              "AM",
+              "AN",
+              "HY",
+              "AS",
+              "AV",
+              "AE",
+              "AY",
+              "AZ",
+              "BM",
+              "BA",
+              "EU",
+              "BE",
+              "BN",
+              "BI",
+              "BS",
+              "BR",
+              "MY",
+              "CA",
+              "CH",
+              "CE",
+              "NY",
+              "ZH",
+              "CU",
+              "CV",
+              "KW",
+              "CO",
+              "CR",
+              "DV",
+              "DZ",
+              "EO",
+              "EE",
+              "FO",
+              "FJ",
+              "FY",
+              "FF",
+              "GD",
+              "GL",
+              "LG",
+              "KA",
+              "KL",
+              "GN",
+              "GU",
+              "HT",
+              "HA",
+              "HE",
+              "HZ",
+              "HO",
+              "IS",
+              "IO",
+              "IG",
+              "ID",
+              "IA",
+              "IE",
+              "IU",
+              "IK",
+              "GA",
+              "JA",
+              "JV",
+              "KN",
+              "KR",
+              "KS",
+              "KK",
+              "KM",
+              "KI",
+              "RW",
+              "KY",
+              "KV",
+              "KG",
+              "KJ",
+              "KU",
+              "LO",
+              "LA",
+              "LI",
+              "LN",
+              "LU",
+              "LB",
+              "MK",
+              "MG",
+              "MS",
+              "ML",
+              "MT",
+              "GV",
+              "MI",
+              "MR",
+              "MH",
+              "MN",
+              "NA",
+              "NV",
+              "ND",
+              "NR",
+              "NG",
+              "NE",
+              "NO",
+              "NB",
+              "NN",
+              "II",
+              "OC",
+              "OJ",
+              "OR",
+              "OM",
+              "OS",
+              "PI",
+              "PS",
+              "FA",
+              "QU",
+              "RM",
+              "RN",
+              "SE",
+              "SM",
+              "SG",
+              "SA",
+              "SC",
+              "SR",
+              "SN",
+              "SD",
+              "SI",
+              "SO",
+              "ST",
+              "SU",
+              "SW",
+              "SS",
+              "TL",
+              "TY",
+              "TG",
+              "TA",
+              "TT",
+              "TE",
+              "TH",
+              "BO",
+              "TI",
+              "TO",
+              "TS",
+              "TN",
+              "TK",
+              "TW",
+              "UG",
+              "UZ",
+              "VE",
+              "VI",
+              "VO",
+              "WA",
+              "CY",
+              "WO",
+              "XH",
+              "YI",
+              "YO",
+              "ZA",
+              "ZU",
+              "CN"
+            ],
+            "type": "string",
+            "description": "Localized description language of the delivery channel",
+            "example": "EN"
+          },
+          "translation": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "description": "Localized description translated text of the delivery channel"
           }
         },
         "additionalProperties": false
@@ -4707,33 +5088,39 @@
           "providerDeliveryId": {
             "maxLength": 150,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "Unique identifier (UUID) of the delivery record as provided by the external service provider. Used to link AccessRC deliveries with the provider’s system."
           },
           "deliveryId": {
             "maxLength": 64,
             "minLength": 0,
             "type": "string",
+            "description": "Internal AccessRC delivery identifier. May be null if the record has not yet been fully linked or synchronized with AccessRC.",
             "nullable": true
           },
           "deliveryAmount": {
             "type": "number",
+            "description": "The total quantity or value delivered to the beneficiary (e.g., cash amount, item count).",
             "format": "double"
           },
           "deliveryUnit": {
             "maxLength": 64,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "The measurement unit associated with the delivery amount (e.g., USD, EUR, PCS, KG)."
           },
           "deliveryVoucherSerialNo": {
             "maxLength": 64,
             "minLength": 0,
             "type": "string",
+            "description": "Unique serial number or voucher code issued for tracking or redemption purposes. Used to verify delivery authenticity.",
             "nullable": true
           },
           "deliveryReferenceNo": {
             "maxLength": 64,
             "minLength": 0,
             "type": "string",
+            "description": "Optional external reference number for the delivery, typically provided by the service provider or financial system.",
             "nullable": true
           },
           "status": {
@@ -4749,12 +5136,14 @@
               "DELIVERY_REVERTED"
             ],
             "type": "string",
+            "description": "Internal AccessRC status representing the delivery’s state in the system workflow (e.g., DELIVERY_REVERTED, DELIVERED, DELIVERY_COLLECTED, DELIVERY_PENDING).",
             "example": "DRAFT"
           },
           "providerStatus": {
             "maxLength": 64,
             "minLength": 0,
             "type": "string",
+            "description": "Current delivery status as reported by the external provider (e.g., Processing, Completed, Collected).",
             "nullable": true
           }
         },
@@ -4773,29 +5162,34 @@
           "deliveryRequestId": {
             "maxLength": 64,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "Unique identifier (UUID) of the delivery request within AccessRC. Used to track and reference the specific delivery transaction initiated by the system."
           },
           "providerDeliveryRequestId": {
             "maxLength": 64,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "Unique identifier (UUID) assigned by the external service provider for the same delivery request, enabling cross-system tracking and synchronization."
           },
           "providerDelivery": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ProviderDeliveryItem"
             },
+            "description": "Array containing detailed records of delivery transactions handled by the provider, including status and synchronization results. providerDelivery can be an empty array (\"providerDelivery\": []) if delivery records are planned to be synced with /api/Delivery/Sync method later on.",
             "nullable": true
           },
           "message": {
             "maxLength": 1024,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "A descriptive summary of the delivery request, typically used for logging, notifications, or administrative review (e.g., “Approve 146,515 UAH of payment to 27 beneficiaries…”)."
           },
           "providerStatus": {
             "maxLength": 64,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "Aggregated status received from the external provider for the entire delivery request (e.g., Pending, Completed, Failed)."
           },
           "status": {
             "enum": [
@@ -4806,6 +5200,7 @@
               "DELIVERED"
             ],
             "type": "string",
+            "description": "Internal AccessRC status of the delivery request, indicating its approval or workflow state (e.g., PENDING_APPROVAL, APPROVED, REJECTED).",
             "example": "DRAFT"
           }
         },
@@ -4861,36 +5256,42 @@
           "type": {
             "maxLength": 16,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "Type of authentication to use. Options: 'hmac' (secret key), 'header' (API key), 'basic' (username/password), or null if no authentication is required."
           },
           "headerName": {
             "maxLength": 64,
             "minLength": 0,
             "type": "string",
+            "description": "Name of the API key header. Required if type is 'header'.",
             "nullable": true
           },
           "headerValue": {
             "maxLength": 512,
             "minLength": 0,
             "type": "string",
+            "description": "Value of the API key. Required if type is 'header'.",
             "nullable": true
           },
           "username": {
             "maxLength": 128,
             "minLength": 0,
             "type": "string",
+            "description": "Username for basic authentication. Required if type is 'basic'.",
             "nullable": true
           },
           "password": {
             "maxLength": 512,
             "minLength": 0,
             "type": "string",
+            "description": "Password for basic authentication. Required if type is 'basic'.",
             "nullable": true
           },
           "secret": {
             "maxLength": 512,
             "minLength": 0,
             "type": "string",
+            "description": "Secret key for HMAC authentication. Required if type is 'hmac'.",
             "nullable": true
           }
         },
@@ -4905,17 +5306,19 @@
           "eventType": {
             "enum": [
               "NULL",
-              "DELIVERY_CHANNEL_STATUS",
-              "NEW_DELIVERY_REQUEST",
-              "REFUND_DELIVERY"
+              "DELIVERY_CHANNEL_STATUS_UPDATED",
+              "DELIVERY_REQUEST_SENT",
+              "DELIVERY_REFUND_REQUESTED"
             ],
             "type": "string",
+            "description": "Type of event to subscribe to.",
             "example": "NULL"
           },
           "callbackUrl": {
             "maxLength": 256,
             "minLength": 0,
             "type": "string",
+            "description": "Callback URL that will receive the event notifications.",
             "format": "uri"
           },
           "auth": {
@@ -4930,9 +5333,9 @@
           "eventType": {
             "enum": [
               "NULL",
-              "DELIVERY_CHANNEL_STATUS",
-              "NEW_DELIVERY_REQUEST",
-              "REFUND_DELIVERY"
+              "DELIVERY_CHANNEL_STATUS_UPDATED",
+              "DELIVERY_REQUEST_SENT",
+              "DELIVERY_REFUND_REQUESTED"
             ],
             "type": "string",
             "example": "NULL"
@@ -4981,12 +5384,14 @@
             "maxLength": 150,
             "minLength": 0,
             "type": "string",
+            "description": "Unique identifier (UUID) of the provider’s delivery record. Represents a single delivery instance linked to this request.",
             "nullable": true
           },
           "deliveryId": {
             "maxLength": 64,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "Internal AccessRC delivery identifier associated with this provider delivery."
           },
           "syncStatus": {
             "enum": [
@@ -4995,18 +5400,21 @@
               "FAILED"
             ],
             "type": "string",
+            "description": "Indicates the result of data synchronization with the provider (e.g., SUCCESS, FAILED).",
             "example": "PENDING"
           },
           "comment": {
             "maxLength": 1024,
             "minLength": 0,
             "type": "string",
+            "description": "Optional remarks or system-generated notes regarding the delivery or synchronization outcome.",
             "nullable": true
           },
           "providerStatus": {
             "maxLength": 64,
             "minLength": 0,
             "type": "string",
+            "description": "The current status of the delivery as reported by the external provider (e.g., Processing, Completed, Rejected).",
             "nullable": true
           }
         },

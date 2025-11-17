@@ -3294,7 +3294,8 @@
                 "DRIVER_LICENSE",
                 "RESIDENCE",
                 "OTHER",
-                "ALL"
+                "ALL",
+                "NOT_PROCESSED"
               ],
               "type": "string",
               "example": "NULL"
@@ -3311,7 +3312,8 @@
                 "DRIVER_LICENSE",
                 "RESIDENCE",
                 "OTHER",
-                "ALL"
+                "ALL",
+                "NOT_PROCESSED"
               ],
               "type": "string",
               "example": "NULL"
@@ -4231,7 +4233,8 @@
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "Specifies where and under which conditions the delivery channel is available — including supported and excluded categories, countries, KYC levels, currencies, and nationalities. Supported values will be filtered and matched within AccessRC to determine eligible delivery options, while excluded values will prevent beneficiaries from being assisted through this channel.\n\ncountriesSupported, countriesExcluded,kycSupported, kycExcluded, currenciesSupported, currenciesExcluded, nationalitiesSupported, nationalitiesExcluded can be absent in the request body, can be an empty array (\"nationalitiesExcluded\": []), or can be null (\"nationalitiesExcluded\": null)"
       },
       "DeliveryChannelBudgetModal": {
         "type": "object",
@@ -4438,7 +4441,30 @@
               "SACK_COMMODITY",
               "SESSION_COMMODITY",
               "CLASS_COMMODITY",
-              "VISIT_COMMODITY"
+              "VISIT_COMMODITY",
+              "BAG_COMMODITY",
+              "BOTTLE_COMMODITY",
+              "BOX_COMMODITY",
+              "BUNDLE_COMMODITY",
+              "CANISTER_COMMODITY",
+              "CARD_COMMODITY",
+              "CASE_COMMODITY",
+              "CONTAINER_COMMODITY",
+              "DRUM_COMMODITY",
+              "ITEM_COMMODITY",
+              "JAR_COMMODITY",
+              "KIT_COMMODITY",
+              "PACKET_COMMODITY",
+              "PARCEL_COMMODITY",
+              "POUCH_COMMODITY",
+              "ROLL_COMMODITY",
+              "SACHET_COMMODITY",
+              "SET_COMMODITY",
+              "TICKET_COMMODITY",
+              "TUBE_COMMODITY",
+              "TRIP_COMMODITY",
+              "UNIT_COMMODITY",
+              "VOUCHER_COMMODITY"
             ],
             "type": "string",
             "nullable": true
@@ -4449,7 +4475,8 @@
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "Defines the allocated budget for this delivery channel, including currency, optional commodity type, and total amount. If a budget is provided, AccessRC won’t exceed this budget while sending the delivery requests. If the budget isn’t provided AccessRC will consider using the Program Virtual Budget that is defined while creating an assistance program in AccessRC"
       },
       "DeliveryChannelCallCenterModal": {
         "required": [
@@ -4481,7 +4508,8 @@
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "Contact details for customer support, including phone number, email, website, and optional WhatsApp contact.\n\ncallCenter can be absent in the request body, or can be null (\"callCenter\": null)\n\nphone, email, WhatsApp, website can be absent in the request body, can be null  (\"phone\": null), or can be empty  (\"phone\": \"\")"
       },
       "DeliveryChannelContactModal": {
         "required": [
@@ -4865,7 +4893,8 @@
             "description": "Localized display name of the delivery channel"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "Localized display name of the delivery channel, including the language code and translated text. (Note: this will be auto-translated to other languages whenever approved by AccessRC Admin)"
       },
       "DeliveryChannelTranslationForShortDescriptionModal": {
         "required": [
@@ -5074,7 +5103,8 @@
             "description": "Localized description translated text of the delivery channel"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "Localized description providing key information about how the service or delivery channel can be accessed or used. (Note: this will be auto-translated to other languages whenever approved by AccessRC Admin). shortDescription can be absent in the request body, or can be null (\"shortDescription\": null)"
       },
       "DeliveryItem": {
         "required": [

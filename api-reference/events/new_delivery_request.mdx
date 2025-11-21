@@ -99,7 +99,7 @@ This document describes the **New Delivery Request** webhook event, where the **
 
 ## Webhook Response Payload
 
-### 200 Response
+### 200 Response Success
 
 A successful callback response from the Service Provider’s callback service.
 
@@ -108,6 +108,21 @@ A successful callback response from the Service Provider’s callback service.
     "status": "success",
     "message": "Callback successfully received",
     "data": {}
+}
+```
+
+### 200 Response - Business Exception
+
+A successful callback response from the Service Provider’s callback service for business exceptions.
+
+```json
+{
+    "status": "failed",
+    "error": {
+        "code": 200,
+        "message": "Delivery can't be found",
+        "type": "Exception"
+    }
 }
 ```
 

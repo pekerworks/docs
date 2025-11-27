@@ -111,21 +111,6 @@ A successful callback response from the Service Provider’s callback service.
 }
 ```
 
-### 200 Response - Business Exception
-
-A successful callback response from the Service Provider’s callback service for business exceptions.
-
-```json
-{
-    "status": "failed",
-    "error": {
-        "code": 200,
-        "message": "Delivery can't be found",
-        "type": "Exception"
-    }
-}
-```
-
 ### 400 Response
 
 If the validation fails or there is a bad request, the response will be:

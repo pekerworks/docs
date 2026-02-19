@@ -24,6 +24,7 @@ This document describes the **New Delivery Request** webhook event, where the **
 |--------|--------------|
 | deliveryRequestId | Unique identifier (UUID) of the delivery request within AccessRC. Used to track, reference, and manage the specific delivery operation. |
 | providerDeliveryChannelId | Unique identifier (UUID) of the delivery channel through which this request will be executed (e.g., MoneyGram, IBAN Transfer). Links the delivery to a defined provider configuration. |
+| assistanceProgramId | Unique identifier (UUID) of the Assistance Program within AccessRC |
 | description | A human-readable description of the delivery request, typically summarizing its purpose, campaign, or activity (e.g., “Ukraine Winterization Cash Delivery”). |
 | delivery | Array containing one or more delivery records for individual beneficiaries under this request. Each item represents a single transaction. |
 | deliveryId | Unique identifier (UUID) of the individual delivery record within AccessRC. Used for internal tracking and reconciliation. |
@@ -43,6 +44,7 @@ This document describes the **New Delivery Request** webhook event, where the **
 {
     "deliveryRequestId": "2372dd86-1e5d-4110-97ba-ff3c4237a74f",
     "providerDeliveryChannelId": "36cd4d29-e332-47b9-9ceb-f084fe5b0446",
+    "assistanceProgramId": "553dad44-a2c2-493a-ab74-564fbcb59719",
     "description": "Ukraine Winterization Cash Delivery",
     "delivery": [
         {
@@ -75,6 +77,7 @@ This document describes the **New Delivery Request** webhook event, where the **
 {
     "deliveryRequestId": "2372dd86-1e5d-4110-97ba-ff3c4237a74f",
     "providerDeliveryChannelId": "36cd4d29-e332-47b9-9ceb-f084fe5b0446",
+    "assistanceProgramId": "553dad44-a2c2-493a-ab74-564fbcb59719",
     "description": "1st Month Hygiene Kits",
     "delivery": [
         {

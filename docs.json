@@ -107,9 +107,17 @@
             "pages": [
                "api-reference/events/delivery_channel_status",
                "api-reference/events/new_delivery_request",
+               "api-reference/events/refund_delivery"
+            ]
+          },
+          {
+            "group": "Planned Events (not yet available)",
+            "pages": [
                "api-reference/events/eligibility_event",
                "api-reference/events/program_pull_form",
-               "api-reference/events/refund_delivery"            ]
+               "api-reference/events/beneficiary_sync_event",
+               "api-reference/events/applications_import_result"
+            ]
           }
         ]
       }

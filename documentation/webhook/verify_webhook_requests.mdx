@@ -64,17 +64,21 @@ Each webhook request will include an authentication header according to your cho
 | **None** | *(no header)* | – |
 | **API Key** | `x-api-key` | `x-api-key: my-api-key` |
 | **Basic** | `Authorization` | `Authorization: Basic bXl1c2VyOm15cGFzc3dvcmQ=` |
-| **HMAC** | `x-signature	` | `x-signature: sha256=abcdef123456...` |
+| **HMAC** | `x-signature` + `x-timestamp` | `x-signature: sha256=abcdef123456...`<br/>`x-timestamp: 1717430400` |
 
 </div>
 
 ## 3. 🧮 Verifying HMAC Signatures
 
-When using **HMAC authentication**, every webhook request includes an `X-Signature` header:
+When using **HMAC authentication**, every webhook request includes an `X-Signature` header and an `X-Timestamp` header:
 
 ```http
 x-signature: sha256=3bdc5b07d7ef9b61b98ed5df4b1793e12fd...
+x-timestamp: 1717430400
 ```
+
+- **`x-signature`** — `sha256=` followed by the hex-encoded HMAC-SHA256 of the raw request body.
+- **`x-timestamp`** — the Unix time **in seconds** at which AccessRC sent the request. Use it to reject stale/replayed deliveries (e.g. reject if it is more than a few minutes from your server's current time).
 
 This signature is generated using:
 

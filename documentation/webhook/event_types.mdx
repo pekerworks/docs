@@ -1,45 +1,39 @@
 ## 📋 Event Types
 
-Below is the list of all event types you can subscribe to using our webhook system. These correspond to different actions or changes within the AccessRC platform.
+Below are the event types in the AccessRC webhook system. The **Available** events can be subscribed to today; the **Planned** events are documented for forward planning but are not yet accepted by the `Subscribe Event` endpoint.
 
 ---
 
-### 📦 Delivery Events
+## ✅ Available Event Types
 
-| Event Type                | Description                                      |
-|---------------------------|--------------------------------------------------|
-| `DELIVERY_CHANNEL_STATUS_UPDATED` | Delivery Channel Request is approved or rejected |
+These are the event types currently accepted by the `Subscribe Event` endpoint. You can confirm the live list at any time via the `GetLookUpValues` endpoint with `data: "EventType"`.
 
----
-
-### 🎯 Delivery Request Events
-
-| Event Type              | Description                            |
-|-------------------------|----------------------------------------|
-| `DELIVERY_REQUEST_SENT`  | A new delivery request is created      |
+| Event Type                        | Description                                      |
+|-----------------------------------|--------------------------------------------------|
+| `DELIVERY_CHANNEL_STATUS_UPDATED` | Delivery Channel request is approved or rejected |
+| `DELIVERY_REQUEST_SENT`           | A new delivery request is created                |
+| `DELIVERY_REFUND_REQUESTED`       | A refund is requested for a delivery             |
 
 ---
 
-### 🎯 Eligibility Evaluation Events
+## 🚧 Planned Event Types (not yet available)
 
-| Event Type              | Description                            |
-|-------------------------|----------------------------------------|
+<Note>
+  These events are on the roadmap and documented for planning purposes. They are **not yet accepted** by the `Subscribe Event` endpoint — attempting to subscribe to them returns a validation error. Subscribe only to the **Available** event types above.
+</Note>
+
+| Event Type                      | Description                            |
+|---------------------------------|----------------------------------------|
 | `PROGRAM_ELIGIBILITY_EVALUATED` | Eligibility evaluations are shared     |
-
----
-
-### ↪️ Refund Events
-
-| Event Type              | Description                            |
-|-------------------------|----------------------------------------|
-| `DELIVERY_REFUND_REQUESTED`       | A refund is requested for a delivery   |
-
+| `PROGRAM_PULL_FORM`             | Program application form is pulled     |
+| `BENEFICIARY_SYNC`              | Beneficiary metadata is synchronized   |
+| `APPLICATIONS_IMPORT_RESULT`    | Imported applications result is ready  |
 
 ---
 
 ## ✅ Subscribing to Events
 
-Use the [`Subscribe Event` API endpoint](../../api-reference/endpoint/event_subscribe) to subscribe your URL to one or more of these events.
+Use the [`Subscribe Event` API endpoint](../../api-reference/endpoint/event_subscribe) to subscribe your URL to one or more of the **Available** events.
 
 You can subscribe to:
 - A single event (e.g., `DELIVERY_CHANNEL_STATUS_UPDATED`)

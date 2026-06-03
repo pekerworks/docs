@@ -16,25 +16,33 @@
               "schema": {
                 "$ref": "#/components/schemas/GetLookUpRequest"
               },
-              "example": {"data":"Nationality"}
+              "example": {
+                "data": "Nationality"
+              }
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/GetLookUpRequest"
               },
-              "example": {"data":"Nationality"}
+              "example": {
+                "data": "Nationality"
+              }
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/GetLookUpRequest"
               },
-              "example": {"data":"Nationality"}
+              "example": {
+                "data": "Nationality"
+              }
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/GetLookUpRequest"
               },
-              "example": {"data":"Nationality"}
+              "example": {
+                "data": "Nationality"
+              }
             }
           }
         },
@@ -86,7 +94,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -112,7 +120,20 @@
                     }
                   }
                 },
-                "example": {"error":null,"data":[{"lookUp":"BG","translation":"Bulgarian"},{"lookUp":"HU","translation":"Hungarian"}],"status":"success"}
+                "example": {
+                  "error": null,
+                  "data": [
+                    {
+                      "lookUp": "BG",
+                      "translation": "Bulgarian"
+                    },
+                    {
+                      "lookUp": "HU",
+                      "translation": "Hungarian"
+                    }
+                  ],
+                  "status": "success"
+                }
               }
             }
           },
@@ -163,7 +184,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -189,7 +210,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"95bd740b-755b-4f95-8549-fa9acfc31a41","code":400,"type":"ValidationError","message":"Invalid request body format. Please check your request format from AccessRC API specifications.","title":"Invalid Request Body"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "95bd740b-755b-4f95-8549-fa9acfc31a41",
+                    "code": 400,
+                    "type": "ValidationError",
+                    "message": "Invalid request body format. Please check your request format from AccessRC API specifications.",
+                    "title": "Invalid Request Body"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -240,7 +271,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -266,7 +297,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":401,"type":"Unauthorized","message":null,"title":"API Key is missing"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 401,
+                    "type": "Unauthorized",
+                    "message": null,
+                    "title": "API Key is missing"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -317,7 +358,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -343,7 +384,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":500,"type":"Exception","message":null,"title":"Internal Server Error"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 500,
+                    "type": "Exception",
+                    "message": null,
+                    "title": "Internal Server Error"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           }
@@ -364,11 +415,57 @@
               "examples": {
                 "Cash Delivery Sync": {
                   "summary": "Example of a cash delivery synchronization request.",
-                  "value": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":150.0,"deliveryUnit":"EUR","deliveryVoucherSerialNo":"","deliveryReferenceNo":"66021926","status":"DELIVERY_REVERTED","providerStatus":"Refund"},{"providerDeliveryId":"8a2b16e7-f074-4433-8ef2-ac8d913249f0","deliveryId":null,"deliveryAmount":200.0,"deliveryUnit":"EUR","deliveryVoucherSerialNo":"","deliveryReferenceNo":"55423654","status":"DELIVERY_PENDING","providerStatus":"Pending"}]}
+                  "value": {
+                    "deliveryList": [
+                      {
+                        "providerDeliveryId": "e05b049a-a93a-4b04-af96-5824e0af6684",
+                        "deliveryId": null,
+                        "deliveryAmount": 150.0,
+                        "deliveryUnit": "EUR",
+                        "deliveryVoucherSerialNo": "",
+                        "deliveryReferenceNo": "66021926",
+                        "status": "DELIVERY_REVERTED",
+                        "providerStatus": "Refund"
+                      },
+                      {
+                        "providerDeliveryId": "8a2b16e7-f074-4433-8ef2-ac8d913249f0",
+                        "deliveryId": null,
+                        "deliveryAmount": 200.0,
+                        "deliveryUnit": "EUR",
+                        "deliveryVoucherSerialNo": "",
+                        "deliveryReferenceNo": "55423654",
+                        "status": "DELIVERY_PENDING",
+                        "providerStatus": "Pending"
+                      }
+                    ]
+                  }
                 },
                 "In-Kind Delivery Sync": {
                   "summary": "Example of an in-kind delivery synchronization request.",
-                  "value": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":1.0,"deliveryUnit":"pcs","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryId":null,"deliveryAmount":2.0,"deliveryUnit":"pcs","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"}]}
+                  "value": {
+                    "deliveryList": [
+                      {
+                        "providerDeliveryId": "e05b049a-a93a-4b04-af96-5824e0af6684",
+                        "deliveryId": null,
+                        "deliveryAmount": 1.0,
+                        "deliveryUnit": "pcs",
+                        "deliveryVoucherSerialNo": "500000650388213UR",
+                        "deliveryReferenceNo": "",
+                        "status": "DELIVERY_COLLECTED",
+                        "providerStatus": "Collected"
+                      },
+                      {
+                        "providerDeliveryId": "7cbba01e-df8f-406e-8bcf-8154994a16d4",
+                        "deliveryId": null,
+                        "deliveryAmount": 2.0,
+                        "deliveryUnit": "pcs",
+                        "deliveryVoucherSerialNo": "500000435643513UR",
+                        "deliveryReferenceNo": "",
+                        "status": "DELIVERY_COLLECTED",
+                        "providerStatus": "Collected"
+                      }
+                    ]
+                  }
                 }
               }
             },
@@ -379,11 +476,57 @@
               "examples": {
                 "Cash Delivery Sync": {
                   "summary": "Example of a cash delivery synchronization request.",
-                  "value": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":150.0,"deliveryUnit":"EUR","deliveryVoucherSerialNo":"","deliveryReferenceNo":"66021926","status":"DELIVERY_REVERTED","providerStatus":"Refund"},{"providerDeliveryId":"8a2b16e7-f074-4433-8ef2-ac8d913249f0","deliveryId":null,"deliveryAmount":200.0,"deliveryUnit":"EUR","deliveryVoucherSerialNo":"","deliveryReferenceNo":"55423654","status":"DELIVERY_PENDING","providerStatus":"Pending"}]}
+                  "value": {
+                    "deliveryList": [
+                      {
+                        "providerDeliveryId": "e05b049a-a93a-4b04-af96-5824e0af6684",
+                        "deliveryId": null,
+                        "deliveryAmount": 150.0,
+                        "deliveryUnit": "EUR",
+                        "deliveryVoucherSerialNo": "",
+                        "deliveryReferenceNo": "66021926",
+                        "status": "DELIVERY_REVERTED",
+                        "providerStatus": "Refund"
+                      },
+                      {
+                        "providerDeliveryId": "8a2b16e7-f074-4433-8ef2-ac8d913249f0",
+                        "deliveryId": null,
+                        "deliveryAmount": 200.0,
+                        "deliveryUnit": "EUR",
+                        "deliveryVoucherSerialNo": "",
+                        "deliveryReferenceNo": "55423654",
+                        "status": "DELIVERY_PENDING",
+                        "providerStatus": "Pending"
+                      }
+                    ]
+                  }
                 },
                 "In-Kind Delivery Sync": {
                   "summary": "Example of an in-kind delivery synchronization request.",
-                  "value": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":1.0,"deliveryUnit":"pcs","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryId":null,"deliveryAmount":2.0,"deliveryUnit":"pcs","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"}]}
+                  "value": {
+                    "deliveryList": [
+                      {
+                        "providerDeliveryId": "e05b049a-a93a-4b04-af96-5824e0af6684",
+                        "deliveryId": null,
+                        "deliveryAmount": 1.0,
+                        "deliveryUnit": "pcs",
+                        "deliveryVoucherSerialNo": "500000650388213UR",
+                        "deliveryReferenceNo": "",
+                        "status": "DELIVERY_COLLECTED",
+                        "providerStatus": "Collected"
+                      },
+                      {
+                        "providerDeliveryId": "7cbba01e-df8f-406e-8bcf-8154994a16d4",
+                        "deliveryId": null,
+                        "deliveryAmount": 2.0,
+                        "deliveryUnit": "pcs",
+                        "deliveryVoucherSerialNo": "500000435643513UR",
+                        "deliveryReferenceNo": "",
+                        "status": "DELIVERY_COLLECTED",
+                        "providerStatus": "Collected"
+                      }
+                    ]
+                  }
                 }
               }
             },
@@ -394,11 +537,57 @@
               "examples": {
                 "Cash Delivery Sync": {
                   "summary": "Example of a cash delivery synchronization request.",
-                  "value": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":150.0,"deliveryUnit":"EUR","deliveryVoucherSerialNo":"","deliveryReferenceNo":"66021926","status":"DELIVERY_REVERTED","providerStatus":"Refund"},{"providerDeliveryId":"8a2b16e7-f074-4433-8ef2-ac8d913249f0","deliveryId":null,"deliveryAmount":200.0,"deliveryUnit":"EUR","deliveryVoucherSerialNo":"","deliveryReferenceNo":"55423654","status":"DELIVERY_PENDING","providerStatus":"Pending"}]}
+                  "value": {
+                    "deliveryList": [
+                      {
+                        "providerDeliveryId": "e05b049a-a93a-4b04-af96-5824e0af6684",
+                        "deliveryId": null,
+                        "deliveryAmount": 150.0,
+                        "deliveryUnit": "EUR",
+                        "deliveryVoucherSerialNo": "",
+                        "deliveryReferenceNo": "66021926",
+                        "status": "DELIVERY_REVERTED",
+                        "providerStatus": "Refund"
+                      },
+                      {
+                        "providerDeliveryId": "8a2b16e7-f074-4433-8ef2-ac8d913249f0",
+                        "deliveryId": null,
+                        "deliveryAmount": 200.0,
+                        "deliveryUnit": "EUR",
+                        "deliveryVoucherSerialNo": "",
+                        "deliveryReferenceNo": "55423654",
+                        "status": "DELIVERY_PENDING",
+                        "providerStatus": "Pending"
+                      }
+                    ]
+                  }
                 },
                 "In-Kind Delivery Sync": {
                   "summary": "Example of an in-kind delivery synchronization request.",
-                  "value": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":1.0,"deliveryUnit":"pcs","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryId":null,"deliveryAmount":2.0,"deliveryUnit":"pcs","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"}]}
+                  "value": {
+                    "deliveryList": [
+                      {
+                        "providerDeliveryId": "e05b049a-a93a-4b04-af96-5824e0af6684",
+                        "deliveryId": null,
+                        "deliveryAmount": 1.0,
+                        "deliveryUnit": "pcs",
+                        "deliveryVoucherSerialNo": "500000650388213UR",
+                        "deliveryReferenceNo": "",
+                        "status": "DELIVERY_COLLECTED",
+                        "providerStatus": "Collected"
+                      },
+                      {
+                        "providerDeliveryId": "7cbba01e-df8f-406e-8bcf-8154994a16d4",
+                        "deliveryId": null,
+                        "deliveryAmount": 2.0,
+                        "deliveryUnit": "pcs",
+                        "deliveryVoucherSerialNo": "500000435643513UR",
+                        "deliveryReferenceNo": "",
+                        "status": "DELIVERY_COLLECTED",
+                        "providerStatus": "Collected"
+                      }
+                    ]
+                  }
                 }
               }
             },
@@ -409,11 +598,57 @@
               "examples": {
                 "Cash Delivery Sync": {
                   "summary": "Example of a cash delivery synchronization request.",
-                  "value": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":150.0,"deliveryUnit":"EUR","deliveryVoucherSerialNo":"","deliveryReferenceNo":"66021926","status":"DELIVERY_REVERTED","providerStatus":"Refund"},{"providerDeliveryId":"8a2b16e7-f074-4433-8ef2-ac8d913249f0","deliveryId":null,"deliveryAmount":200.0,"deliveryUnit":"EUR","deliveryVoucherSerialNo":"","deliveryReferenceNo":"55423654","status":"DELIVERY_PENDING","providerStatus":"Pending"}]}
+                  "value": {
+                    "deliveryList": [
+                      {
+                        "providerDeliveryId": "e05b049a-a93a-4b04-af96-5824e0af6684",
+                        "deliveryId": null,
+                        "deliveryAmount": 150.0,
+                        "deliveryUnit": "EUR",
+                        "deliveryVoucherSerialNo": "",
+                        "deliveryReferenceNo": "66021926",
+                        "status": "DELIVERY_REVERTED",
+                        "providerStatus": "Refund"
+                      },
+                      {
+                        "providerDeliveryId": "8a2b16e7-f074-4433-8ef2-ac8d913249f0",
+                        "deliveryId": null,
+                        "deliveryAmount": 200.0,
+                        "deliveryUnit": "EUR",
+                        "deliveryVoucherSerialNo": "",
+                        "deliveryReferenceNo": "55423654",
+                        "status": "DELIVERY_PENDING",
+                        "providerStatus": "Pending"
+                      }
+                    ]
+                  }
                 },
                 "In-Kind Delivery Sync": {
                   "summary": "Example of an in-kind delivery synchronization request.",
-                  "value": {"deliveryList":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":null,"deliveryAmount":1.0,"deliveryUnit":"pcs","deliveryVoucherSerialNo":"500000650388213UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"},{"providerDeliveryId":"7cbba01e-df8f-406e-8bcf-8154994a16d4","deliveryId":null,"deliveryAmount":2.0,"deliveryUnit":"pcs","deliveryVoucherSerialNo":"500000435643513UR","deliveryReferenceNo":"","status":"DELIVERY_COLLECTED","providerStatus":"Collected"}]}
+                  "value": {
+                    "deliveryList": [
+                      {
+                        "providerDeliveryId": "e05b049a-a93a-4b04-af96-5824e0af6684",
+                        "deliveryId": null,
+                        "deliveryAmount": 1.0,
+                        "deliveryUnit": "pcs",
+                        "deliveryVoucherSerialNo": "500000650388213UR",
+                        "deliveryReferenceNo": "",
+                        "status": "DELIVERY_COLLECTED",
+                        "providerStatus": "Collected"
+                      },
+                      {
+                        "providerDeliveryId": "7cbba01e-df8f-406e-8bcf-8154994a16d4",
+                        "deliveryId": null,
+                        "deliveryAmount": 2.0,
+                        "deliveryUnit": "pcs",
+                        "deliveryVoucherSerialNo": "500000435643513UR",
+                        "deliveryReferenceNo": "",
+                        "status": "DELIVERY_COLLECTED",
+                        "providerStatus": "Collected"
+                      }
+                    ]
+                  }
                 }
               }
             }
@@ -467,7 +702,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -493,7 +728,14 @@
                     }
                   }
                 },
-                "example": {"error":null,"data":{"message":"Deliveries are synced successfully","date":"2025-04-04T14:07:49Z"},"status":"success"}
+                "example": {
+                  "error": null,
+                  "data": {
+                    "message": "Deliveries are synced successfully",
+                    "date": "2025-04-04T14:07:49Z"
+                  },
+                  "status": "success"
+                }
               }
             }
           },
@@ -544,7 +786,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -570,7 +812,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"95bd740b-755b-4f95-8549-fa9acfc31a41","code":400,"type":"ValidationError","message":"Invalid request body format. Please check your request format from AccessRC API specifications.","title":"Invalid Request Body"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "95bd740b-755b-4f95-8549-fa9acfc31a41",
+                    "code": 400,
+                    "type": "ValidationError",
+                    "message": "Invalid request body format. Please check your request format from AccessRC API specifications.",
+                    "title": "Invalid Request Body"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -621,7 +873,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -647,7 +899,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":401,"type":"Unauthorized","message":null,"title":"API Key is missing"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 401,
+                    "type": "Unauthorized",
+                    "message": null,
+                    "title": "API Key is missing"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -698,7 +960,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -724,7 +986,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":500,"type":"Exception","message":null,"title":"Internal Server Error"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 500,
+                    "type": "Exception",
+                    "message": null,
+                    "title": "Internal Server Error"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           }
@@ -742,25 +1014,341 @@
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}],"status":null}
+              "example": {
+                "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+                "name": {
+                  "language": "EN",
+                  "translation": "Bulgaria Moneygram"
+                },
+                "shortDescription": {
+                  "language": "EN",
+                  "translation": "Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."
+                },
+                "landingPage": "www.moneygram.com",
+                "contacts": [
+                  {
+                    "email": "john_doe@moneygram.com",
+                    "name": "John Doe",
+                    "phone": "+902129343472"
+                  }
+                ],
+                "callCenter": {
+                  "phone": "+18009269400",
+                  "email": "customerservice@moneygram.com",
+                  "website": "https://www.moneygram.com/mgo/ie/en/help/contact/",
+                  "whatsapp": "+905441112233"
+                },
+                "availability": {
+                  "categoriesSupported": [
+                    "CASH"
+                  ],
+                  "countriesSupported": [
+                    "BG",
+                    "HN",
+                    "ML",
+                    "PL"
+                  ],
+                  "countriesExcluded": [
+                    "UY"
+                  ],
+                  "kycSupported": [
+                    "ALL"
+                  ],
+                  "kycExcluded": [
+                    "OTHER"
+                  ],
+                  "currenciesSupported": [
+                    "USD",
+                    "GBP",
+                    "EUR"
+                  ],
+                  "currenciesExcluded": [
+                    "CHF"
+                  ],
+                  "nationalitiesSupported": [
+                    "BULGARIAN",
+                    "UKRAINIAN",
+                    "HUNGARIAN"
+                  ],
+                  "nationalitiesExcluded": [
+                    "FINNISH",
+                    "CROATIAN"
+                  ]
+                },
+                "budget": {
+                  "currency": "EUR",
+                  "commodity": null,
+                  "amount": 50000.0
+                },
+                "deliveryOptions": [
+                  {
+                    "fieldLabel": "IBAN (22 characters)",
+                    "fieldName": "accountNumber",
+                    "fieldMaxLength": 28,
+                    "fieldMinLength": 28,
+                    "dataType": "STRING",
+                    "defaultValue": "",
+                    "validationRegex": "^HN[0-9A-Za-z]*$",
+                    "isRequired": true
+                  }
+                ],
+                "status": null
+              }
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}],"status":null}
+              "example": {
+                "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+                "name": {
+                  "language": "EN",
+                  "translation": "Bulgaria Moneygram"
+                },
+                "shortDescription": {
+                  "language": "EN",
+                  "translation": "Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."
+                },
+                "landingPage": "www.moneygram.com",
+                "contacts": [
+                  {
+                    "email": "john_doe@moneygram.com",
+                    "name": "John Doe",
+                    "phone": "+902129343472"
+                  }
+                ],
+                "callCenter": {
+                  "phone": "+18009269400",
+                  "email": "customerservice@moneygram.com",
+                  "website": "https://www.moneygram.com/mgo/ie/en/help/contact/",
+                  "whatsapp": "+905441112233"
+                },
+                "availability": {
+                  "categoriesSupported": [
+                    "CASH"
+                  ],
+                  "countriesSupported": [
+                    "BG",
+                    "HN",
+                    "ML",
+                    "PL"
+                  ],
+                  "countriesExcluded": [
+                    "UY"
+                  ],
+                  "kycSupported": [
+                    "ALL"
+                  ],
+                  "kycExcluded": [
+                    "OTHER"
+                  ],
+                  "currenciesSupported": [
+                    "USD",
+                    "GBP",
+                    "EUR"
+                  ],
+                  "currenciesExcluded": [
+                    "CHF"
+                  ],
+                  "nationalitiesSupported": [
+                    "BULGARIAN",
+                    "UKRAINIAN",
+                    "HUNGARIAN"
+                  ],
+                  "nationalitiesExcluded": [
+                    "FINNISH",
+                    "CROATIAN"
+                  ]
+                },
+                "budget": {
+                  "currency": "EUR",
+                  "commodity": null,
+                  "amount": 50000.0
+                },
+                "deliveryOptions": [
+                  {
+                    "fieldLabel": "IBAN (22 characters)",
+                    "fieldName": "accountNumber",
+                    "fieldMaxLength": 28,
+                    "fieldMinLength": 28,
+                    "dataType": "STRING",
+                    "defaultValue": "",
+                    "validationRegex": "^HN[0-9A-Za-z]*$",
+                    "isRequired": true
+                  }
+                ],
+                "status": null
+              }
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}],"status":null}
+              "example": {
+                "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+                "name": {
+                  "language": "EN",
+                  "translation": "Bulgaria Moneygram"
+                },
+                "shortDescription": {
+                  "language": "EN",
+                  "translation": "Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."
+                },
+                "landingPage": "www.moneygram.com",
+                "contacts": [
+                  {
+                    "email": "john_doe@moneygram.com",
+                    "name": "John Doe",
+                    "phone": "+902129343472"
+                  }
+                ],
+                "callCenter": {
+                  "phone": "+18009269400",
+                  "email": "customerservice@moneygram.com",
+                  "website": "https://www.moneygram.com/mgo/ie/en/help/contact/",
+                  "whatsapp": "+905441112233"
+                },
+                "availability": {
+                  "categoriesSupported": [
+                    "CASH"
+                  ],
+                  "countriesSupported": [
+                    "BG",
+                    "HN",
+                    "ML",
+                    "PL"
+                  ],
+                  "countriesExcluded": [
+                    "UY"
+                  ],
+                  "kycSupported": [
+                    "ALL"
+                  ],
+                  "kycExcluded": [
+                    "OTHER"
+                  ],
+                  "currenciesSupported": [
+                    "USD",
+                    "GBP",
+                    "EUR"
+                  ],
+                  "currenciesExcluded": [
+                    "CHF"
+                  ],
+                  "nationalitiesSupported": [
+                    "BULGARIAN",
+                    "UKRAINIAN",
+                    "HUNGARIAN"
+                  ],
+                  "nationalitiesExcluded": [
+                    "FINNISH",
+                    "CROATIAN"
+                  ]
+                },
+                "budget": {
+                  "currency": "EUR",
+                  "commodity": null,
+                  "amount": 50000.0
+                },
+                "deliveryOptions": [
+                  {
+                    "fieldLabel": "IBAN (22 characters)",
+                    "fieldName": "accountNumber",
+                    "fieldMaxLength": 28,
+                    "fieldMinLength": 28,
+                    "dataType": "STRING",
+                    "defaultValue": "",
+                    "validationRegex": "^HN[0-9A-Za-z]*$",
+                    "isRequired": true
+                  }
+                ],
+                "status": null
+              }
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}],"status":null}
+              "example": {
+                "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+                "name": {
+                  "language": "EN",
+                  "translation": "Bulgaria Moneygram"
+                },
+                "shortDescription": {
+                  "language": "EN",
+                  "translation": "Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."
+                },
+                "landingPage": "www.moneygram.com",
+                "contacts": [
+                  {
+                    "email": "john_doe@moneygram.com",
+                    "name": "John Doe",
+                    "phone": "+902129343472"
+                  }
+                ],
+                "callCenter": {
+                  "phone": "+18009269400",
+                  "email": "customerservice@moneygram.com",
+                  "website": "https://www.moneygram.com/mgo/ie/en/help/contact/",
+                  "whatsapp": "+905441112233"
+                },
+                "availability": {
+                  "categoriesSupported": [
+                    "CASH"
+                  ],
+                  "countriesSupported": [
+                    "BG",
+                    "HN",
+                    "ML",
+                    "PL"
+                  ],
+                  "countriesExcluded": [
+                    "UY"
+                  ],
+                  "kycSupported": [
+                    "ALL"
+                  ],
+                  "kycExcluded": [
+                    "OTHER"
+                  ],
+                  "currenciesSupported": [
+                    "USD",
+                    "GBP",
+                    "EUR"
+                  ],
+                  "currenciesExcluded": [
+                    "CHF"
+                  ],
+                  "nationalitiesSupported": [
+                    "BULGARIAN",
+                    "UKRAINIAN",
+                    "HUNGARIAN"
+                  ],
+                  "nationalitiesExcluded": [
+                    "FINNISH",
+                    "CROATIAN"
+                  ]
+                },
+                "budget": {
+                  "currency": "EUR",
+                  "commodity": null,
+                  "amount": 50000.0
+                },
+                "deliveryOptions": [
+                  {
+                    "fieldLabel": "IBAN (22 characters)",
+                    "fieldName": "accountNumber",
+                    "fieldMaxLength": 28,
+                    "fieldMinLength": 28,
+                    "dataType": "STRING",
+                    "defaultValue": "",
+                    "validationRegex": "^HN[0-9A-Za-z]*$",
+                    "isRequired": true
+                  }
+                ],
+                "status": null
+              }
             }
           }
         },
@@ -812,7 +1400,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -838,7 +1426,17 @@
                     }
                   }
                 },
-                "example": {"error":null,"data":{"message":"Delivery Channel request is created successfully","providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","date":"2025-04-04T14:07:49Z","requestType":"Delivery Channel Create","requestedDate":"2025-04-04T14:07:47Z"},"status":"success"}
+                "example": {
+                  "error": null,
+                  "data": {
+                    "message": "Delivery Channel request is created successfully",
+                    "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+                    "date": "2025-04-04T14:07:49Z",
+                    "requestType": "Delivery Channel Create",
+                    "requestedDate": "2025-04-04T14:07:47Z"
+                  },
+                  "status": "success"
+                }
               }
             }
           },
@@ -889,7 +1487,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -915,7 +1513,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"95bd740b-755b-4f95-8549-fa9acfc31a41","code":400,"type":"ValidationError","message":"Invalid request body format. Please check your request format from AccessRC API specifications.","title":"Invalid Request Body"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "95bd740b-755b-4f95-8549-fa9acfc31a41",
+                    "code": 400,
+                    "type": "ValidationError",
+                    "message": "Invalid request body format. Please check your request format from AccessRC API specifications.",
+                    "title": "Invalid Request Body"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -966,7 +1574,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -992,7 +1600,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":401,"type":"Unauthorized","message":null,"title":"API Key is missing"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 401,
+                    "type": "Unauthorized",
+                    "message": null,
+                    "title": "API Key is missing"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -1043,7 +1661,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -1069,7 +1687,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":500,"type":"Exception","message":null,"title":"Internal Server Error"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 500,
+                    "type": "Exception",
+                    "message": null,
+                    "title": "Internal Server Error"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           }
@@ -1087,25 +1715,341 @@
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}],"status":null}
+              "example": {
+                "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+                "name": {
+                  "language": "EN",
+                  "translation": "Bulgaria Moneygram"
+                },
+                "shortDescription": {
+                  "language": "EN",
+                  "translation": "Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."
+                },
+                "landingPage": "www.moneygram.com",
+                "contacts": [
+                  {
+                    "email": "john_doe@moneygram.com",
+                    "name": "John Doe",
+                    "phone": "+902129343472"
+                  }
+                ],
+                "callCenter": {
+                  "phone": "+18009269400",
+                  "email": "customerservice@moneygram.com",
+                  "website": "https://www.moneygram.com/mgo/ie/en/help/contact/",
+                  "whatsapp": "+905441112233"
+                },
+                "availability": {
+                  "categoriesSupported": [
+                    "CASH"
+                  ],
+                  "countriesSupported": [
+                    "BG",
+                    "HN",
+                    "ML",
+                    "PL"
+                  ],
+                  "countriesExcluded": [
+                    "UY"
+                  ],
+                  "kycSupported": [
+                    "ALL"
+                  ],
+                  "kycExcluded": [
+                    "OTHER"
+                  ],
+                  "currenciesSupported": [
+                    "USD",
+                    "GBP",
+                    "EUR"
+                  ],
+                  "currenciesExcluded": [
+                    "CHF"
+                  ],
+                  "nationalitiesSupported": [
+                    "BULGARIAN",
+                    "UKRAINIAN",
+                    "HUNGARIAN"
+                  ],
+                  "nationalitiesExcluded": [
+                    "FINNISH",
+                    "CROATIAN"
+                  ]
+                },
+                "budget": {
+                  "currency": "EUR",
+                  "commodity": null,
+                  "amount": 50000.0
+                },
+                "deliveryOptions": [
+                  {
+                    "fieldLabel": "IBAN (22 characters)",
+                    "fieldName": "accountNumber",
+                    "fieldMaxLength": 28,
+                    "fieldMinLength": 28,
+                    "dataType": "STRING",
+                    "defaultValue": "",
+                    "validationRegex": "^HN[0-9A-Za-z]*$",
+                    "isRequired": true
+                  }
+                ],
+                "status": null
+              }
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}],"status":null}
+              "example": {
+                "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+                "name": {
+                  "language": "EN",
+                  "translation": "Bulgaria Moneygram"
+                },
+                "shortDescription": {
+                  "language": "EN",
+                  "translation": "Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."
+                },
+                "landingPage": "www.moneygram.com",
+                "contacts": [
+                  {
+                    "email": "john_doe@moneygram.com",
+                    "name": "John Doe",
+                    "phone": "+902129343472"
+                  }
+                ],
+                "callCenter": {
+                  "phone": "+18009269400",
+                  "email": "customerservice@moneygram.com",
+                  "website": "https://www.moneygram.com/mgo/ie/en/help/contact/",
+                  "whatsapp": "+905441112233"
+                },
+                "availability": {
+                  "categoriesSupported": [
+                    "CASH"
+                  ],
+                  "countriesSupported": [
+                    "BG",
+                    "HN",
+                    "ML",
+                    "PL"
+                  ],
+                  "countriesExcluded": [
+                    "UY"
+                  ],
+                  "kycSupported": [
+                    "ALL"
+                  ],
+                  "kycExcluded": [
+                    "OTHER"
+                  ],
+                  "currenciesSupported": [
+                    "USD",
+                    "GBP",
+                    "EUR"
+                  ],
+                  "currenciesExcluded": [
+                    "CHF"
+                  ],
+                  "nationalitiesSupported": [
+                    "BULGARIAN",
+                    "UKRAINIAN",
+                    "HUNGARIAN"
+                  ],
+                  "nationalitiesExcluded": [
+                    "FINNISH",
+                    "CROATIAN"
+                  ]
+                },
+                "budget": {
+                  "currency": "EUR",
+                  "commodity": null,
+                  "amount": 50000.0
+                },
+                "deliveryOptions": [
+                  {
+                    "fieldLabel": "IBAN (22 characters)",
+                    "fieldName": "accountNumber",
+                    "fieldMaxLength": 28,
+                    "fieldMinLength": 28,
+                    "dataType": "STRING",
+                    "defaultValue": "",
+                    "validationRegex": "^HN[0-9A-Za-z]*$",
+                    "isRequired": true
+                  }
+                ],
+                "status": null
+              }
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}],"status":null}
+              "example": {
+                "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+                "name": {
+                  "language": "EN",
+                  "translation": "Bulgaria Moneygram"
+                },
+                "shortDescription": {
+                  "language": "EN",
+                  "translation": "Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."
+                },
+                "landingPage": "www.moneygram.com",
+                "contacts": [
+                  {
+                    "email": "john_doe@moneygram.com",
+                    "name": "John Doe",
+                    "phone": "+902129343472"
+                  }
+                ],
+                "callCenter": {
+                  "phone": "+18009269400",
+                  "email": "customerservice@moneygram.com",
+                  "website": "https://www.moneygram.com/mgo/ie/en/help/contact/",
+                  "whatsapp": "+905441112233"
+                },
+                "availability": {
+                  "categoriesSupported": [
+                    "CASH"
+                  ],
+                  "countriesSupported": [
+                    "BG",
+                    "HN",
+                    "ML",
+                    "PL"
+                  ],
+                  "countriesExcluded": [
+                    "UY"
+                  ],
+                  "kycSupported": [
+                    "ALL"
+                  ],
+                  "kycExcluded": [
+                    "OTHER"
+                  ],
+                  "currenciesSupported": [
+                    "USD",
+                    "GBP",
+                    "EUR"
+                  ],
+                  "currenciesExcluded": [
+                    "CHF"
+                  ],
+                  "nationalitiesSupported": [
+                    "BULGARIAN",
+                    "UKRAINIAN",
+                    "HUNGARIAN"
+                  ],
+                  "nationalitiesExcluded": [
+                    "FINNISH",
+                    "CROATIAN"
+                  ]
+                },
+                "budget": {
+                  "currency": "EUR",
+                  "commodity": null,
+                  "amount": 50000.0
+                },
+                "deliveryOptions": [
+                  {
+                    "fieldLabel": "IBAN (22 characters)",
+                    "fieldName": "accountNumber",
+                    "fieldMaxLength": 28,
+                    "fieldMinLength": 28,
+                    "dataType": "STRING",
+                    "defaultValue": "",
+                    "validationRegex": "^HN[0-9A-Za-z]*$",
+                    "isRequired": true
+                  }
+                ],
+                "status": null
+              }
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelRequestModal"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","GBP","EUR"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":{"currency":"EUR","commodity":null,"amount":50000.0},"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}],"status":null}
+              "example": {
+                "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+                "name": {
+                  "language": "EN",
+                  "translation": "Bulgaria Moneygram"
+                },
+                "shortDescription": {
+                  "language": "EN",
+                  "translation": "Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."
+                },
+                "landingPage": "www.moneygram.com",
+                "contacts": [
+                  {
+                    "email": "john_doe@moneygram.com",
+                    "name": "John Doe",
+                    "phone": "+902129343472"
+                  }
+                ],
+                "callCenter": {
+                  "phone": "+18009269400",
+                  "email": "customerservice@moneygram.com",
+                  "website": "https://www.moneygram.com/mgo/ie/en/help/contact/",
+                  "whatsapp": "+905441112233"
+                },
+                "availability": {
+                  "categoriesSupported": [
+                    "CASH"
+                  ],
+                  "countriesSupported": [
+                    "BG",
+                    "HN",
+                    "ML",
+                    "PL"
+                  ],
+                  "countriesExcluded": [
+                    "UY"
+                  ],
+                  "kycSupported": [
+                    "ALL"
+                  ],
+                  "kycExcluded": [
+                    "OTHER"
+                  ],
+                  "currenciesSupported": [
+                    "USD",
+                    "GBP",
+                    "EUR"
+                  ],
+                  "currenciesExcluded": [
+                    "CHF"
+                  ],
+                  "nationalitiesSupported": [
+                    "BULGARIAN",
+                    "UKRAINIAN",
+                    "HUNGARIAN"
+                  ],
+                  "nationalitiesExcluded": [
+                    "FINNISH",
+                    "CROATIAN"
+                  ]
+                },
+                "budget": {
+                  "currency": "EUR",
+                  "commodity": null,
+                  "amount": 50000.0
+                },
+                "deliveryOptions": [
+                  {
+                    "fieldLabel": "IBAN (22 characters)",
+                    "fieldName": "accountNumber",
+                    "fieldMaxLength": 28,
+                    "fieldMinLength": 28,
+                    "dataType": "STRING",
+                    "defaultValue": "",
+                    "validationRegex": "^HN[0-9A-Za-z]*$",
+                    "isRequired": true
+                  }
+                ],
+                "status": null
+              }
             }
           }
         },
@@ -1157,7 +2101,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -1183,7 +2127,17 @@
                     }
                   }
                 },
-                "example": {"error":null,"data":{"message":"Delivery Channel update request is created successfully","providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","date":"2025-04-04T14:07:49Z","requestType":"Delivery Channel Update","requestedDate":"2025-04-04T14:07:47Z"},"status":"success"}
+                "example": {
+                  "error": null,
+                  "data": {
+                    "message": "Delivery Channel update request is created successfully",
+                    "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+                    "date": "2025-04-04T14:07:49Z",
+                    "requestType": "Delivery Channel Update",
+                    "requestedDate": "2025-04-04T14:07:47Z"
+                  },
+                  "status": "success"
+                }
               }
             }
           },
@@ -1234,7 +2188,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -1260,7 +2214,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"95bd740b-755b-4f95-8549-fa9acfc31a41","code":400,"type":"ValidationError","message":"Invalid request body format. Please check your request format from AccessRC API specifications.","title":"Invalid Request Body"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "95bd740b-755b-4f95-8549-fa9acfc31a41",
+                    "code": 400,
+                    "type": "ValidationError",
+                    "message": "Invalid request body format. Please check your request format from AccessRC API specifications.",
+                    "title": "Invalid Request Body"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -1311,7 +2275,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -1337,7 +2301,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":401,"type":"Unauthorized","message":null,"title":"API Key is missing"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 401,
+                    "type": "Unauthorized",
+                    "message": null,
+                    "title": "API Key is missing"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -1388,7 +2362,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -1414,7 +2388,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":500,"type":"Exception","message":null,"title":"Internal Server Error"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 500,
+                    "type": "Exception",
+                    "message": null,
+                    "title": "Internal Server Error"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           }
@@ -1432,25 +2416,37 @@
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelDeleteRequest"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","status":"OFFLINE"}
+              "example": {
+                "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+                "status": "OFFLINE"
+              }
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelDeleteRequest"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","status":"OFFLINE"}
+              "example": {
+                "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+                "status": "OFFLINE"
+              }
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelDeleteRequest"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","status":"OFFLINE"}
+              "example": {
+                "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+                "status": "OFFLINE"
+              }
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/DeliveryChannelDeleteRequest"
               },
-              "example": {"providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","status":"OFFLINE"}
+              "example": {
+                "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+                "status": "OFFLINE"
+              }
             }
           }
         },
@@ -1502,7 +2498,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -1528,7 +2524,17 @@
                     }
                   }
                 },
-                "example": {"error":null,"data":{"message":"Delivery Channel update status request is created successfully","providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","date":"2025-04-04T14:07:49Z","requestType":"Delivery Channel Create","requestedDate":"2025-04-04T14:07:47Z"},"status":"success"}
+                "example": {
+                  "error": null,
+                  "data": {
+                    "message": "Delivery Channel update status request is created successfully",
+                    "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+                    "date": "2025-04-04T14:07:49Z",
+                    "requestType": "Delivery Channel Create",
+                    "requestedDate": "2025-04-04T14:07:47Z"
+                  },
+                  "status": "success"
+                }
               }
             }
           },
@@ -1579,7 +2585,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -1605,7 +2611,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"95bd740b-755b-4f95-8549-fa9acfc31a41","code":400,"type":"ValidationError","message":"Invalid request body format. Please check your request format from AccessRC API specifications.","title":"Invalid Request Body"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "95bd740b-755b-4f95-8549-fa9acfc31a41",
+                    "code": 400,
+                    "type": "ValidationError",
+                    "message": "Invalid request body format. Please check your request format from AccessRC API specifications.",
+                    "title": "Invalid Request Body"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -1656,7 +2672,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -1682,7 +2698,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":401,"type":"Unauthorized","message":null,"title":"API Key is missing"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 401,
+                    "type": "Unauthorized",
+                    "message": null,
+                    "title": "API Key is missing"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -1733,7 +2759,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -1759,7 +2785,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":500,"type":"Exception","message":null,"title":"Internal Server Error"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 500,
+                    "type": "Exception",
+                    "message": null,
+                    "title": "Internal Server Error"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           }
@@ -1830,7 +2866,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -1856,7 +2892,87 @@
                     }
                   }
                 },
-                "example": {"error":null,"data":{"isApproved":true,"status":"ONLINE","providerDeliveryChannelId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","name":{"language":"EN","translation":"Bulgaria Moneygram"},"shortDescription":{"language":"EN","translation":"Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."},"landingPage":"www.moneygram.com","contacts":[{"email":"john_doe@moneygram.com","name":"John Doe","phone":"+902129343472"}],"callCenter":{"phone":"+18009269400","email":"customerservice@moneygram.com","website":"https://www.moneygram.com/mgo/ie/en/help/contact/","whatsapp":"+905441112233"},"availability":{"categoriesSupported":["CASH"],"countriesSupported":["BG","HN","ML","PL"],"countriesExcluded":["UY"],"kycSupported":["ALL"],"kycExcluded":["OTHER"],"currenciesSupported":["USD","EUR","GBP"],"currenciesExcluded":["CHF"],"nationalitiesSupported":["BULGARIAN","UKRAINIAN","HUNGARIAN"],"nationalitiesExcluded":["FINNISH","CROATIAN"]},"budget":null,"deliveryOptions":[{"fieldLabel":"IBAN (22 characters)","fieldName":"accountNumber","fieldMaxLength":28,"fieldMinLength":28,"dataType":"STRING","defaultValue":"","validationRegex":"^HN[0-9A-Za-z]*$","isRequired":true}]},"status":"success"}
+                "example": {
+                  "error": null,
+                  "data": {
+                    "isApproved": true,
+                    "status": "ONLINE",
+                    "providerDeliveryChannelId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+                    "name": {
+                      "language": "EN",
+                      "translation": "Bulgaria Moneygram"
+                    },
+                    "shortDescription": {
+                      "language": "EN",
+                      "translation": "Collect your cash transfer at any MoneyGram agent location in Bulgaria using your valid identification and transaction reference number."
+                    },
+                    "landingPage": "www.moneygram.com",
+                    "contacts": [
+                      {
+                        "email": "john_doe@moneygram.com",
+                        "name": "John Doe",
+                        "phone": "+902129343472"
+                      }
+                    ],
+                    "callCenter": {
+                      "phone": "+18009269400",
+                      "email": "customerservice@moneygram.com",
+                      "website": "https://www.moneygram.com/mgo/ie/en/help/contact/",
+                      "whatsapp": "+905441112233"
+                    },
+                    "availability": {
+                      "categoriesSupported": [
+                        "CASH"
+                      ],
+                      "countriesSupported": [
+                        "BG",
+                        "HN",
+                        "ML",
+                        "PL"
+                      ],
+                      "countriesExcluded": [
+                        "UY"
+                      ],
+                      "kycSupported": [
+                        "ALL"
+                      ],
+                      "kycExcluded": [
+                        "OTHER"
+                      ],
+                      "currenciesSupported": [
+                        "USD",
+                        "EUR",
+                        "GBP"
+                      ],
+                      "currenciesExcluded": [
+                        "CHF"
+                      ],
+                      "nationalitiesSupported": [
+                        "BULGARIAN",
+                        "UKRAINIAN",
+                        "HUNGARIAN"
+                      ],
+                      "nationalitiesExcluded": [
+                        "FINNISH",
+                        "CROATIAN"
+                      ]
+                    },
+                    "budget": null,
+                    "deliveryOptions": [
+                      {
+                        "fieldLabel": "IBAN (22 characters)",
+                        "fieldName": "accountNumber",
+                        "fieldMaxLength": 28,
+                        "fieldMinLength": 28,
+                        "dataType": "STRING",
+                        "defaultValue": "",
+                        "validationRegex": "^HN[0-9A-Za-z]*$",
+                        "isRequired": true
+                      }
+                    ]
+                  },
+                  "status": "success"
+                }
               }
             }
           },
@@ -1907,7 +3023,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -1933,7 +3049,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"95bd740b-755b-4f95-8549-fa9acfc31a41","code":400,"type":"ValidationError","message":"Invalid request body format. Please check your request format from AccessRC API specifications.","title":"Invalid Request Body"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "95bd740b-755b-4f95-8549-fa9acfc31a41",
+                    "code": 400,
+                    "type": "ValidationError",
+                    "message": "Invalid request body format. Please check your request format from AccessRC API specifications.",
+                    "title": "Invalid Request Body"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -1984,7 +3110,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -2010,7 +3136,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":401,"type":"Unauthorized","message":null,"title":"API Key is missing"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 401,
+                    "type": "Unauthorized",
+                    "message": null,
+                    "title": "API Key is missing"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -2061,7 +3197,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -2087,7 +3223,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":500,"type":"Exception","message":null,"title":"Internal Server Error"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 500,
+                    "type": "Exception",
+                    "message": null,
+                    "title": "Internal Server Error"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           }
@@ -2108,15 +3254,60 @@
               "examples": {
                 "Initial Sync (Pending Approval)": {
                   "summary": "A newly created delivery request waiting for approval.",
-                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Delivery Request successfully created","providerStatus":"WaitingSecondaryLevelTopUpApproval","status":"PENDING_APPROVAL"}
+                  "value": {
+                    "deliveryRequestId": "2372dd86-1e5d-4110-97ba-ff3c4237a74f",
+                    "providerDeliveryRequestId": "4d6c8838-dce2-473f-a6e1-6f91c0ebc87c",
+                    "providerDelivery": [
+                      {
+                        "providerDeliveryId": "e05b049a-a93a-4b04-af96-5824e0af6684",
+                        "deliveryId": "6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+                        "syncStatus": "SUCCESS",
+                        "comment": "",
+                        "providerStatus": "Completed"
+                      }
+                    ],
+                    "message": "Delivery Request successfully created",
+                    "providerStatus": "WaitingSecondaryLevelTopUpApproval",
+                    "status": "PENDING_APPROVAL"
+                  }
                 },
                 "Failed Sync (Rejected)": {
                   "summary": "A delivery request rejected due to invalid or missing information.",
-                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"FAILED","comment":"IBAN is missing","providerStatus":"Failed"}],"message":"Delivery Request cannot be synced. Deliveries contain inconsistencies. Please check the delivery details.","providerStatus":"Rejected","status":"REJECTED"}
+                  "value": {
+                    "deliveryRequestId": "2372dd86-1e5d-4110-97ba-ff3c4237a74f",
+                    "providerDeliveryRequestId": "4d6c8838-dce2-473f-a6e1-6f91c0ebc87c",
+                    "providerDelivery": [
+                      {
+                        "providerDeliveryId": "",
+                        "deliveryId": "6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+                        "syncStatus": "FAILED",
+                        "comment": "IBAN is missing",
+                        "providerStatus": "Failed"
+                      }
+                    ],
+                    "message": "Delivery Request cannot be synced. Deliveries contain inconsistencies. Please check the delivery details.",
+                    "providerStatus": "Rejected",
+                    "status": "REJECTED"
+                  }
                 },
                 "Update Sync (Approved / Completed)": {
                   "summary": "An approved delivery request successfully completed.",
-                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Approved 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH.","providerStatus":"Completed","status":"APPROVED"}
+                  "value": {
+                    "deliveryRequestId": "2372dd86-1e5d-4110-97ba-ff3c4237a74f",
+                    "providerDeliveryRequestId": "4d6c8838-dce2-473f-a6e1-6f91c0ebc87c",
+                    "providerDelivery": [
+                      {
+                        "providerDeliveryId": "e05b049a-a93a-4b04-af96-5824e0af6684",
+                        "deliveryId": "6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+                        "syncStatus": "SUCCESS",
+                        "comment": "",
+                        "providerStatus": "Completed"
+                      }
+                    ],
+                    "message": "Approved 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH.",
+                    "providerStatus": "Completed",
+                    "status": "APPROVED"
+                  }
                 }
               }
             },
@@ -2127,15 +3318,60 @@
               "examples": {
                 "Initial Sync (Pending Approval)": {
                   "summary": "A newly created delivery request waiting for approval.",
-                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Delivery Request successfully created","providerStatus":"WaitingSecondaryLevelTopUpApproval","status":"PENDING_APPROVAL"}
+                  "value": {
+                    "deliveryRequestId": "2372dd86-1e5d-4110-97ba-ff3c4237a74f",
+                    "providerDeliveryRequestId": "4d6c8838-dce2-473f-a6e1-6f91c0ebc87c",
+                    "providerDelivery": [
+                      {
+                        "providerDeliveryId": "e05b049a-a93a-4b04-af96-5824e0af6684",
+                        "deliveryId": "6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+                        "syncStatus": "SUCCESS",
+                        "comment": "",
+                        "providerStatus": "Completed"
+                      }
+                    ],
+                    "message": "Delivery Request successfully created",
+                    "providerStatus": "WaitingSecondaryLevelTopUpApproval",
+                    "status": "PENDING_APPROVAL"
+                  }
                 },
                 "Failed Sync (Rejected)": {
                   "summary": "A delivery request rejected due to invalid or missing information.",
-                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"FAILED","comment":"IBAN is missing","providerStatus":"Failed"}],"message":"Delivery Request cannot be synced. Deliveries contain inconsistencies. Please check the delivery details.","providerStatus":"Rejected","status":"REJECTED"}
+                  "value": {
+                    "deliveryRequestId": "2372dd86-1e5d-4110-97ba-ff3c4237a74f",
+                    "providerDeliveryRequestId": "4d6c8838-dce2-473f-a6e1-6f91c0ebc87c",
+                    "providerDelivery": [
+                      {
+                        "providerDeliveryId": "",
+                        "deliveryId": "6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+                        "syncStatus": "FAILED",
+                        "comment": "IBAN is missing",
+                        "providerStatus": "Failed"
+                      }
+                    ],
+                    "message": "Delivery Request cannot be synced. Deliveries contain inconsistencies. Please check the delivery details.",
+                    "providerStatus": "Rejected",
+                    "status": "REJECTED"
+                  }
                 },
                 "Update Sync (Approved / Completed)": {
                   "summary": "An approved delivery request successfully completed.",
-                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Approved 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH.","providerStatus":"Completed","status":"APPROVED"}
+                  "value": {
+                    "deliveryRequestId": "2372dd86-1e5d-4110-97ba-ff3c4237a74f",
+                    "providerDeliveryRequestId": "4d6c8838-dce2-473f-a6e1-6f91c0ebc87c",
+                    "providerDelivery": [
+                      {
+                        "providerDeliveryId": "e05b049a-a93a-4b04-af96-5824e0af6684",
+                        "deliveryId": "6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+                        "syncStatus": "SUCCESS",
+                        "comment": "",
+                        "providerStatus": "Completed"
+                      }
+                    ],
+                    "message": "Approved 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH.",
+                    "providerStatus": "Completed",
+                    "status": "APPROVED"
+                  }
                 }
               }
             },
@@ -2146,15 +3382,60 @@
               "examples": {
                 "Initial Sync (Pending Approval)": {
                   "summary": "A newly created delivery request waiting for approval.",
-                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Delivery Request successfully created","providerStatus":"WaitingSecondaryLevelTopUpApproval","status":"PENDING_APPROVAL"}
+                  "value": {
+                    "deliveryRequestId": "2372dd86-1e5d-4110-97ba-ff3c4237a74f",
+                    "providerDeliveryRequestId": "4d6c8838-dce2-473f-a6e1-6f91c0ebc87c",
+                    "providerDelivery": [
+                      {
+                        "providerDeliveryId": "e05b049a-a93a-4b04-af96-5824e0af6684",
+                        "deliveryId": "6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+                        "syncStatus": "SUCCESS",
+                        "comment": "",
+                        "providerStatus": "Completed"
+                      }
+                    ],
+                    "message": "Delivery Request successfully created",
+                    "providerStatus": "WaitingSecondaryLevelTopUpApproval",
+                    "status": "PENDING_APPROVAL"
+                  }
                 },
                 "Failed Sync (Rejected)": {
                   "summary": "A delivery request rejected due to invalid or missing information.",
-                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"FAILED","comment":"IBAN is missing","providerStatus":"Failed"}],"message":"Delivery Request cannot be synced. Deliveries contain inconsistencies. Please check the delivery details.","providerStatus":"Rejected","status":"REJECTED"}
+                  "value": {
+                    "deliveryRequestId": "2372dd86-1e5d-4110-97ba-ff3c4237a74f",
+                    "providerDeliveryRequestId": "4d6c8838-dce2-473f-a6e1-6f91c0ebc87c",
+                    "providerDelivery": [
+                      {
+                        "providerDeliveryId": "",
+                        "deliveryId": "6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+                        "syncStatus": "FAILED",
+                        "comment": "IBAN is missing",
+                        "providerStatus": "Failed"
+                      }
+                    ],
+                    "message": "Delivery Request cannot be synced. Deliveries contain inconsistencies. Please check the delivery details.",
+                    "providerStatus": "Rejected",
+                    "status": "REJECTED"
+                  }
                 },
                 "Update Sync (Approved / Completed)": {
                   "summary": "An approved delivery request successfully completed.",
-                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Approved 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH.","providerStatus":"Completed","status":"APPROVED"}
+                  "value": {
+                    "deliveryRequestId": "2372dd86-1e5d-4110-97ba-ff3c4237a74f",
+                    "providerDeliveryRequestId": "4d6c8838-dce2-473f-a6e1-6f91c0ebc87c",
+                    "providerDelivery": [
+                      {
+                        "providerDeliveryId": "e05b049a-a93a-4b04-af96-5824e0af6684",
+                        "deliveryId": "6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+                        "syncStatus": "SUCCESS",
+                        "comment": "",
+                        "providerStatus": "Completed"
+                      }
+                    ],
+                    "message": "Approved 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH.",
+                    "providerStatus": "Completed",
+                    "status": "APPROVED"
+                  }
                 }
               }
             },
@@ -2165,15 +3446,60 @@
               "examples": {
                 "Initial Sync (Pending Approval)": {
                   "summary": "A newly created delivery request waiting for approval.",
-                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Delivery Request successfully created","providerStatus":"WaitingSecondaryLevelTopUpApproval","status":"PENDING_APPROVAL"}
+                  "value": {
+                    "deliveryRequestId": "2372dd86-1e5d-4110-97ba-ff3c4237a74f",
+                    "providerDeliveryRequestId": "4d6c8838-dce2-473f-a6e1-6f91c0ebc87c",
+                    "providerDelivery": [
+                      {
+                        "providerDeliveryId": "e05b049a-a93a-4b04-af96-5824e0af6684",
+                        "deliveryId": "6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+                        "syncStatus": "SUCCESS",
+                        "comment": "",
+                        "providerStatus": "Completed"
+                      }
+                    ],
+                    "message": "Delivery Request successfully created",
+                    "providerStatus": "WaitingSecondaryLevelTopUpApproval",
+                    "status": "PENDING_APPROVAL"
+                  }
                 },
                 "Failed Sync (Rejected)": {
                   "summary": "A delivery request rejected due to invalid or missing information.",
-                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"FAILED","comment":"IBAN is missing","providerStatus":"Failed"}],"message":"Delivery Request cannot be synced. Deliveries contain inconsistencies. Please check the delivery details.","providerStatus":"Rejected","status":"REJECTED"}
+                  "value": {
+                    "deliveryRequestId": "2372dd86-1e5d-4110-97ba-ff3c4237a74f",
+                    "providerDeliveryRequestId": "4d6c8838-dce2-473f-a6e1-6f91c0ebc87c",
+                    "providerDelivery": [
+                      {
+                        "providerDeliveryId": "",
+                        "deliveryId": "6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+                        "syncStatus": "FAILED",
+                        "comment": "IBAN is missing",
+                        "providerStatus": "Failed"
+                      }
+                    ],
+                    "message": "Delivery Request cannot be synced. Deliveries contain inconsistencies. Please check the delivery details.",
+                    "providerStatus": "Rejected",
+                    "status": "REJECTED"
+                  }
                 },
                 "Update Sync (Approved / Completed)": {
                   "summary": "An approved delivery request successfully completed.",
-                  "value": {"deliveryRequestId":"2372dd86-1e5d-4110-97ba-ff3c4237a74f","providerDeliveryRequestId":"4d6c8838-dce2-473f-a6e1-6f91c0ebc87c","providerDelivery":[{"providerDeliveryId":"e05b049a-a93a-4b04-af96-5824e0af6684","deliveryId":"6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a","syncStatus":"SUCCESS","comment":"","providerStatus":"Completed"}],"message":"Approved 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH.","providerStatus":"Completed","status":"APPROVED"}
+                  "value": {
+                    "deliveryRequestId": "2372dd86-1e5d-4110-97ba-ff3c4237a74f",
+                    "providerDeliveryRequestId": "4d6c8838-dce2-473f-a6e1-6f91c0ebc87c",
+                    "providerDelivery": [
+                      {
+                        "providerDeliveryId": "e05b049a-a93a-4b04-af96-5824e0af6684",
+                        "deliveryId": "6fd1ca79-1a5d-4bd9-a4c9-b41c48ff6b7a",
+                        "syncStatus": "SUCCESS",
+                        "comment": "",
+                        "providerStatus": "Completed"
+                      }
+                    ],
+                    "message": "Approved 146,515 UAH of payment to 27 beneficiaries at Location: Bulgarian Red Cross, Bulgaria via Activity: Winterization MoneyGram Bulgaria - IBAN UAH.",
+                    "providerStatus": "Completed",
+                    "status": "APPROVED"
+                  }
                 }
               }
             }
@@ -2227,7 +3553,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -2253,7 +3579,15 @@
                     }
                   }
                 },
-                "example": {"error":null,"data":{"message":"Delivery Request is synced successfully","providerDeliveryRequestId":"ced2396b-32b5-4b08-bd98-7830dfb2b622","date":"2025-04-04T14:07:49Z"},"status":"success"}
+                "example": {
+                  "error": null,
+                  "data": {
+                    "message": "Delivery Request is synced successfully",
+                    "providerDeliveryRequestId": "ced2396b-32b5-4b08-bd98-7830dfb2b622",
+                    "date": "2025-04-04T14:07:49Z"
+                  },
+                  "status": "success"
+                }
               }
             }
           },
@@ -2304,7 +3638,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -2330,7 +3664,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"95bd740b-755b-4f95-8549-fa9acfc31a41","code":400,"type":"ValidationError","message":"Invalid request body format. Please check your request format from AccessRC API specifications.","title":"Invalid Request Body"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "95bd740b-755b-4f95-8549-fa9acfc31a41",
+                    "code": 400,
+                    "type": "ValidationError",
+                    "message": "Invalid request body format. Please check your request format from AccessRC API specifications.",
+                    "title": "Invalid Request Body"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -2381,7 +3725,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -2407,7 +3751,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":401,"type":"Unauthorized","message":null,"title":"API Key is missing"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 401,
+                    "type": "Unauthorized",
+                    "message": null,
+                    "title": "API Key is missing"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -2458,7 +3812,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -2484,7 +3838,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":500,"type":"Exception","message":null,"title":"Internal Server Error"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 500,
+                    "type": "Exception",
+                    "message": null,
+                    "title": "Internal Server Error"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           }
@@ -2505,19 +3869,56 @@
               "examples": {
                 "No Authentication": {
                   "summary": "Subscription without authentication.",
-                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":null}
+                  "value": {
+                    "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED",
+                    "callbackUrl": "https://partner.example.com/webhook",
+                    "auth": null
+                  }
                 },
                 "API Key (header)": {
                   "summary": "Subscription with API key in a custom header.",
-                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"header","headerName":"X-API-Key","headerValue":"my-api-key","username":null,"password":null,"secret":null}}
+                  "value": {
+                    "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED",
+                    "callbackUrl": "https://partner.example.com/webhook",
+                    "auth": {
+                      "type": "header",
+                      "headerName": "X-API-Key",
+                      "headerValue": "my-api-key",
+                      "username": null,
+                      "password": null,
+                      "secret": null
+                    }
+                  }
                 },
                 "Basic Auth": {
                   "summary": "Subscription secured with HTTP Basic authentication.",
-                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"basic","headerName":null,"headerValue":null,"username":"webhook-user","password":"securepass","secret":null}}
+                  "value": {
+                    "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED",
+                    "callbackUrl": "https://partner.example.com/webhook",
+                    "auth": {
+                      "type": "basic",
+                      "headerName": null,
+                      "headerValue": null,
+                      "username": "webhook-user",
+                      "password": "securepass",
+                      "secret": null
+                    }
+                  }
                 },
                 "HMAC": {
                   "summary": "Subscription signed with an HMAC secret.",
-                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"hmac","headerName":null,"headerValue":null,"username":null,"password":null,"secret":"mysecretkey"}}
+                  "value": {
+                    "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED",
+                    "callbackUrl": "https://partner.example.com/webhook",
+                    "auth": {
+                      "type": "hmac",
+                      "headerName": null,
+                      "headerValue": null,
+                      "username": null,
+                      "password": null,
+                      "secret": "mysecretkey"
+                    }
+                  }
                 }
               }
             },
@@ -2528,19 +3929,56 @@
               "examples": {
                 "No Authentication": {
                   "summary": "Subscription without authentication.",
-                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":null}
+                  "value": {
+                    "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED",
+                    "callbackUrl": "https://partner.example.com/webhook",
+                    "auth": null
+                  }
                 },
                 "API Key (header)": {
                   "summary": "Subscription with API key in a custom header.",
-                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"header","headerName":"X-API-Key","headerValue":"my-api-key","username":null,"password":null,"secret":null}}
+                  "value": {
+                    "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED",
+                    "callbackUrl": "https://partner.example.com/webhook",
+                    "auth": {
+                      "type": "header",
+                      "headerName": "X-API-Key",
+                      "headerValue": "my-api-key",
+                      "username": null,
+                      "password": null,
+                      "secret": null
+                    }
+                  }
                 },
                 "Basic Auth": {
                   "summary": "Subscription secured with HTTP Basic authentication.",
-                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"basic","headerName":null,"headerValue":null,"username":"webhook-user","password":"securepass","secret":null}}
+                  "value": {
+                    "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED",
+                    "callbackUrl": "https://partner.example.com/webhook",
+                    "auth": {
+                      "type": "basic",
+                      "headerName": null,
+                      "headerValue": null,
+                      "username": "webhook-user",
+                      "password": "securepass",
+                      "secret": null
+                    }
+                  }
                 },
                 "HMAC": {
                   "summary": "Subscription signed with an HMAC secret.",
-                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"hmac","headerName":null,"headerValue":null,"username":null,"password":null,"secret":"mysecretkey"}}
+                  "value": {
+                    "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED",
+                    "callbackUrl": "https://partner.example.com/webhook",
+                    "auth": {
+                      "type": "hmac",
+                      "headerName": null,
+                      "headerValue": null,
+                      "username": null,
+                      "password": null,
+                      "secret": "mysecretkey"
+                    }
+                  }
                 }
               }
             },
@@ -2551,19 +3989,56 @@
               "examples": {
                 "No Authentication": {
                   "summary": "Subscription without authentication.",
-                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":null}
+                  "value": {
+                    "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED",
+                    "callbackUrl": "https://partner.example.com/webhook",
+                    "auth": null
+                  }
                 },
                 "API Key (header)": {
                   "summary": "Subscription with API key in a custom header.",
-                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"header","headerName":"X-API-Key","headerValue":"my-api-key","username":null,"password":null,"secret":null}}
+                  "value": {
+                    "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED",
+                    "callbackUrl": "https://partner.example.com/webhook",
+                    "auth": {
+                      "type": "header",
+                      "headerName": "X-API-Key",
+                      "headerValue": "my-api-key",
+                      "username": null,
+                      "password": null,
+                      "secret": null
+                    }
+                  }
                 },
                 "Basic Auth": {
                   "summary": "Subscription secured with HTTP Basic authentication.",
-                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"basic","headerName":null,"headerValue":null,"username":"webhook-user","password":"securepass","secret":null}}
+                  "value": {
+                    "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED",
+                    "callbackUrl": "https://partner.example.com/webhook",
+                    "auth": {
+                      "type": "basic",
+                      "headerName": null,
+                      "headerValue": null,
+                      "username": "webhook-user",
+                      "password": "securepass",
+                      "secret": null
+                    }
+                  }
                 },
                 "HMAC": {
                   "summary": "Subscription signed with an HMAC secret.",
-                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"hmac","headerName":null,"headerValue":null,"username":null,"password":null,"secret":"mysecretkey"}}
+                  "value": {
+                    "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED",
+                    "callbackUrl": "https://partner.example.com/webhook",
+                    "auth": {
+                      "type": "hmac",
+                      "headerName": null,
+                      "headerValue": null,
+                      "username": null,
+                      "password": null,
+                      "secret": "mysecretkey"
+                    }
+                  }
                 }
               }
             },
@@ -2574,19 +4049,56 @@
               "examples": {
                 "No Authentication": {
                   "summary": "Subscription without authentication.",
-                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":null}
+                  "value": {
+                    "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED",
+                    "callbackUrl": "https://partner.example.com/webhook",
+                    "auth": null
+                  }
                 },
                 "API Key (header)": {
                   "summary": "Subscription with API key in a custom header.",
-                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"header","headerName":"X-API-Key","headerValue":"my-api-key","username":null,"password":null,"secret":null}}
+                  "value": {
+                    "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED",
+                    "callbackUrl": "https://partner.example.com/webhook",
+                    "auth": {
+                      "type": "header",
+                      "headerName": "X-API-Key",
+                      "headerValue": "my-api-key",
+                      "username": null,
+                      "password": null,
+                      "secret": null
+                    }
+                  }
                 },
                 "Basic Auth": {
                   "summary": "Subscription secured with HTTP Basic authentication.",
-                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"basic","headerName":null,"headerValue":null,"username":"webhook-user","password":"securepass","secret":null}}
+                  "value": {
+                    "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED",
+                    "callbackUrl": "https://partner.example.com/webhook",
+                    "auth": {
+                      "type": "basic",
+                      "headerName": null,
+                      "headerValue": null,
+                      "username": "webhook-user",
+                      "password": "securepass",
+                      "secret": null
+                    }
+                  }
                 },
                 "HMAC": {
                   "summary": "Subscription signed with an HMAC secret.",
-                  "value": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED","callbackUrl":"https://partner.example.com/webhook","auth":{"type":"hmac","headerName":null,"headerValue":null,"username":null,"password":null,"secret":"mysecretkey"}}
+                  "value": {
+                    "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED",
+                    "callbackUrl": "https://partner.example.com/webhook",
+                    "auth": {
+                      "type": "hmac",
+                      "headerName": null,
+                      "headerValue": null,
+                      "username": null,
+                      "password": null,
+                      "secret": "mysecretkey"
+                    }
+                  }
                 }
               }
             }
@@ -2640,7 +4152,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -2666,7 +4178,17 @@
                     }
                   }
                 },
-                "example": {"error":null,"data":{"message":"Webhook successfully subscribed","subscriptionId":"c79f8f33-0042-4c25-bd5e-0dc1982f8cea","callbackUrl":"https://partner.example.com/webhook","eventType":"DELIVERY_REQUEST_SENT","date":"2025-04-07T07:51:38Z"},"status":"success"}
+                "example": {
+                  "error": null,
+                  "data": {
+                    "message": "Webhook successfully subscribed",
+                    "subscriptionId": "c79f8f33-0042-4c25-bd5e-0dc1982f8cea",
+                    "callbackUrl": "https://partner.example.com/webhook",
+                    "eventType": "DELIVERY_REQUEST_SENT",
+                    "date": "2025-04-07T07:51:38Z"
+                  },
+                  "status": "success"
+                }
               }
             }
           },
@@ -2717,7 +4239,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -2743,7 +4265,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"95bd740b-755b-4f95-8549-fa9acfc31a41","code":400,"type":"ValidationError","message":"Invalid request body format. Please check your request format from AccessRC API specifications.","title":"Invalid Request Body"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "95bd740b-755b-4f95-8549-fa9acfc31a41",
+                    "code": 400,
+                    "type": "ValidationError",
+                    "message": "Invalid request body format. Please check your request format from AccessRC API specifications.",
+                    "title": "Invalid Request Body"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -2794,7 +4326,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -2820,7 +4352,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":401,"type":"Unauthorized","message":null,"title":"API Key is missing"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 401,
+                    "type": "Unauthorized",
+                    "message": null,
+                    "title": "API Key is missing"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -2871,7 +4413,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -2897,7 +4439,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":500,"type":"Exception","message":null,"title":"Internal Server Error"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 500,
+                    "type": "Exception",
+                    "message": null,
+                    "title": "Internal Server Error"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           }
@@ -2915,25 +4467,33 @@
               "schema": {
                 "$ref": "#/components/schemas/EventUnsubscribeRequest"
               },
-              "example": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED"}
+              "example": {
+                "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED"
+              }
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/EventUnsubscribeRequest"
               },
-              "example": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED"}
+              "example": {
+                "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED"
+              }
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/EventUnsubscribeRequest"
               },
-              "example": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED"}
+              "example": {
+                "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED"
+              }
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/EventUnsubscribeRequest"
               },
-              "example": {"eventType":"DELIVERY_CHANNEL_STATUS_UPDATED"}
+              "example": {
+                "eventType": "DELIVERY_CHANNEL_STATUS_UPDATED"
+              }
             }
           }
         },
@@ -2985,7 +4545,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -3011,7 +4571,17 @@
                     }
                   }
                 },
-                "example": {"error":null,"data":{"message":"Webhook successfully unsubscribed","subscriptionId":"c79f8f33-0042-4c25-bd5e-0dc1982f8cea","callbackUrl":"https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e","eventType":"DELIVERY_REQUEST_SENT","date":"2025-04-07T07:51:38Z"},"status":"success"}
+                "example": {
+                  "error": null,
+                  "data": {
+                    "message": "Webhook successfully unsubscribed",
+                    "subscriptionId": "c79f8f33-0042-4c25-bd5e-0dc1982f8cea",
+                    "callbackUrl": "https://webhook.site/98add1ca-f654-4c01-8eac-e771f06e160e",
+                    "eventType": "DELIVERY_REQUEST_SENT",
+                    "date": "2025-04-07T07:51:38Z"
+                  },
+                  "status": "success"
+                }
               }
             }
           },
@@ -3062,7 +4632,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -3088,7 +4658,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"95bd740b-755b-4f95-8549-fa9acfc31a41","code":400,"type":"ValidationError","message":"Invalid request body format. Please check your request format from AccessRC API specifications.","title":"Invalid Request Body"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "95bd740b-755b-4f95-8549-fa9acfc31a41",
+                    "code": 400,
+                    "type": "ValidationError",
+                    "message": "Invalid request body format. Please check your request format from AccessRC API specifications.",
+                    "title": "Invalid Request Body"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -3139,7 +4719,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -3165,7 +4745,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":401,"type":"Unauthorized","message":null,"title":"API Key is missing"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 401,
+                    "type": "Unauthorized",
+                    "message": null,
+                    "title": "API Key is missing"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           },
@@ -3216,7 +4806,7 @@
                           }
                         },
                         "Data": {
-                          "$ref": "#/components/schemas/IFRCBaseResponse"
+                          "$ref": "#/components/schemas/BaseResponse"
                         },
                         "Paging": {
                           "type": "object",
@@ -3242,7 +4832,17 @@
                     }
                   }
                 },
-                "example": {"error":{"guid":"2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3","code":500,"type":"Exception","message":null,"title":"Internal Server Error"},"data":null,"status":"failed"}
+                "example": {
+                  "error": {
+                    "guid": "2c77f4b6-6ff8-4017-8bb8-1d7a5c8e01f3",
+                    "code": 500,
+                    "type": "Exception",
+                    "message": null,
+                    "title": "Internal Server Error"
+                  },
+                  "data": null,
+                  "status": "failed"
+                }
               }
             }
           }
@@ -3252,6 +4852,22 @@
   },
   "components": {
     "schemas": {
+      "BaseResponse": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/Error"
+          },
+          "data": {
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "DeliveryChannelAvailabilityModal": {
         "required": [
           "categoriesSupported"
@@ -3293,6 +4909,7 @@
                 "PASSPORT",
                 "DRIVER_LICENSE",
                 "RESIDENCE",
+                "BIRTH_CERTIFICATE",
                 "OTHER",
                 "ALL",
                 "NOT_PROCESSED"
@@ -3311,6 +4928,7 @@
                 "PASSPORT",
                 "DRIVER_LICENSE",
                 "RESIDENCE",
+                "BIRTH_CERTIFICATE",
                 "OTHER",
                 "ALL",
                 "NOT_PROCESSED"
@@ -5163,7 +6781,8 @@
               "DELIVERED",
               "DELIVERY_READY_TO_COLLECT",
               "DELIVERY_COLLECTED",
-              "DELIVERY_REVERTED"
+              "DELIVERY_REVERTED",
+              "FAILED"
             ],
             "type": "string",
             "description": "Internal AccessRC status representing the delivery’s state in the system workflow (e.g., DELIVERY_REVERTED, DELIVERED, DELIVERY_COLLECTED, DELIVERY_PENDING).",
@@ -5183,7 +6802,6 @@
         "required": [
           "deliveryRequestId",
           "message",
-          "providerDeliveryRequestId",
           "providerStatus",
           "status"
         ],
@@ -5199,7 +6817,8 @@
             "maxLength": 64,
             "minLength": 0,
             "type": "string",
-            "description": "Unique identifier (UUID) assigned by the external service provider for the same delivery request, enabling cross-system tracking and synchronization."
+            "description": "Unique identifier (UUID) assigned by the external service provider for the same delivery request, enabling cross-system tracking and synchronization.",
+            "nullable": true
           },
           "providerDelivery": {
             "type": "array",
@@ -5224,10 +6843,14 @@
           "status": {
             "enum": [
               "DRAFT",
+              "SENT_TO_SERVICE_PROVIDER",
               "PENDING_APPROVAL",
               "APPROVED",
               "REJECTED",
-              "DELIVERED"
+              "DELIVERED",
+              "FAILED",
+              "DISPATCH_IN_PROGRESS",
+              "FAILED_RESPONSE_UNKNOWN"
             ],
             "type": "string",
             "description": "Internal AccessRC status of the delivery request, indicating its approval or workflow state (e.g., PENDING_APPROVAL, APPROVED, REJECTED).",
@@ -5383,22 +7006,6 @@
             "maxLength": 64,
             "minLength": 0,
             "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "IFRCBaseResponse": {
-        "type": "object",
-        "properties": {
-          "error": {
-            "$ref": "#/components/schemas/Error"
-          },
-          "data": {
-            "nullable": true
-          },
-          "status": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
